@@ -1,0 +1,59 @@
+@extends('layouts.admin_layout')
+@section('title','Admin | Enquiry - Listing')
+@section('content')
+@section('page_header','Enquiry')
+
+@section('content')
+<div class="page-content">
+    
+<div class="portlet-body">
+    <div class="clearfix">
+    </div>
+    	<table id="clients_list" class="table table-hover table-striped">
+    		<thead>
+    			<tr>
+                    <th>ID</th>
+    				<th>Service</th>
+    				<th>Name</th>
+    				<th>Email</th>
+    				<th>Company</th>
+    				<th>Phone</th>
+    				<th>Website</th>
+    				<th>Message</th>
+    			</tr>
+            </thead>
+            <tbody>
+    			@foreach($enquiry as $enquiries)
+    				<tr>
+                        <td>{{$enquiries->id}}</td>
+    					<td>{{$enquiries->service}}</td>
+    					<td>{{$enquiries->name}}</td>
+    					<td>{{$enquiries->email}}</td>
+    					<td>{{$enquiries->company}}</td>
+    					<td>{{$enquiries->phone}}</td>
+    					<td>{{$enquiries->website}}</td>
+    					<td>{{$enquiries->message}}</td>
+    				</tr>
+    			@endforeach
+    		
+             </tbody>    
+    	</table>
+    <div class="table-responsive mtl">
+    </div>
+</div>
+</div>
+@endsection
+
+@section('custom_scripts')
+    <script type="text/javascript">
+        <link type="text/css" rel="stylesheet" href="{{url('').'/resources/assets/admin/'}}vendors/bootstrap-switch/css/bootstrap-switch.css">
+        <script src="{{url('').'/resources/assets/admin/'}}vendors/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="{{url('').'/resources/assets/admin/'}}vendors/bootstrap-datepicker/css/datepicker.css">
+        <script src="{{url('').'/resources/assets/admin/'}}vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+        <script type="text/javascript">
+
+        $('#clients_list').DataTable();
+    </script>
+@endsection                

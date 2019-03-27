@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/admin_services.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>SSL Certificates:: Edit</title>
+<!-- InstanceEndEditable -->
+<!-- OCK front end icons css --> 
+<link type="text/css" rel="stylesheet" href="icons/font-awesome.min.css"> 
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="images/icons/favicon.ico" rel="shortcut icon">
+   
+   	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+    
+ <!--Loading bootstrap css-->
+<link type="text/css" rel="stylesheet" href="vendors/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+<link type="text/css" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    
+<!--LOADING SCRIPTS FOR PAGE-->
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap-datepicker/css/datepicker.css">
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap-switch/css/bootstrap-switch.css">
+
+<!--LOADING SCRIPTS FOR PAGE-->
+<link type="text/css" rel="stylesheet" href="vendors/jquery-nestable/nestable.css">
+    
+    <!--Loading style vendors-->
+<link type="text/css" rel="stylesheet" href="vendors/animate.css/animate.css">
+<link type="text/css" rel="stylesheet" href="vendors/jquery-pace/pace.css">
+
+<!--Loading style-->
+<link type="text/css" rel="stylesheet" href="css/style.css">  
+<!--<link type="text/css" rel="stylesheet" href="css/style.css">-->
+<link type="text/css" rel="stylesheet" href="css/style-mango.css" id="theme-style">
+<link type="text/css" rel="stylesheet" href="css/vendors.css">
+<link type="text/css" rel="stylesheet" href="css/themes/grey.css" id="color-style">
+<link type="text/css" rel="stylesheet" href="css/style-responsive.css">
+
+<!-- webqom frontend style css -->
+<link type="text/css" rel="stylesheet" href="css/style_webqom_front.css">
+<link type="text/css" rel="stylesheet" href="css/reset.css">
+<link type="text/css" rel="stylesheet" href="css/responsive-leyouts_webqom_front.css">
+<link type="text/css" rel="stylesheet" href="css/shortcodes.css">
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body>
+<div>
+<!--BEGIN TO TOP--><a id="totop" href="#"><i class="fa fa-angle-up"></i></a><!--END BACK TO TOP-->
+  <div id="wrapper"><!--BEGIN TOPBAR-->
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;" class="navbar navbar-default navbar-static-top">
+          <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a id="logo" href="http://www.webqom.com/web88.html" target="_blank" class="navbar-brand"><img src="images/logo_web88.png"></a>          </div>
+            
+            	<div class="topbar-main">
+                	<a id="logo" href="#" class="navbar-brand"><img src="images/logo.jpg"></a>
+                    <a id="menu-toggle" href="#" class="btn hidden-xs"><i class="fa fa-bars"></i></a>
+                    
+                <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control"/></div>
+                </form>
+                <ul class="nav navbar-top-links navbar-right">
+					<li><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-fw"></i><span class="badge badge-blue">3</span></a></li>                
+<li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><img src="images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>&nbsp;
+                        Support Webqom
+                        &nbsp;<span class="caret"></span></a>
+<ul class="dropdown-menu dropdown-user pull-right animated bounceInLeft">
+                            <li>
+                                <div class="navbar-content">
+                                    <div class="row">
+                                        <div class="col-md-5 col-xs-5"><img src="images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>
+
+                                            <p class="text-center mtm">
+                                            	<a href="#" data-target="#modal-change-avatar" data-toggle="modal" class="change-avatar">
+                                                <small>Change Avatar</small>                                                </a></p>
+                                      </div>
+                                        <div class="col-md-7 col-xs-5"><span>Support Webqom</span>
+
+                                            <p class="text-muted small">support@webqom.com</p>
+
+                                            <div class="divider"></div>
+                                            <!--<a href="#" class="btn btn-primary btn-sm">View Profile</a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navbar-footer">
+                                    <div class="navbar-footer-content">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm" data-target="#modal-change-password" data-toggle="modal">Change Password</a></div>
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm pull-right">Sign Out</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                      </ul>
+                  </li>
+                </ul>
+          </div>
+        </nav>
+        <!--Modal Change Avatar start-->
+                            <div id="modal-change-avatar" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                    <h4 id="modal-login-label2" class="modal-title">Change Avatar</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="form">
+                                      <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label">Upload Avatar Image </label>
+                                          <div class="col-md-8">
+                                            <div class="text-15px margin-top-10px"> 
+                                           	  <img src="images/profile/image_hock.jpg" alt="Avatar" class="img-responsive"><br/>
+                                                <input id="exampleInputFile1" type="file"/>
+                                              <br/>
+                                                <span class="help-block">(Image dimension: 100 x 100 pixels, JPEG/GIF/PNG only, Max. 2MB) </span> </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                          <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <!--END MODAL Change Avatar-->
+        <!--Modal Change Password start-->
+                <div id="modal-change-password" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                <h4 id="modal-login-label" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Change Password</h4></div>
+                            <div class="modal-body">
+                                <div class="form">
+                                    <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">Confirm New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="Confirm New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <div class="col-md-offset-4 col-md-8">
+                                               <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp;
+                                              <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a>                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!--END MODAL CHANGE PASSWORD-->
+        <!--END TOPBAR-->
+        
+        <!--BEGIN SIDEBAR MENU-->
+        <nav id="sidebar" role="navigation" class="navbar-default navbar-static-side">
+            <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    <li class="clock"><strong id="get-date"></strong>
+
+                        <div class="digital-clock">
+                            <div id="getHours" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getMinutes" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getSeconds" class="get-time"></div>
+                        </div>
+                    </li>
+                    <li><a href="dashboard.html"><i class="fa fa-laptop fa-fw"></i><span class="menu-title">Dashboard</span></a></li>
+                    <li class="sidebar-heading"><h4>Clients</h4></li>
+                    
+                    <li><a href="client_list.html"><i class="fa fa-user fa-fw"></i><span class="menu-title">Clients Listing</span></a></li>
+                    <li class="sidebar-heading"><h4>Billing</h4></li>
+                    
+                  <li><a href="billing_invoices_list.html"><i class="fa fa-list fa-fw"></i><span class="menu-title">Invoices Listing</span></a></li>
+                  <li><a href="billing_invoice_new.html"><i class="fa fa-plus fa-fw"></i><span class="menu-title">Add New Invoice</span></a></li>
+                  <li><a href="billing_receipts_list.html"><i class="fa fa-file fa-fw"></i><span class="menu-title">Receipts Listing</span></a></li>
+                  <li><a href="billing_quotes_list.html"><i class="fa fa-list-alt fa-fw"></i><span class="menu-title">Quotes Listing</span></a></li>
+                  <li><a href="billing_quote_new.html"><i class="fa fa-plus fa-fw"></i><span class="menu-title">Add New Quote</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Orders</h4></li>
+                    <li><a href="orders_list.html"><i class="fa fa-shopping-cart fa-fw"></i><span class="menu-title">Orders</span><span class="badge badge-blue">3</span></a></li>
+                    
+
+                    <li class="sidebar-heading"><h4>Services</h4></li>
+                    <!-- InstanceBeginEditable name="EditRegion3" -->
+                    <li class="active"><a href="categories_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Categories</span></a> </li>
+                    <li><a href="#"><i class="fa fa-globe fa-fw"></i><span class="menu-title">Domains</span><span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li><a href="single_domain_prices_list.html">Single Domain Pricing List</a></li>
+						  <li><a href="bulk_domain_prices_list.html">Bulk Domain Pricing List</a></li>
+                          <li><a href="domain_addons_prices_list.html">Domain Addons Pricing List</a></li>
+                      </ul>
+                  	</li>
+                    <li><a href="client_schedule_notification_list.html"><i class="fa fa-bullhorn fa-fw"></i><span class="menu-title">Client Schedule Notification</span></a></li> 
+
+                    <!-- InstanceEndEditable -->
+                    
+                    
+                  <li class="sidebar-heading"><h4>Promotions</h4></li>
+                    <li><a href="global_discounts_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Global Discounts</span></a> </li>
+					<li><a href="promo_codes_list.html"><i class="fa fa-qrcode fa-fw"></i><span class="menu-title">Promo Codes</span></a></li>
+                  	<li><a href="newsletter_subscription_list.html"><i class="fa fa-envelope fa-fw"></i><span class="menu-title">Newsletter Subscription</span></a> </li>
+                    
+                    <li class="sidebar-heading"><h4>Support</h4></li>
+                    <li><a href="support_tickets_list.html"><i class="fa fa-wrench fa-fw"></i><span class="menu-title">Support Tickets/Service Enquiry/Ask For Quote Listing</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Banners</h4></li>
+                    <li><a href="index_banner_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Index Banners</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>CMS Pages</h4></li>
+                    <li><a href="blog_articles_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Blog</span></a></li>
+                    <li><a href="#"><i class="fa fa-globe fa-fw"></i><span class="menu-title">Domains</span><span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li><a href="domains_edit.html">Domains Main Page</a></li>
+						  <li><a href="single_domain_search_edit.html">Single Domain Search</a></li>
+                          <li><a href="bulk_domain_search_edit.html">Bulk Domain Search</a></li>
+                          <li><a href="single_domain_transfer_edit.html">Single Domain Transfer</a></li>
+                          <li><a href="bulk_domain_transfer_edit.html">Bulk Domain Transfer</a></li>
+                      </ul>
+                  	</li>
+                    <li class="sidebar-heading"><h4>Global Setup</h4></li>
+                    <li><a href="gst_rate_list.html"><i class="fa fa-dollar fa-fw"></i><span class="menu-title">GST Rate Setup</span></a></li>
+              </ul>
+          </div>
+    </nav>
+        <!--END SIDEBAR MENU--><!--BEGIN PAGE WRAPPER-->
+      <div id="page-wrapper"><!--BEGIN PAGE HEADER & BREADCRUMB-->
+        
+        <div class="page-header-breadcrumb">
+          <div class="page-heading hidden-xs">
+            <h1 class="page-title">Services</h1>
+          </div>
+          
+          <!-- InstanceBeginEditable name="EditRegion1" -->
+          <ol class="breadcrumb page-breadcrumb">
+            <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Dashboard</a>&nbsp; <i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li>Services &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li><a href="categories_list.html">Categories</a> &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li class="active">SSL Certificates - Edit</li>
+          </ol>
+          <!-- InstanceEndEditable --></div>
+        <!--END PAGE HEADER & BREADCRUMB--><!--BEGIN CONTENT-->
+        <!-- InstanceBeginEditable name="EditRegion2" -->
+        <div class="page-content">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>SSL Certificates <i class="fa fa-angle-right"></i> Edit</h2>
+              <div class="clearfix"></div>
+              <div class="alert alert-success alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-check-circle"></i> <strong>Success!</strong>
+                <p>The information has been saved/updated successfully.</p>
+              </div>
+              <div class="alert alert-danger alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-times-circle"></i> <strong>Error!</strong>
+                <p>The information has not been saved/updated. Please correct the errors.</p>
+              </div>
+              <div class="pull-left"> Last updated: <span class="text-blue">15 Sept, 2014 @ 12.00PM</span> </div>
+              <div class="clearfix"></div>
+              <p></p>
+              
+              <div class="portlet">
+                <div class="portlet-header">
+                  <div class="caption">Page Info</div>
+                  <div class="clearfix"></div>
+                  <span class="text-blue text-12px">You can edit the content by clicking the text section below.</span>
+                  <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                </div>
+                <div class="portlet-body">
+                    note to programmer: pls use the ckeditor version 4.5.4 version or newer. The css style and layout should follow 100% as shown in front end. 
+                    <div class="feature_section102">
+
+                        <div class="plan">
+                        <div class="container">
+                            
+                            <div class="onecol_sixty">
+                                <div class="clearfix margin_bottom3"></div>
+                                <div contenteditable="true">
+                                	<h2 class="caps"><i class="fa fa-check sitecolor"></i> World's strongest encryption</h2>
+                                	<p>Our SSLs use SHA-2 and 2048-bit encryption to stop hackers in their tracks. That's the strongest encryption on the market today. It's virtually uncrackable.</p>
+                                	<div class="clearfix margin_bottom2"></div>
+                                	<h2 class="caps"><i class="fa fa-check sitecolor"></i> One-click set up</h2>
+                                	<p>A single click is all it takes to install your SSL if you have Webqom hosting. Website hosted elsewhere? We'll have you on your way in minutes. No technical skills needed.</p>
+                                	<div class="clearfix margin_bottom2"></div>
+                                	<h2 class="caps"><i class="fa fa-check sitecolor"></i> Better search rankings</h2>
+                                	<p>Google favors HTTPS-encrypted websites and will push them higher in search results. So a Webqom SSL not only protects your customers but helps you find more of them.</p>
+                                </div>
+                            </div><!-- end section -->
+                            <div contenteditable="true">
+                            	<div class="onecol_forty last animate" data-anim-type="fadeInRight" data-anim-delay="200"><img src="../images/site-img106.png" alt=""/ ></div>
+                            <!-- end img -->
+                            </div>
+                           
+                            
+                        </div>    
+                        </div>
+                        <!-- end plan 1 -->
+                        
+                        
+                    
+                    </div><!-- end featured section 102 -->
+     
+                    <div class="clearfix"></div>
+                    
+                    
+                    <div class="feature_section102 parallax_section4">
+
+                        <div class="plan four">
+                        <div class="container">
+                            <div contenteditable="true">
+                            	<div class="onecol_forty animate" data-anim-type="fadeInLeft" data-anim-delay="200"><img src="../images/ssl/img.png" alt="How it works" /></div><!-- end img -->
+                            </div>
+                            
+                            <div class="onecol_sixty last">
+                                <div contenteditable="true">
+                                	<h1 class="caps white"><strong>How it works</strong></h1>
+                                </div>
+                                <div contenteditable="true">
+                                	<h2 class="light gray">An SSL creates a secure tunnel through which information including usernames, passwords, credit card numbers and more can pass safely.</h2>
+                                </div>
+                                <div contenteditable="true">
+                                	<h3 class="white"><i class="fa fa-check"></i> First, the SSL "handshake"</h3> 
+                                	<p class="gray">When a website visitor enters an SSL-protected area of your website, your SSL certificate automatically creates an encrypted connection with the visitor's browser.</p>
+                                </div>
+                                <div contenteditable="true">
+                                	<h3 class="white"><i class="fa fa-check"></i> The padlock icon appears</h3>
+                                	<p class="gray">Once the connection is complete, a padlock icon and HTTPS prefix appear in the visitor's browser bar to show them they're safe to share personal details. If you have a high-assurance EV Certificate, your visitor's status bar will also turn green.</p>
+                                </div>
+                                <div contenteditable="true">
+                                	<h3 class="white"><i class="fa fa-check"></i> You're good to go</h3>
+                                	<p class="gray">All information passing to and from your website is now scrambled by 2048-bit encryption that's virtually unbreakable by hackers.</p> 
+                                </div>
+                            </div><!-- end section -->
+                            
+                    
+                            
+                        </div>    
+                        </div>
+                        <!-- end plan 4 -->
+                        
+                        
+                    
+                    </div><!-- end featured section 102 -->
+                    
+                    
+                    <div class="clearfix"></div>
+                    <div class="margin_bottom5"></div>
+                    
+                    
+                </div><!-- end portlet body -->
+                <!-- save button start -->
+                <div class="form-actions none-bg"> <a href="#preview in browser/not yet published" class="btn btn-red">Save &amp; Preview &nbsp;<i class="fa fa-search"></i></a>&nbsp; <a href="#publish online" class="btn btn-blue">Save &amp; Publish &nbsp;<i class="fa fa-globe"></i></a>&nbsp; <a href="#" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                <!-- save button end -->
+                
+              </div>
+              <!-- end porlet -->
+              
+              <h4 class="block-heading">SSL Certificates Plans &amp; General Features Listing</h4>
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#hosting-plans" data-toggle="tab">SSL Certificates Plans</a></li>
+                <li><a href="#general-features" data-toggle="tab">General Features</a></li>
+                <li><a href="#faq" data-toggle="tab">FAQ</a></li>
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                <div id="hosting-plans" class="tab-pane fade in active">
+					
+                  <div class="portlet">
+                    <div class="portlet-header">
+                      <div class="caption">SSL Certificates Plans Listing</div>
+                      <p class="margin-top-10px"></p>
+                      <a href="ssl_certificate_plan_new.html" class="btn btn-success">Add New Plan &nbsp;<i class="fa fa-plus"></i></a>&nbsp;
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Delete</button>
+                        <button type="button" data-toggle="dropdown" class="btn btn-red dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                        <ul role="menu" class="dropdown-menu">
+                          <li><a href="#" data-target="#modal-delete-selected-plan" data-toggle="modal">Delete selected item(s)</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#" data-target="#modal-delete-all" data-toggle="modal">Delete all</a></li>
+                        </ul>
+                      </div>
+                      
+                      <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                      
+                      <!--Modal delete selected items start-->
+                      <div id="modal-delete-selected-plan" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete the selected item(s)? </h4>
+                            </div>
+                            <div class="modal-body">
+                              <p><strong>#1:</strong> Secure Multiple Domains</p>
+                              <div class="form-actions">
+                                <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal delete selected items end -->
+                      <!--Modal delete all items start-->
+                      <div id="modal-delete-all" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete all items? </h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form-actions">
+                                <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal delete all items end -->
+                      
+                    </div>
+                    <div class="portlet-body">
+                    	<div class="pull-right"> <a href="#" class="btn btn-danger">Update Display Order &nbsp;<i class="fa fa-refresh"></i></a> </div>
+                  		<div class="clearfix"></div>
+                        <div class="table-responsive mtl">
+                              <table class="table table-hover table-striped">
+                                <thead>
+                                  <tr>
+                                    <th width="1%"><input type="checkbox"/></th>
+                                    <th>#</th>
+                                    <th>Status</th>
+                                    <th>Service Code</th>
+                                    <th>Plan Name</th>
+                                    <th>Price (RM)</th>
+                                    <th>Promo Behaviour</th>
+                                    <th width="10%">Display Order</th>
+                                    <th class="alicent">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><input type="checkbox"/></td>
+                                    <td>3</td>
+                                    <td><span class="label label-xs label-success">Active</span></td>
+                                    <td>UC-DC1</td>
+                                    <td>Secure Multiple Domains</td>
+                                    <td>3 Years @ 799.99/yr<br/>
+                                    	2 Years @ 859.99/yr<br/>
+                                        1 Years @ 919.99/yr
+                                    </td>
+                                    <td></td>
+                                    <td><input type="text" class="form-control" value="Right"></td>
+                                    <td class="alicent"><a href="ssl_certificate_plan_edit.html" data-hover="tooltip" data-placement="top" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a> <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-1" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                       
+                                        <!--Modal delete plan start-->
+                                        <div id="modal-delete-1" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade alileft">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                                <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete this? </h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                <p><strong>#3:</strong> Secure Multiple Domains</p>
+                                                <div class="form-actions">
+                                                  <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <!-- modal delete end -->
+                                     </td>
+                                   </tr>
+                                   <tr>
+                                    <td><input type="checkbox"/></td>
+                                    <td>2</td>
+                                    <td><span class="label label-xs label-success">Active</span></td>
+                                    <td>EV-DC1</td>
+                                    <td>Green Bar Assurance</td>
+                                    <td>3 Years @ 439.99/yr<br/>
+                                    	2 Years @ 479.99/yr<br/>
+                                        1 Years @ 519.99/yr
+                                    </td>
+                                    <td></td>
+                                    <td><input type="text" class="form-control" value="Middle"></td>
+                                    <td class="alicent"><a href="ssl_certificate_plan_edit.html" data-hover="tooltip" data-placement="top" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a> <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-1" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="checkbox"/></td>                                 
+                                    <td>1</td>
+                                    <td><span class="label label-xs label-success">Active</span></td>
+                                    <td>SP-DC1</td>
+                                    <td>Secure a Single Common Name</td>
+                                    <td>3 Years @ 199.99/yr<br/>
+                                    	2 Years @ 219.99/yr<br/>
+                                        1 Years @ 239.99/yr
+                                    </td>
+                                    <td></td>
+                                    <td><input type="text" class="form-control" value="Left"></td>
+                                    <td class="alicent"><a href="ssl_certificate_plan_edit.html" data-hover="tooltip" data-placement="top" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a> <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-1" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                                <tfoot>
+                                  <tr>
+                                    <td colspan="9"></td>
+                                  </tr>
+                                </tfoot>
+                              </table>
+                            </div>
+                            <!-- end table responsive -->
+                    </div>
+                    <!-- end portlet body -->
+                  </div>
+                  <!-- End porlet -->
+                </div>
+                <!-- end tab copyright text -->
+                <div id="general-features" class="tab-pane fade">
+                	<div class="portlet">
+                    <div class="portlet-header">
+                      <div class="caption">Feature Heading Edit</div>
+                       
+                      <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                    </div>
+                    <div class="portlet-body">
+                      <div class="table-responsive mtl">
+                        <table class="table table-hover table-striped">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Status</th>
+                              <th>Feature Heading</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td><span class="label label-xs label-danger">Inactive</span></td>
+                              <td>N/A</td>
+                              <td><a href="#" data-hover="tooltip" data-placement="top" data-target="#modal-edit-feature-title" data-toggle="modal" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a>
+                                  <!--Modal Edit feature heading text start-->
+                                  <div id="modal-edit-feature-title" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                    <div class="modal-dialog modal-wide-width">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                          <h4 id="modal-login-label3" class="modal-title">Edit Feature Heading Text</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="form">
+                                            <form class="form-horizontal">
+                                              <div class="form-group">
+                                                <label class="col-md-3 control-label">Status</label>
+                                                <div class="col-md-6">
+                                                  <div data-on="success" data-off="primary" class="make-switch">
+                                                    <input type="checkbox"/>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-md-3 control-label">Feature Heading <span class="text-red">*</span> </label>
+                                                <div class="col-md-6">
+                                                   <input type="text" class="form-control" value="N/A"> 
+                                                </div>
+                                              </div>
+                                              
+                                              <div class="form-actions">
+                                                <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <!--END MODAL Edit feature heading text-->
+                              </td>
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <td colspan="5"></td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                        <div class="clearfix"></div>
+                      </div>
+                      <!-- end table responsive -->
+                    </div>
+                  </div>
+                  <!-- End porlet -->
+                  
+                  <div class="portlet">
+                    <div class="portlet-header">
+                      <div class="caption">General Features Listing</div>
+                      <p class="margin-top-10px"></p>
+                      <a href="#" data-target="#modal-add-general-feature" data-toggle="modal" class="btn btn-success">Add New &nbsp;<i class="fa fa-plus"></i></a>&nbsp;
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Delete</button>
+                        <button type="button" data-toggle="dropdown" class="btn btn-red dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                        <ul role="menu" class="dropdown-menu">
+                          <li><a href="#" data-target="#modal-delete-selected-general-feature" data-toggle="modal">Delete selected item(s)</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#" data-target="#modal-delete-all" data-toggle="modal">Delete all</a></li>
+                        </ul>
+                      </div>
+                      <!--Modal delete all items start-->
+                      <div id="modal-delete-all" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete all items? </h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form-actions">
+                                <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal delete all items end -->
+                      
+                      <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                      
+                      <!--Modal Add new general ffeature start-->
+                      <div id="modal-add-general-feature" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog modal-wide-width">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label3" class="modal-title">Add New General Feature</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form">
+                                <form class="form-horizontal">
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Status</label>
+                                    <div class="col-md-6">
+                                      <div data-on="success" data-off="primary" class="make-switch">
+                                        <input type="checkbox" checked="checked"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Feature Title <span class="text-red">*</span></label>
+                                    <div class="col-md-6">
+                                      <input type="text" class="form-control" placeholder="eg. Highly Custom Service">
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Feature Description</label>
+                                    <div class="col-md-6">
+                                      <textarea class="form-control"></textarea>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Insert CSS Icon or </label>
+                                    <div class="col-md-6">
+                                    	<div class="text-blue border-bottom">Please choose <strong>ONE</strong> of the following options for "Feature Icon".</div>
+                                      <div class="margin-top-5px"></div>
+                                      <input type="text" class="form-control" id="inputContent" placeholder="eg. fa-rocket or icon-anchor">
+                                      <div class="help-block">Please refer here for complete <a href="icons_sevices.html" target="_blank">icon options.</a></div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Upload Icon Image</label>
+                                    <div class="col-md-9">
+                                    	<div class="xs-margin"></div>
+                                        <input id="exampleInputFile2" type="file"/>
+                                        <span class="help-block">(Image dimension: 64 x 64 pixels, PNG only, Max. 1MB) </span>
+                                    </div>
+                                  </div>
+                                  <div class="form-actions">
+                                    <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--END MODAL Add New general Feature-->
+                      <!--Modal delete selected items start-->
+                      <div id="modal-delete-selected-general-feature" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete the selected item(s)? </h4>
+                            </div>
+                            <div class="modal-body">
+                              <p><strong>#1:</strong> Highly Custom Service</p>
+                              <div class="form-actions">
+                                <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal delete selected items end -->
+                      
+                    </div>
+                    <div class="portlet-body">
+                      <div class="table-responsive">
+                      	 <table class="table table-hover table-striped">
+                            <thead>
+                              <tr>
+                                <th width="1%"><input type="checkbox"></th>
+                                <th>#</th>
+                                <th>Status</th>
+                                <th>Title</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td colspan="5">No Records Found</td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                              	<td colspan="5"></td>
+                              </tr>
+                            </tfoot>
+                         </table>
+                      </div><!-- end table responsive -->
+                      
+                      <div class="table-responsive">
+                          <table class="table table-hover table-striped">
+                            <thead>
+                              <tr>
+                                <th width="1%"><input type="checkbox"></th>
+                                <th>#</th>
+                                <th>Status</th>
+                                <th>Title</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><input type="checkbox"></td>
+                                <td>1</td>
+                                <td><span class="label label-xs label-success">Active</span></td>
+                                <td>Highly Custom Service</td>
+                                <td><a href="#" data-hover="tooltip" data-placement="top" data-target="#modal-edit-general-feature" data-toggle="modal" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a> <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-general-feature-1" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                    <!--Modal Edit general feature start-->
+                                    <div id="modal-edit-general-feature" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                      <div class="modal-dialog modal-wide-width">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                            <h4 id="modal-login-label3" class="modal-title">General Feature Edit</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <div class="form">
+                                              <form class="form-horizontal">
+                                                <div class="form-group">
+                                                  <label class="col-md-3 control-label">Status</label>
+                                                  <div class="col-md-6">
+                                                    <div data-on="success" data-off="primary" class="make-switch">
+                                                      <input type="checkbox" checked="checked"/>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-3 control-label">Feature Title <span class="text-red">*</span></label>
+                                                    <div class="col-md-6">
+                                                      <input type="text" class="form-control" placeholder="eg. Highly Custom Service " value="Highly Custom Service ">
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  <div class="form-group">
+                                                    <label class="col-md-3 control-label">Feature Description</label>
+                                                    <div class="col-md-6">
+                                                      <textarea class="form-control">We use lightweight Linux containers with SSD disks for unmatched resource efficiency and site speed.</textarea>
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <label class="col-md-3 control-label">Insert CSS Icon or </label>
+                                                    <div class="col-md-6">
+                                                        <div class="text-blue border-bottom">Please choose <strong>ONE</strong> of the following options for "Feature Icon".</div>
+                                                      <div class="margin-top-5px"></div>
+                                                      <input type="text" class="form-control" id="inputContent" placeholder="eg. fa-rocket or icon-anchor" value="fa-rocket">
+                                                      <div class="help-block">Please refer here for complete <a href="icons_sevices.html" target="_blank">icon options.</a></div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <label class="col-md-3 control-label">Upload Icon Image</label>
+                                                    <div class="col-md-9">
+                                                        <div class="xs-margin"></div>
+                                                        <img src="../images/about_us/icon_cloud_app.png" alt="Ultra-Fast Platform" class="img-responsive"><br/>
+                                                        <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-icon" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                                        <!--Modal delete icon start-->
+                                                        <div id="modal-delete-icon" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                                          <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                              <div class="modal-header">
+                                                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                                                <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete this icon image? </h4>
+                                                              </div>
+                                                              <div class="modal-body">
+                                                                <p><img src="../images/about_us/icon_cloud_app.png" alt="Ultra-Fast Platform" class="img-responsive"></p>
+                                                                <div class="form-actions">
+                                                                  <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                      </div>
+                                                      <!-- modal delete end -->
+                                                      <div class="xs-margin"></div> 
+                                                            
+                                                        <input id="exampleInputFile2" type="file"/>
+                            
+                                                        <span class="help-block">(Image dimension: 64 x 64 pixels, PNG only, Max. 1MB) </span>
+                                                    </div>
+                                                  </div>
+                                                
+                                                <div class="form-actions">
+                                                  <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                                </div>
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <!--END MODAL Edit general feature -->
+                                  <!--Modal delete start-->
+                                  <div id="modal-delete-general-feature-1" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                                <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete this? </h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                <p><strong>#1:</strong> Highly Custom Service</p>
+                                                <div class="form-actions">
+                                                  <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <!-- modal delete general feature end -->
+                                </td> 
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td colspan="5"></td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                      </div><!-- end table responsive -->
+                      <div class="clearfix"></div>
+                    </div>
+                  </div><!-- end porlet -->
+                  
+                  
+                  <div class="portlet">
+                    <div class="portlet-header">
+                      <div class="caption">All Our Plans Include Listing</div>
+                      <p class="margin-top-10px"></p>
+                      <a href="#" data-target="#modal-add-all-plan-include" data-toggle="modal" class="btn btn-success">Add New &nbsp;<i class="fa fa-plus"></i></a>&nbsp;
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Delete</button>
+                        <button type="button" data-toggle="dropdown" class="btn btn-red dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                        <ul role="menu" class="dropdown-menu">
+                          <li><a href="#" data-target="#modal-delete-selected-general-feature" data-toggle="modal">Delete selected item(s)</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#" data-target="#modal-delete-all" data-toggle="modal">Delete all</a></li>
+                        </ul>
+                      </div>
+                      
+                      
+                      <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                      
+                      <!--Modal Add new start-->
+                      <div id="modal-add-all-plan-include" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog modal-wide-width">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label3" class="modal-title">All Our Plans Include Feature Add New</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form">
+                                <form class="form-horizontal">
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Status</label>
+                                    <div class="col-md-6">
+                                      <div data-on="success" data-off="primary" class="make-switch">
+                                        <input type="checkbox" checked="checked"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Feature Line 1 Text <span class="text-red">*</span></label>
+                                    <div class="col-md-6">
+                                      <input type="text" class="form-control" placeholder="eg. Free">
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Feature Line 2 Text <span class="text-red">*</span></label>
+                                    <div class="col-md-6">
+                                      <input type="text" class="form-control" placeholder="eg. Domain">
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Insert CSS Icon or </label>
+                                    <div class="col-md-6">
+                                    	<div class="text-blue border-bottom">Please choose <strong>ONE</strong> of the following options for "Feature Icon".</div>
+                                      <div class="margin-top-5px"></div>
+                                      <input type="text" class="form-control" id="inputContent" placeholder="eg. fa-rocket or icon-anchor">
+                                      <div class="help-block">Please refer here for complete <a href="icons_sevices.html" target="_blank">icon options.</a></div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Upload Icon Image</label>
+                                    <div class="col-md-9">
+                                    	<div class="xs-margin"></div>
+                                        <input id="exampleInputFile2" type="file"/>
+                                        <span class="help-block">(Image dimension: 64 x 64 pixels, PNG only, Max. 1MB) </span>
+                                    </div>
+                                  </div>
+                                  <div class="form-actions">
+                                    <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--END MODAL Add New -->
+                      <!--Modal delete selected items start-->
+                      <div id="modal-delete-selected-all-plan-include" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete the selected item(s)? </h4>
+                            </div>
+                            <div class="modal-body">
+                              <p><strong>#1:</strong> SHA-2 and 2048-bit encryption</p>
+                              <div class="form-actions">
+                                <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal delete selected items end -->
+                      
+                    </div>
+                    <div class="portlet-body">
+                      <div class="table-responsive">
+                          <table class="table table-hover table-striped">
+                            <thead>
+                              <tr>
+                                <th width="1%"><input type="checkbox"></th>
+                                <th>#</th>
+                                <th>Status</th>
+                                <th>Title</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><input type="checkbox"></td>
+                                <td>1</td>
+                                <td><span class="label label-xs label-success">Active</span></td>
+                                <td>SHA-2 and 2048-bit encryption</td>
+                                <td><a href="#" data-hover="tooltip" data-placement="top" data-target="#modal-edit-all-plan-include" data-toggle="modal" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a> <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-general-feature-1" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                    <!--Modal Edit start-->
+                                    <div id="modal-edit-all-plan-include" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                      <div class="modal-dialog modal-wide-width">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                            <h4 id="modal-login-label3" class="modal-title">All Our Plans Include Feature Edit</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <div class="form">
+                                              <form class="form-horizontal">
+                                                <div class="form-group">
+                                                  <label class="col-md-3 control-label">Status</label>
+                                                  <div class="col-md-6">
+                                                    <div data-on="success" data-off="primary" class="make-switch">
+                                                      <input type="checkbox" checked="checked"/>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-3 control-label">Feature Line 1 Text <span class="text-red">*</span></label>
+                                                    <div class="col-md-6">
+                                                      <input type="text" class="form-control" placeholder="eg. Free" value="SHA-2 and 2048-bit">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <label class="col-md-3 control-label">Feature Line 2 Text <span class="text-red">*</span></label>
+                                                    <div class="col-md-6">
+                                                      <input type="text" class="form-control" placeholder="eg. Domain" value="encryption">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <label class="col-md-3 control-label">Insert CSS Icon or </label>
+                                                    <div class="col-md-6">
+                                                        <div class="text-blue border-bottom">Please choose <strong>ONE</strong> of the following options for "Feature Icon".</div>
+                                                      <div class="margin-top-5px"></div>
+                                                      <input type="text" class="form-control" id="inputContent" placeholder="eg. fa-rocket or icon-anchor" value="icon-lock">
+                                                      <div class="help-block">Please refer here for complete <a href="icons_sevices.html" target="_blank">icon options.</a></div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <label class="col-md-3 control-label">Upload Icon Image</label>
+                                                    <div class="col-md-9">
+                                                        <div class="xs-margin"></div>
+                                                        <img src="../images/shared_hosting/logo_email88.png" alt="Free Domain" class="img-responsive"><br/>
+                                                        <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-icon-all-plan-include" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                                        <!--Modal delete icon start-->
+                                                        <div id="modal-delete-icon-all-plan-include" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                                          <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                              <div class="modal-header">
+                                                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                                                <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete this icon image? </h4>
+                                                              </div>
+                                                              <div class="modal-body">
+                                                                <p><img src="../images/about_us/icon_cloud_app.png" alt="Ultra-Fast Platform" class="img-responsive"></p>
+                                                                <div class="form-actions">
+                                                                  <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                      </div>
+                                                      <!-- modal delete end -->
+                                                      <div class="xs-margin"></div> 
+                                                            
+                                                        <input id="exampleInputFile2" type="file"/>
+                            
+                                                        <span class="help-block">(Image dimension: 64 x 64 pixels, PNG only, Max. 1MB) </span>
+                                                    </div>
+                                                  </div>
+                                                
+                                                <div class="form-actions">
+                                                  <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                                </div>
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <!--END MODAL Edit general feature -->
+                                  <!--Modal delete start-->
+                                  <div id="modal-delete-general-feature-1" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                                <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete this? </h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                <p><strong>#1:</strong> SHA-2 and 2048-bit encryption</p>
+                                                <div class="form-actions">
+                                                  <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <!-- modal delete general feature end -->
+                                </td> 
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td colspan="5"></td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                      </div><!-- end table responsive -->
+                      
+                      <div class="clearfix"></div>
+                    </div>
+                  </div><!-- end portlet all our plans include -->
+                  
+                </div><!-- end tab general features -->
+                
+                <div id="faq" class="tab-pane fade">
+                	
+                  <div class="portlet">
+                    <div class="portlet-header">
+                      <div class="caption">Frequently Asked Questions Listing</div>
+                      <p class="margin-top-10px"></p>
+                      <a href="#" data-target="#modal-add-faq" data-toggle="modal" class="btn btn-success">Add New &nbsp;<i class="fa fa-plus"></i></a>&nbsp;
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Delete</button>
+                        <button type="button" data-toggle="dropdown" class="btn btn-red dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                        <ul role="menu" class="dropdown-menu">
+                          <li><a href="#" data-target="#modal-delete-selected-faq" data-toggle="modal">Delete selected item(s)</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#" data-target="#modal-delete-all" data-toggle="modal">Delete all</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                      
+                      <!--Modal Add new start-->
+                      <div id="modal-add-faq" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog modal-wide-width">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label3" class="modal-title">FAQ Add New</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form">
+                                <form class="form-horizontal">
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Status</label>
+                                    <div class="col-md-6">
+                                      <div data-on="success" data-off="primary" class="make-switch">
+                                        <input type="checkbox" checked="checked"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">FAQ Title <span class="text-red">*</span></label>
+                                    <div class="col-md-6">
+                                      <input type="text" class="form-control" placeholder="eg. What is a SSL Certificate?">
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Content <span class="text-red">*</span></label>
+                                    <div class="col-md-9">
+                                      <div class="text-blue border-bottom">You can edit the content by clicking the text below.</div>
+                                      <div contenteditable="true">
+                                      	 <p>Click here to start edit the content.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-actions">
+                                    <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--END MODAL Add New -->
+                      <!--Modal delete selected items start-->
+                      <div id="modal-delete-selected-faq" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete the selected item(s)? </h4>
+                            </div>
+                            <div class="modal-body">
+                              <p><strong>#1:</strong> What is a SSL Certificate?</p>
+                              <div class="form-actions">
+                                <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal delete selected items end -->
+                      
+                    </div>
+                    <div class="portlet-body">
+                      <div class="table-responsive">
+                          <table class="table table-hover table-striped">
+                            <thead>
+                              <tr>
+                                <th width="1%"><input type="checkbox"></th>
+                                <th>#</th>
+                                <th>Status</th>
+                                <th>Title</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><input type="checkbox"></td>
+                                <td>1</td>
+                                <td><span class="label label-xs label-success">Active</span></td>
+                                <td>What is a SSL Certificate?</td>
+                                <td><a href="#" data-hover="tooltip" data-placement="top" data-target="#modal-edit-faq" data-toggle="modal" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a> <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-faq-1" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                  <!--Modal Edit faq start-->
+                                  <div id="modal-edit-faq" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                    <div class="modal-dialog modal-wide-width">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                          <h4 id="modal-login-label3" class="modal-title">FAQ Edit</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="form">
+                                            <form class="form-horizontal">
+                                              <div class="form-group">
+                                                <label class="col-md-3 control-label">Status</label>
+                                                <div class="col-md-6">
+                                                  <div data-on="success" data-off="primary" class="make-switch">
+                                                    <input type="checkbox" checked="checked"/>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-md-3 control-label">FAQ Title <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                  <input type="text" class="form-control" placeholder="eg. What is a SSL Certificate?" value="What is a SSL Certificate?">
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-md-3 control-label">Content <span class="text-red">*</span></label>
+                                                <div class="col-md-9">
+                                                  <div class="text-blue border-bottom">You can edit the content by clicking the text below.</div>
+                                                  <div contenteditable="true">
+                                                     <p>SSL stands for Secure Socket Layer. It might sound complex, but it's really not. SSL Certificates validate your website's identity, and encrypt the information visitors send to, or receive from, your site. This keeps thieves from spying on any exchange between you and your shoppers.</p>
+                                                     <p>When you have an SSL Certificate protecting your website, your customers can rest assured that the information they enter on any secured page is private and can't be viewed by cyber crooks. Webqom makes it easy to install your certificate and secure your server.</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+            
+                                              <div class="form-actions">
+                                                <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>  
+                                  <!--END MODAL Edit faq -->
+                                  <!--Modal delete faq start-->
+                                  <div id="modal-delete-faq-1" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                                <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete this? </h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                <p><strong>#1:</strong> What is a SSL Certificate?</p>
+                                                <div class="form-actions">
+                                                  <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <!-- modal delete faq end -->
+                                </td> 
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td colspan="5"></td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                      </div><!-- end table responsive -->
+                      
+                      <div class="clearfix"></div>
+                    </div>
+                  </div><!-- end portlet all our plans include -->
+                  
+                </div><!-- end tab faq-->
+                
+              </div>
+              <!-- end tab content -->
+              <div class="clearfix"></div>
+            </div>
+            <!-- end col-lg-12 -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- InstanceEndEditable -->
+        <!--END CONTENT-->
+            
+            <!--BEGIN FOOTER-->
+<div class="page-footer">
+                <div class="copyright"><span class="text-15px">2016 © <a href="http://www.webqom.com" target="_blank">Webqom Technologies Sdn Bhd.</a> Any queries, please contact <a href="mailto:support@webqom.com">Webqom Support</a>.</span>
+                	<div class="pull-right"><img src="images/logo_webqom.png" alt="Webqom Technologies Sdn Bhd"></div>
+                </div>
+        </div>
+    <!--END FOOTER--></div>
+  <!--END PAGE WRAPPER--></div>
+</div>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<!--loading bootstrap js-->
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="vendors/slimScroll/jquery.slimscroll.js"></script>
+<script src="vendors/jquery-cookie/jquery.cookie.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="vendors/jquery-pace/pace.min.js"></script>
+
+<!--LOADING SCRIPTS FOR PAGE-->
+<script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="vendors/moment/moment.js"></script>
+<script src="vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="vendors/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script src="vendors/bootstrap-clockface/js/clockface.js"></script>
+<script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="vendors/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="vendors/jquery-maskedinput/jquery-maskedinput.js"></script>
+<script src="js/form-components.js"></script>
+<!--LOADING SCRIPTS FOR PAGE-->
+
+<!-- InstanceBeginEditable name="EditRegion4" -->
+<script src="vendors/tinymce/js/tinymce/tinymce.min.js"></script>
+<script src="vendors/ckeditor/ckeditor.js"></script>
+<script src="js/ui-tabs-accordions-navs.js"></script>
+<!-- InstanceEndEditable -->
+
+
+
+<!--CORE JAVASCRIPT-->
+<script src="js/main.js"></script>
+<script src="js/holder.js"></script>
+</body>
+<!-- InstanceEnd --></html>

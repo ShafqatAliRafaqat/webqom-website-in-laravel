@@ -1,0 +1,167 @@
+@extends('layouts.frontend_layout')
+@section('title','Domain Search | Webqom Technologies')
+@section('page_header','Domains')
+@section('breadcrumbs','Domain Search')
+@section('content')
+<div class="clearfix"></div>
+
+<div class="content_fullwidth">
+
+    <div class="container">
+
+        <div class="one_fourth_less">
+            <h4>Status Filter</h4>
+            <div class="list-group">
+            	<a href="#" class="list-group-item active">All Domains<span class="badge badge-dark pull-right">4</span></a>
+                <a href="#" class="list-group-item caps">Active<span class="badge badge-success pull-right">1</span></a>
+                <a href="#" class="list-group-item caps">Expired<span class="badge badge-danger pull-right">1</span></a>
+                <a href="#" class="list-group-item caps">Pending<span class="badge badge-warning pull-right">1</span></a>
+            </div>
+            note to programmer: when clicked, filter the table on the right by status and only showed the filtered data. Please note when click status "Pending", filter it in "my domains" table. "Pending" status will not appear in renewal table. eg. payment failed, so client needs to compelete payment and then can renew for this domain.
+
+            <h4>Client Area</h4>
+             <ul class="list-group">
+            	<li class="list-group-item"><h5 class="white">Quick Links</h5></li>
+                <li class="list-group-item"><a href="/dashboard"><i class="fa fa-caret-right"></i> Dashboard</a></li>
+                <li class="list-group-item alt"><h5>Products/Services</h5></li>
+                <li class="list-group-item"><a href="services_my_services.html"><i class="fa fa-caret-right"></i> My Services Listing</a></li>
+
+                <li class="list-group-item alt"><h5>Orders</h5></li>
+                <li class="list-group-item"><a href="order_history_list.html"><i class="fa fa-caret-right"></i> My Order History</a></li>
+
+                <li class="list-group-item alt"><h5>Domains</h5></li>
+                <li class="list-group-item"><a href="domain_my_domains.html"><i class="fa fa-caret-right"></i> My Domains</a></li>
+                <li class="list-group-item"><a href="/domain_domain_renewal"><i class="fa fa-caret-right"></i> Renew Domains</a></li>
+                <li class="list-group-item"><a href="{{route('frontend.domain.registerNewLogin')}}"><i class="fa fa-caret-right"></i> Register a New Domain</a></li>
+                <li class="list-group-item"><a href="{{route('frontend.domain.transferLogin')}}"><i class="fa fa-caret-right"></i> Transfer Domains to Us</a></li>
+                <li class="list-group-item"><a href="{{ route('frontend.domain.searchLogin') }}"><i class="fa fa-caret-right"></i> Domain Search</a></li>
+
+                <li class="list-group-item alt"><h5>Billing</h5></li>
+                <li class="list-group-item"><a href="billing_my_invoices.html"><i class="fa fa-caret-right"></i> My Invoices</a></li>
+                <li class="list-group-item"><a href="billing_my_quotes.html"><i class="fa fa-caret-right"></i> My Quotes</a></li>
+                <li class="list-group-item"><a href="billing_mass_payment.html"><i class="fa fa-caret-right"></i> Make Payment / Mass Payment</a></li>
+                <li class="list-group-item alt"><h5>Support</h5></li>
+                <li class="list-group-item"><a href="support_my_support_tickets.html"><i class="fa fa-caret-right"></i> My Support Tickets</a></li>
+                <li class="list-group-item"><a href="support_open_new_ticket.html"><i class="fa fa-caret-right"></i> Open New Ticket</a></li>
+
+                <li class="list-group-item alt"><h5>My Account</h5></li>
+                <li class="list-group-item"><a href="{{route('frontend.client_update_information')}}"><i class="fa fa-caret-right"></i> Edit Account Details</a></li>
+                <li class="list-group-item"><a href="{{route('frontend.client_update_information')}}?change-password"><i class="fa fa-caret-right"></i> Change Password</a></li>
+
+
+             </ul>
+
+        </div><!-- end section -->
+
+    	<div class="three_fourth_less last">
+
+           <div class="text-18px dark light">Secure your domain(s) by adding more years to them. Choose how many years you want to renew for and then submit to continue.</div>
+           <div class="clearfix margin_bottom1"></div>
+
+           <p class="aliright">{{$domains->count()}} record(s) found. Items 1-{{$domains->count()}} out of {{$domains->count()}} displayed</p>
+
+                <div class="table-responsive">
+
+                          <table class="table table-hover table-striped">
+                            <thead>
+                              <tr>
+                              	<th width="1%"><input type="checkbox"></th>
+                                <th><span class="pull-left">Domain</span> <a href="#sort by domain" class="pull-right white"><i class="fa fa-sort"></i></a></th>
+                                <th><span class="pull-left">Next Due Date</span> <a href="#sort by next due date" class="pull-right white"><i class="fa fa-sort"></i></a></th>
+                                <th><span class="pull-left">Days Until Expiry</span> <a href="#sort by days until expiry" class="pull-right white"><i class="fa fa-sort"></i></a></th>
+                                <th><span class="pull-left">Registration Period</span> <a href="#sort by registration period" class="pull-right white"><i class="fa fa-sort"></i></a></th>
+                                <th><span class="pull-left">Status</span> <a href="#sort by status" class="pull-right white"><i class="fa fa-sort"></i></a></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                              @forelse($domains as $domain)
+                              <?php
+                                  $diffTime = Carbon\Carbon::now()->diffInDays(new Carbon\Carbon($domain->exp_date), false);
+                                ?>
+                                <td width="1%" class="alicent">
+                                    @if($diffTime > 0)
+                                  <input type="checkbox">
+                                  @else
+                                  <input type="checkbox" disabled="disabled">
+                                  @endif
+                                </td>
+                                <td>{{$domain->name}}</td>
+                                <td>{{$domain->exp_date}}</td>
+                                <td>
+                                  @if($diffTime > 0)
+                                  {{$diffTime}} Days
+                                  @else
+                                  <span class="red">{{$diffTime*-1}} Days Ago</span>
+                                  @endif
+                                </td>
+                                <td>
+                                  @if($diffTime >= 91)
+                                  <span class="red">Past Renewable Period</span>
+                                  @else
+                                  <select class="form-control input-medium">
+                                      <option value="1 year">1 year(s) @ RM 38.00</option>
+                                      <option value="2 years">2 year(s) @ RM 69.00</option>
+                                      <option value="3 years">3 year(s) @ RM 99.00</option>
+                                      <option value="4 years">4 year(s) @ RM 129.00</option>
+                                      <option value="5 years">5 year(s) @ RM 159.00</option>
+                                      <option value="6 years">6 year(s) @ RM 225.00</option>
+                                      <option value="7 years">7 year(s) @ RM 265.00</option>
+                                      <option value="8 years">8 year(s) @ RM 295.00</option>
+                                      <option value="9 years">9 year(s) @ RM 335.00</option>
+                                      <option value="10 years">10 year(s) @ RM 365.00</option>
+                                  </select>
+                                  @endif
+                                </td>
+                                <td>
+                                  <a href="domain_manage_domain.html">
+                                      @if($diffTime > 0)
+                                    <span class="label label-success caps">Active</span>
+                                    @else
+                                    <span class="label label-danger caps">Expired</span>
+                                    @endif
+                                  </a>
+                                </td>
+                              @empty
+                              <tr>
+                                <td colspan="6">No records found.</td>
+                              </tr>
+                              @endforelse
+
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td colspan="6"></td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                          <div class="clearfix"></div>
+
+                </div>
+
+            <div class="clearfix"></div>
+            <div class="divider_line7"></div>
+            <div class="clearfix"></div>
+            @if($domains->count() > 0)
+            <div class="alicent">
+               <a href="{{route('frontend.domain.configuration')}}" class="btn btn-danger caps"><i class="fa fa-arrow-circle-right"></i> <b>Continue</b></a>&nbsp;
+            </div>
+            @endif
+
+
+       </div><!-- end section -->
+
+
+
+
+	</div>
+    <!-- end container -->
+
+
+    <div class="clearfix"></div>
+
+
+</div><!-- end content full width -->
+
+<div class="clearfix"></div>
+@endsection()

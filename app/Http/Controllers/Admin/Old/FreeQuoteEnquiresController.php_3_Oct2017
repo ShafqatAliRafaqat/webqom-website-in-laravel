@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Models\FreequoteEnquiry;
+use App\Http\Controllers\Controller;
+/**
+ *
+ */
+class FreeQuoteEnquiresController extends Controller
+{
+
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
+    public function index()
+    {
+        $enquiry = FreequoteEnquiry::get();
+        return view("admin.enquiry.list", compact('enquiry'));
+    }
+}

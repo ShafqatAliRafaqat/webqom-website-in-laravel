@@ -1,0 +1,227 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Article;
+use App\Http\Requests\ArticleCreateRequest;
+use Illuminate\Support\Facades\Log;
+use App\Http\Requests\ArticleUpdateRequest;
+use Session;
+
+class ArticleController extends Controller
+{
+    public function index(Request $request, $page=10)
+    {
+        $articles = Article::orderBy('created_at','desc')->paginate($page);
+        return view('admin.articles.index', ['articles' => $articles, 'select_page' => $page, 'recent_update' => $this->recentUpdate('App\Models\Article')]);
+    }
+
+    /**
+     * Modified by Narek
+     * Store a newly created resource in storage.
+     */
+    public function store(ArticleCreateRequest $request)
+    {
+        // Log::info($request->all());
+        $this->validate($request, [
+            'title' => 'required',
+            'post_date' => 'required',
+            'author' => 'required',
+            'author_thumbnail' => 'required|image|dimensions:min_width=100,min_height=100|max:1024',
+            'front_image' => 'required|image|dimensions:min_width=300,min_height=300|max:1024',
+        ]);
+        // Log::info($validatedData);
+        // if($validatedData) {
+            $input = $request->all();
+            $input['status'] = 0;
+
+            // move the image to respective directories
+            $input['author_thumbnail'] = time().'.'.$request->author_thumbnail->getClientOriginalExtension();
+            $input['front_image'] = time().'.'.$request->author_thumbnail->getClientOriginalExtension();
+
+            $request->author_thumbnail->move(storage_path('articles/author_thumbnail'), $input['author_thumbnail']);
+            $request->front_image->move(storage_path('articles/front_image'), $input['front_image']);
+
+            // reformat date
+            $input['post_date'] = $this->reformatDate($input['post_date']);
+
+            if ($request->has('status')) {
+                $input['status'] = 1;
+            }
+
+            Article::create($input);
+
+            Session::flash('success', 'Information was saved successfully');
+            return response()->json([
+                'error'=> 0,
+                'message' => 'Article created!.'
+            ],201);
+        // } else {
+        //     return response()->json([
+        //         'message' => 'Please fill in all required fields',
+        //     ], 422);
+        // }
+
+    }
+
+    public function search(Request $request, $page = 10)
+    {
+        $builder = Article::query();
+        if ($request->has('title_search')) {
+            $queryString = $request->get('title_search');
+            $builder->where('title', 'LIKE', "%$queryString%");
+        }
+
+        if ($request->has('status_search') && $request->get('status_search') != 100) {
+            $builder->where('status', $request->get('status_search'));
+        }
+
+        if ($request->has('post_date_search')) {
+            $post_date_search = $this->reformatDate($request->get('post_date_search'));
+            $builder->where('post_date', $post_date_search);
+        }
+
+        if ($request->has('author_search')) {
+            $queryString = $request->get('author_search');
+            $builder->where('author', 'LIKE', "%$queryString%");
+        }
+        $articles = $builder->orderBy('created_at', 'desc')->paginate($page)->appends($request->all());
+        return view('admin.articles.index', ['articles' => $articles, 'select_page' => $page, 'inputs' => $request->all(), 'recent_update' => $this->recentUpdate('App\Models\Article')]);
+    }
+
+
+    private function reformatDate($date)
+    {
+        // reformat date
+        $post_date = null;
+        $post_date = explode('/', $date);
+        return $post_date[2] . '-' . $post_date[1] . '-' . $post_date[0];
+    }
+
+    public function destroy(Request $request)
+    {
+        $id = $request->get('id_delete');
+        if ($id) {
+            $article = Article::find($id);
+            if ($article) {
+                $article->delete();
+                Session::flash('success', 'Information was deleted successfully');
+                return redirect()->route('admin.articles.index');
+            }
+        }
+
+        Session::flash('success', 'The information has not been deleted. Please correct the errors.');
+        return redirect()->route('admin.articles.index');
+    }
+
+    public function show(Request $request, $id)
+    {
+        $article = Article::find($id);
+
+        if ($request->ajax()) {
+            if ($article) {
+                return response()->json([
+                    'error' => 0,
+                    'data' => [
+                        'article' => $article
+                    ]
+                ]);
+            }
+            return response()->json([
+                'error' => 1,
+                'message' => 'Article Not found',
+            ]);
+        }
+        $comments = collect();
+        $comments = $article->comments;
+
+        return view('admin.articles.show', ['article' => $article, 'recent_update' => $this->recentUpdate('App\Models\Article'), 'comments' => $comments]);
+    }
+
+    public function update(ArticleUpdateRequest $request)
+    {
+        $id = $request->get('id');
+        $article = Article::find($id);
+
+        if ($article) {
+            $input = $request->all();
+            if ($request->hasFile('author_thumbnail')) {
+                # code...
+                // move the image to respective directories
+                $input['author_thumbnail'] = time().'.'.$request->author_thumbnail->getClientOriginalExtension();
+                $request->author_thumbnail->move(storage_path('articles/author_thumbnail'), $input['author_thumbnail']);
+            }
+
+            if ($request->hasFile('front_image')) {
+                // move the image to respective directories
+                $input['front_image'] = time().'.'.$request->author_thumbnail->getClientOriginalExtension();
+                $request->front_image->move(storage_path('articles/front_image'), $input['front_image']);
+            }
+
+            // reformat date
+            if ($request->has('post_date')) {
+                $input['post_date'] = $this->reformatDate($input['post_date']);
+            }
+
+            if ($request->has('status')) {
+                $input['status'] = 1;
+            }
+
+            $article->update($input);
+
+            if (!$request->has('delete_author_thumbnail') || !$request->has('delete_front_image')) {
+                Session::flash('success', 'Information was saved successfully');
+            }
+            return response()->json([
+                'error'=> 0,
+                'message' => 'Article updated!.'
+            ],201);
+        }
+        Session::flash('error', 'Something wrong, please contact your developer!.');
+        return redirect()->route('admin.articles.index');
+    }
+
+    private function recentUpdate($model)
+    {
+        $recent_date_timestamp= $model::select('updated_at')->orderBy('updated_at','desc')->first();
+        $recent_update=date("d M,Y")." @ ".date("h:i a");
+        if ($recent_date_timestamp) {
+            $recent_update=date("d M,Y",strtotime($recent_date_timestamp->updated_at))." @ ".date("h:i a",strtotime($recent_date_timestamp->updated_at));
+
+        }
+        return $recent_update;
+    }
+
+    public function bulkDelete(Request $request)
+    {
+        Article::truncate();
+        Session::flash('success', 'Information was deleted successfully');
+        return redirect()->route('admin.articles.index');
+    }
+
+    public function deleteSelectedItem(Request $request)
+    {
+
+        $selected_items = $request->get('selected-item');
+        if (!empty($selected_items)) {
+            Article::whereIn('id', explode(',', $selected_items))->delete();
+            Session::flash('success', 'Information was deleted successfully');
+            return redirect()->route('admin.articles.index');
+        }
+    }
+
+    public function get_details(Request $request)
+    {
+
+        $id = $request->id;
+        if ($id!=NULL) {
+            if (is_array($id)) {
+                $data=Article::whereIn('id', $id)->get();
+
+                return $data;
+            }
+        }
+    }
+}

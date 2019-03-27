@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Models\FreequoteEnquiry;
+use App\Http\Controllers\Controller;
+/**
+ *
+ */
+class FreeQuoteEnquiresController extends Controller
+{
+
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
+    public function index()
+    {
+        $enquiry = FreequoteEnquiry::paginate(10);
+        return view("admin.enquiry.list", compact('enquiry'));
+    }
+
+    public function deleteEnquires($id)
+    {
+    	$enquiry = FreequoteEnquiry::destroy($id);
+    	return redirect()->back()->with([
+            'flash_message' => 'Enquiry has been deleted successfully.',
+        ]);;
+    }
+}

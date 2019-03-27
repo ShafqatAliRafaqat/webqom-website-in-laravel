@@ -1,0 +1,349 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| This file is where you may define all of the routes that are handled
+| by your application. Just tell Laravel the URIs it should respond
+| to using a Closure or controller method. Build something great!
+|
+ */
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Auth::routes();
+
+// Route::group(['namespace' => 'Admin'], function () {
+Route::group(['namespace' => 'Admin', 'middleware' => 'noCache'], function (){
+    Route::get('/web88/admin/', 'UsersController@index');
+    Route::get('/admin/icons', 'ServicesController@show_icons');
+    Route::get('/test', 'CategoriesController@rename_slug');
+    Route::post('/auth/login', 'AuthController@doLogin');
+    Route::get('/web88/admin/login', 'AuthController@admin_login');
+    Route::get('/web88/admin/logout', 'AuthController@admin_logout');
+    Route::get('users', 'UsersController@generate_password');
+    Route::POST('/admin/get_user_details/', 'UsersController@get_users');
+    Route::POST('change_password', 'AuthController@change_password');
+    Route::POST('generate_password', 'UsersController@generate_password');
+    Route::POST('reset_password', 'AuthController@reset_password');
+    Route::get('admin/get_video/{id}', 'IndexPlanController@get_video');
+    Route::POST('admin/delete_video', 'IndexPlanController@delete_video');
+    Route::POST('admin/save_video', 'IndexPlanController@save_video');
+    Route::get('admin/get_video/{id}', 'IndexPlanController@get_video');
+    Route::POST('admin/delete_feature_plan', 'ServicesController@delete_feature_plan');
+    Route::POST('admin/delete_feature_plan_detail', 'ServicesController@delete_feature_plan_detail');
+    Route::POST('admin/save_feature_plan_detail', 'ServicesController@save_feature_plan_detail');
+    Route::resource('admin/index-plan', 'IndexPlanController');
+    Route::POST('admin/index-plan/{plan_id}/addfeature/{feature_id?}', 'IndexPlanController@saveFeature')->name('admin.index-plan.feature.save');
+    Route::POST('admin/index-plan/{plan_id}/deletefeature/{feature_id?}', 'IndexPlanController@deleteFeature')->name('admin.index-plan.feature.delete');
+
+    Route::group(
+        [
+            'prefix' => 'admin/develop/',
+        ],
+        function () {
+            Route::match(['get', 'post'], 'artisan', 'ArtisanController@index')
+                ->name('develop.artisan.commands');
+        }
+    );
+
+    Route::group(['prefix' => 'admin/index-plan/'], function () {
+        Route::POST('/delete', 'IndexPlanController@delete');
+        Route::POST('image_update', 'IndexPlanController@image_update');
+        Route::POST('get_index_plan_details/', 'IndexPlanController@get_index_plan_details');
+        Route::POST('get_testimonial_details/', 'IndexPlanController@get_testimonial_details');
+        Route::POST('get_videos_details/', 'IndexPlanController@get_videos_details');
+        Route::POST('update_sort/', 'IndexPlanController@update_sort');
+        Route::POST('update_sort_offer_services/', 'IndexPlanController@update_sort_offer_services');
+        Route::POST('cms_update/', 'IndexPlanController@cms_update');
+        Route::POST('new_testimonial/', 'IndexPlanController@new_testimonial');
+        Route::POST('delete_testimonial/', 'IndexPlanController@delete_testimonial');
+        Route::POST('new_service/', 'IndexPlanController@new_service');
+        Route::POST('delete_service/', 'IndexPlanController@delete_service');
+        Route::POST('get_service/', 'IndexPlanController@get_service');
+        Route::POST('heading_edit/{type?}', 'IndexPlanController@heading_edit');
+
+    });
+    Route::group(['prefix' => 'admin/cloud_hosting/'], function () {
+        Route::get('/', 'CloudHostingController@index');
+        Route::get('/new', 'CloudHostingController@create');
+        Route::post('/new', 'CloudHostingController@store');
+        Route::post('/new_plan', 'CloudHostingController@cloud_hosting_plan');
+        Route::get('/edit/{id}', 'CloudHostingController@edit');
+        Route::POST('get_details/', 'CloudHostingController@get_details');
+        Route::POST('get_details_hp/', 'CloudHostingController@get_details_hp');
+        Route::post('/update', 'CloudHostingController@update');
+        Route::post('/update_cloud_hosting_plan/{id}', 'CloudHostingController@update_cloud_hosting_plan');
+        Route::POST('/delete', 'CloudHostingController@delete');
+        Route::POST('/delete_hp', 'CloudHostingController@delete_hp');
+        Route::POST('image_update', 'IndexPlanController@image_update');
+        Route::POST('get_index_plan_details/', 'IndexPlanController@get_index_plan_details');
+        Route::POST('update_sort/', 'CloudHostingController@update_sort');
+        Route::POST('cms_update/', 'IndexPlanController@cms_update');
+        Route::POST('/delete_all_plans', 'CloudHostingController@delete_all_plans');
+
+    });
+
+    Route::group(['prefix' => 'admin/services'], function () {
+        Route::GET('/domain-main-page', 'ServicesController@getDomainMainPage')->name('edit_domain_main_page');
+        Route::POST('/domain-main-page', 'ServicesController@saveDomainMainPage')->name('save_domain_main_page');
+        // Added by mrloffel
+        Route::POST('/domain-main-page-preview', 'ServicesController@previewDomainMainPage')->name('preview_domain_main_page');
+        Route::GET('/single-domain-tranfser-edit', 'ServicesController@getSingleTransferPage')->name('edit_single_domain_transfer_page');
+        Route::POST('/single-domain-tranfser-edit', 'ServicesController@saveSingleTransferPage')->name('save_single_domain_transfer_page');
+        Route::POST('/single-domain-transfer-add-feature', 'ServicesController@addFeatureSingleTransferPage')->name('add_feature_single_transfer_page');
+        Route::POST('/single-domain-transfer-update-feature', 'ServicesController@updateFeatureSingleTransferPage')->name('update_feature_single_transfer_page');
+        Route::post('/single-domain-transfer-delete-feature', 'ServicesController@deleteFeatureSingleTransferPage')->name('delete_feature_single_transfer_page');
+        // End
+        Route::get('/{page}', 'ServicesController@index')->name('service-page');
+        Route::POST('/pf_details', 'ServicesController@add_pf_details');
+        Route::POST('/delete_pf_detail', 'ServicesController@delete_pf_detail');
+        Route::POST('/get_details_pf_detail', 'ServicesController@get_details_pf_detail');
+        Route::get('/new/{page}', 'ServicesController@add_hosting_plan');
+        Route::post('/new/{page}', 'ServicesController@store');
+        Route::post('/new_hosting_plan', 'ServicesController@hosting_plan');
+        Route::get('/edit/{id}/{page}', 'ServicesController@edit');
+        Route::POST('get_details/', 'ServicesController@get_details');
+        Route::POST('get_details_hp/', 'ServicesController@get_details_hp');
+        Route::post('/update', 'ServicesController@update');
+        Route::post('/update_hosting_plan/{id}', 'ServicesController@update_hosting_plan');
+        Route::POST('/feature_plan_delete', 'ServicesController@feature_plan_delete');
+        Route::POST('/delete_hp', 'ServicesController@delete_hp');
+        Route::POST('image_update', 'IndexPlanController@image_update');
+        Route::POST('get_index_plan_details/', 'IndexPlanController@get_index_plan_details');
+        Route::POST('update_sort/', 'CloudHostingController@update_sort');
+        Route::POST('cms_update/', 'IndexPlanController@cms_update');
+        Route::POST('/delete_all_plans', 'CloudHostingController@delete_all_plans');
+        Route::POST('/save_service_free_domain', 'ServicesController@save_service_free_domain');
+        Route::POST('/new_faq', 'ServicesController@new_faq');
+        Route::POST('/get_faq', 'ServicesController@get_faq');
+        Route::POST('/delete_faq', 'ServicesController@delete_faq');
+        Route::POST('/deletebulkfaqs', 'ServicesController@deleteBulkFaqs');
+
+    });
+    Route::group(['prefix' => 'admin/domain_pricing'], function () {
+        Route::get('/{per_page?}', 'DomainPricingController@index')->where(['per_page' => '[0-9]+']);
+        Route::get('/addons/{per_page?}', 'DomainPricingController@addonsList')->where(['per_page' => '[0-9]+']);
+        Route::post('/new/{addons?}', 'DomainPricingController@store');
+        Route::POST('get_details/', 'DomainPricingController@get_details');
+        Route::POST('/delete', 'DomainPricingController@delete');
+        Route::post('/update/{addons?}', 'DomainPricingController@update');
+        Route::POST('/delete_all', 'DomainPricingController@delete_all_plans');
+
+    });
+
+    Route::group(['prefix' => 'admin'], function () {
+        Route::delete('domain_pricing_list/all', 'DomainPricingListController@destroyAll')
+            ->name('domain_pricing_list.destroy_all');
+        Route::delete('domain_pricing_list/selected', 'DomainPricingListController@destroySelected')
+            ->name('domain_pricing_list.destroy_selected');
+        Route::post('domain_pricing_list.import', 'DomainPricingListController@importPricing')
+            ->name('domain_pricing_list.import');
+        Route::post('domain_pricing_list.markup', 'DomainPricingListController@markUp')
+            ->name('domain_pricing_list.mark_up');
+        Route::resource('domain_pricing_list', 'DomainPricingListController', ['except' => [
+            'index', 'create',
+        ]]);
+    });
+
+    Route::group(['prefix' => 'admin/services_enquiry'], function () {
+        Route::get('/{per_page?}', 'ServicesEnquiryController@index');
+        Route::get('/addons/{per_page?}', 'ServicesEnquiryController@index');
+        Route::post('/new/{addons?}', 'ServicesEnquiryController@store');
+        Route::POST('get_details/', 'ServicesEnquiryController@get_details');
+        Route::POST('/delete', 'ServicesEnquiryController@delete');
+        Route::post('/update/{addons?}', 'ServicesEnquiryController@update');
+        Route::POST('/delete_all', 'ServicesEnquiryController@delete_all_plans');
+    });
+
+    Route::group(['prefix' => 'admin/general_features/'], function () {
+        Route::get('/', 'DedicatedServersController@index');
+        Route::post('/new', 'GeneralFeaturesController@store');
+        Route::post('/new_plan', 'DedicatedServersController@hosting_plan');
+        Route::get('/edit/{id}', 'GeneralFeaturesController@edit');
+        Route::POST('heading_edit/', 'GeneralFeaturesController@heading_edit');
+        Route::POST('get_details/', 'GeneralFeaturesController@get_details');
+        Route::POST('get_details_hp/', 'DedicatedServersController@get_details_hp');
+        Route::post('/update', 'GeneralFeaturesController@update');
+        Route::post('/update_cloud_hosting_plan/{id}', 'DedicatedServersController@update_hosting_plan');
+        Route::POST('/delete', 'GeneralFeaturesController@delete');
+        Route::POST('/delete_icon', 'GeneralFeaturesController@delete_icon');
+        Route::POST('/delete_hp', 'DedicatedServersController@delete_hp');
+        Route::POST('image_update', 'IndexPlanController@image_update');
+        Route::POST('get_index_plan_details/', 'IndexPlanController@get_index_plan_details');
+        Route::POST('update_sort/', 'DedicatedServersController@update_sort');
+        Route::POST('cms_update/', 'IndexPlanController@cms_update');
+        Route::POST('/delete_all_plans', 'DedicatedServersController@delete_all_plans');
+
+    });
+    Route::resource('admin/categories', 'CategoriesController');
+    Route::group(['prefix' => 'admin/categories/'], function () {
+        Route::POST('/update_sort', 'CategoriesController@update_sort');
+        Route::POST('/upload_images', 'CategoriesController@upload_images');
+        Route::POST('/category_images_delete', 'CategoriesController@category_images_delete');
+        Route::get('/category_images/{category_id}', 'CategoriesController@get_category_images');
+        Route::POST('/reload_switcher', 'CategoriesController@reloadSwitcher');
+    });
+
+    //
+    Route::group(['prefix' => 'web88/admin/bulk_domain/'], function () {
+
+        Route::get('/{per_page}', 'BulkDomainController@index')->where(['per_page' => '[0-9]+']);
+        Route::get('/pricing/{id}/{per_page}', 'BulkDomainController@pricing')->where(['id' => '[0-9]+', 'per_page' => '[0-9]+']);
+        Route::POST('/delete_selected/{per_page?}', 'BulkDomainController@delete_selected');
+        Route::POST('/delete_all', 'BulkDomainController@delete_all');
+        Route::POST('/update/{page_id}', 'BulkDomainController@update');
+        Route::POST('/add', 'BulkDomainController@store');
+    });
+    Route::resource('web88/admin/bulk_domain', 'BulkDomainController');
+
+    //
+
+    Route::group(['prefix' => 'admin/pages/'], function () {
+        Route::POST('/new', 'PagesController@store');
+        Route::POST('/update', 'PagesController@update');
+    });
+    Route::group(['prefix' => 'clients'], function () {
+        Route::get('/listing', 'ClientsController@index');
+        Route::get('/listing/{page_id}', 'ClientsController@index');
+        Route::any('/search_clients', 'ClientsController@search_clients');
+        Route::post('/create', 'ClientsController@store');
+        Route::post('/delete', 'ClientsController@delete');
+        Route::get('/edit/{id}', 'ClientsController@edit');
+        Route::POST('/update', 'ClientsController@update');
+        Route::POST('/delete_all_clients', 'ClientsController@delelte_all');
+        Route::get('/export', 'ClientsController@export_csv');
+
+    });
+    //New added start
+    Route::group(['prefix' => 'admin/web88ir'], function () {
+        Route::POST('/new', 'Web88irController@store');
+        Route::POST('/update', 'Web88irController@update');
+        Route::POST('/heading_edit', 'Web88irController@heading_edit');
+        Route::GET('/edit/{id}', 'Web88irController@edit');
+        Route::POST('/delete/', 'Web88irController@delete');
+    });
+    //New added start
+    Route::group(['prefix' => 'admin/email88'], function () {
+        Route::POST('/new', 'Email88Controller@store');
+        Route::POST('/update', 'Email88Controller@update');
+        Route::POST('/heading_edit', 'Email88Controller@heading_edit');
+        Route::GET('/edit/{id}', 'Email88Controller@edit');
+        Route::POST('/delete/', 'Email88Controller@delete');
+    });
+    Route::group(['prefix' => 'admin/services/enquiry'], function () {
+        Route::get('/list/{per_page?}', ['as' => 'enquires-list', 'uses' => 'FreeQuoteEnquiresController@index']);
+        Route::get('/export/csv', ['uses' => 'FreeQuoteEnquiresController@exportEnquiry']);
+        Route::get('/add', ['uses' => 'FreeQuoteEnquiresController@add', 'as' => 'enquires-add']);
+        Route::post('/create', ['uses' => 'FreeQuoteEnquiresController@create', 'as' => 'enquires-create']);
+        Route::get('/edit/{id}', ['uses' => 'FreeQuoteEnquiresController@edit', 'as' => 'enquires-edit']);
+        Route::put('/update/{id}', ['uses' => 'FreeQuoteEnquiresController@update', 'as' => 'enquires-update']);
+        Route::post('/get_enquiry_details', ['uses' => 'FreeQuoteEnquiresController@getEnquiryDetails']);
+        Route::post('/delete_by_id', ['uses' => 'FreeQuoteEnquiresController@deleteEnquiryByID']);
+        Route::post('/delete_all', ['uses' => 'FreeQuoteEnquiresController@deleteEnquiryAll']);
+        Route::DELETE('/enquires/{id}', ['as' => 'enquires-delete', 'uses' => 'FreeQuoteEnquiresController@deleteEnquires']);
+    });
+    //New added end
+    Route::resource('admin/co_cloud_hosting', 'CoCloudHostingController');
+    Route::resource('admin/dedicated_servers', 'DedicatedServersController');
+    Route::resource('admin/shared_hosting', 'SharedHostingController');
+    Route::resource('admin/vps_hosting', 'VpsHostingController');
+
+
+    // Route group for admin, it's related to controllers inside Controllers/Admin folder
+    // Route::group(['prefix' => 'admin'], function () {
+    Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+
+        // Route group for blog section
+        Route::group(['prefix' => 'blog'], function () {
+            Route::get('articles/list/{page?}', 'ArticleController@index')->name('admin.articles.index');
+            Route::post('articles', 'ArticleController@store')->name('admin.articles.store');
+            Route::get('articles/search/{page?}', 'ArticleController@search')->name('admin.articles.search');
+            Route::delete('articles', 'ArticleController@destroy')->name('admin.articles.destroy');
+            Route::get('articles/{id}', 'ArticleController@show')->name('admin.articles.show');
+            Route::match(['POST', 'PATCH'], 'articles/update', 'ArticleController@update')->name('admin.articles.update');
+            Route::post('articles/{id}/comment', 'CommentController@store')->name('admin.articles.comment.store');
+            Route::delete('articles/selected-items', 'ArticleController@deleteSelectedItem')->name('admin.articles.destroy.items');
+            Route::delete('articles/bulk-delete', 'ArticleController@bulkDelete')->name('admin.articles.destroy.bulk.delete');
+            Route::POST('articles/get_details/', 'ArticleController@get_details');
+        });
+    });
+
+	//inserted by Altaf Hossain limon started
+	 // Route group for admin, it's related to controllers inside Controllers/Admin folder
+    // Route::group(['prefix' => 'admin'], function () {
+    Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+		Route::get('banners', 'BannersController@index')->name('admin.banners.index');
+		Route::post('banners/store', 'BannersController@store')->name('admin.banners.store');
+		Route::get('banners/edit/{id}', 'BannersController@edit')->name('admin.banners.edit');
+		Route::post('banners/update', 'BannersController@update')->name('admin.banners.update');
+		Route::post('banners/order/update', 'BannersController@updateOrder')->name('admin.banners.updateOrder');
+		Route::get('banners/delete/{id}', 'BannersController@delete')->name('admin.banners.delete');
+		Route::post('banners/selected/delete', 'BannersController@deleteSelected')->name('admin.banners.deleteSelected');
+		Route::get('banners/destroy', 'BannersController@destroy')->name('admin.banners.destroy');
+		Route::get('banners/delete/enlarge-image/{id}', 'BannersController@deleteEnlargeImage')->name('admin.banners.delete.enlarge.image');
+		Route::get('banners/delete/enlarge-pdf/{id}', 'BannersController@deleteEnlargePdf')->name('admin.banners.delete.enlarge.pdf');
+    });
+	//inserted by Altaf Hossain limon ended
+
+});
+
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::get('/', 'IndexController@index')->name('frontend.index');
+    Route::get('/makeadmin', 'IndexController@makeadmin');
+    Route::get('/services/{page}/{preview?}', 'ServicesController@index')->name('frontend.services');
+    Route::get('/shared_hosting', 'SharedHostingController@index');
+    Route::get('/co_cloud_hosting', 'CoCloudHostingController@index');
+    Route::get('/dedicated_servers', 'DedicatedServersController@index');
+    Route::get('/register', 'IndexController@client_register');
+    Route::get('/dashboard', 'IndexController@client_dashboard')->name('frontend.client_dashboard');
+    Route::get('/my_account', 'IndexController@client_update')->name('frontend.client_update_information');
+    Route::post('/update_client', 'IndexController@client_account_update');
+    Route::post('/get_categories', 'IndexController@get_categories');
+    Route::POST('/register', 'IndexController@client_registeration');
+    Route::get('get_countries', 'IndexController@get_countries');
+    Route::get('get_state/{country_id}', 'IndexController@get_state');
+    Route::get('get_city/{state_id}', 'IndexController@get_city');
+    Route::POST('/profile_pic_update', 'IndexController@change_profile_pic');
+    Route::get('/reset_password', 'IndexController@client_reset_password');
+    Route::POST('/unsubscribe_news_letter', 'IndexController@unsubscribe_news_letter');
+    Route::POST('/subscribe_news_letter', 'IndexController@subscribe_news_letter');
+    Route::get('/enquiry', 'EnquiryController@index');
+    Route::get('blog', 'ArticleController@index')->name('frontend.articles.index');
+    Route::get('blog/{id}', 'ArticleController@show')->name('frontend.articles.show');
+    Route::post('blog/{id}/comment', 'CommentController@store')->name('frontend.articles.comment.store');
+    Route::GET('domains', 'DomainsController@index')->name('frontend.domain.index');
+    Route::get('domain_transfer', 'DomainsController@transferPage')->name('frontend.domain.transfer_page');
+
+    Route::get('contact', 'ContactController@index')->name('contact');
+    Route::post('contact-enquiry','ContactController@contactEnquiry')->name('contactEnquiry');
+    // Route::resource('contact','ContactController');
+    // Route::get('domain_transfer', 'DomainsController@transferPage')->name('frontend.domain.transfer_page');
+
+
+    Route::get('/cloud_hosting1', 'CloudHostingClientController@index');
+    Route::get('/domain_configuration', 'DomainConfigController@index')->name('frontend.domain.configuration');
+    Route::post('/domain_configuration', 'DomainConfigController@postIndex')->name('frontend.domain.configuration_post');
+    Route::get('/shopping_cart', 'ShoppingCartController@index');
+    Route::get('/support', 'SupportController@index');
+
+
+
+    Route::get('/domain_search_login', 'DomainsController@searchLogin')->name('frontend.domain.searchLogin');
+    Route::get('/domain_transfer_login', 'DomainsController@transferLogin')->name('frontend.domain.transferLogin');
+    Route::get('/domain_register_new_login', 'DomainsController@registerNewLogin')->name('frontend.domain.registerNewLogin');
+    Route::get('/domain_domain_renewal', 'DomainsController@domainRenewal')->name('frontend.domain.domainRenewal');
+    Route::get('/domain_search', 'DomainsController@search')->name('frontend.domain.search');
+    Route::get('/domain-search-ajax', 'DomainsController@ajaxDomainSearch')->name('frontend.domain.ajax_search');
+    Route::get('/whois/{domain}', 'DomainsController@whois')->name('frontend.domain.whois');
+
+
+//    Route::get('bulk_domain_search', 'DomainsController@bulkSearch')->name('frontend.domain.bulk_search');
+Route::get('/test',function(){
+    \Artisan::call('config:cache');
+});
+});

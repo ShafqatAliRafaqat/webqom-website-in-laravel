@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/admin_promotions.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Promo Codes:: Edit</title>
+<!-- InstanceEndEditable -->
+<!-- OCK front end icons css --> 
+<link type="text/css" rel="stylesheet" href="icons/font-awesome.min.css"> 
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="images/icons/favicon.ico" rel="shortcut icon">
+   
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPT+Gudea:400,700,400italic%7CPT+Oswald:400,700,300" rel="stylesheet" id="googlefont">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+ <!--Loading bootstrap css-->
+<link type="text/css" rel="stylesheet" href="vendors/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+<link type="text/css" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    
+<!--LOADING SCRIPTS FOR PAGE-->
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap-datepicker/css/datepicker.css">
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap-switch/css/bootstrap-switch.css">
+    
+    <!--Loading style vendors-->
+<link type="text/css" rel="stylesheet" href="vendors/animate.css/animate.css">
+<link type="text/css" rel="stylesheet" href="vendors/jquery-pace/pace.css">
+
+<!--Loading style-->
+<link type="text/css" rel="stylesheet" href="css/style.css">  
+<!--<link type="text/css" rel="stylesheet" href="css/style.css">-->
+<link type="text/css" rel="stylesheet" href="css/style-mango.css" id="theme-style">
+<link type="text/css" rel="stylesheet" href="css/vendors.css">
+<link type="text/css" rel="stylesheet" href="css/themes/grey.css" id="color-style">
+<link type="text/css" rel="stylesheet" href="css/style-responsive.css">
+
+<!-- webqom frontend style css -->
+<link type="text/css" rel="stylesheet" href="css/style_webqom_front.css">
+<link type="text/css" rel="stylesheet" href="css/reset.css">
+<link type="text/css" rel="stylesheet" href="css/responsive-leyouts_webqom_front.css">
+
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body>
+<div>
+<!--BEGIN TO TOP--><a id="totop" href="#"><i class="fa fa-angle-up"></i></a><!--END BACK TO TOP-->
+  <div id="wrapper"><!--BEGIN TOPBAR-->
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;" class="navbar navbar-default navbar-static-top">
+          <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a id="logo" href="http://www.webqom.com/web88.html" target="_blank" class="navbar-brand"><img src="images/logo_web88.png"></a>          </div>
+            
+            	<div class="topbar-main">
+                	<a id="logo" href="#" class="navbar-brand"><img src="images/logo.jpg"></a>
+                    <a id="menu-toggle" href="#" class="btn hidden-xs"><i class="fa fa-bars"></i></a>
+                    
+                <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control"/></div>
+                </form>
+                <ul class="nav navbar-top-links navbar-right">
+                	<li><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-fw"></i><span class="badge badge-blue">3</span></a></li>
+<li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><img src="images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>&nbsp;
+                        Support Webqom
+                        &nbsp;<span class="caret"></span></a>
+<ul class="dropdown-menu dropdown-user pull-right animated bounceInLeft">
+                            <li>
+                                <div class="navbar-content">
+                                    <div class="row">
+                                        <div class="col-md-5 col-xs-5"><img src="images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>
+
+                                            <p class="text-center mtm">
+                                            	<a href="#" data-target="#modal-change-avatar" data-toggle="modal" class="change-avatar">
+                                                <small>Change Avatar</small>                                                </a></p>
+                                      </div>
+                                        <div class="col-md-7 col-xs-5"><span>Support Webqom</span>
+
+                                            <p class="text-muted small">support@webqom.com</p>
+
+                                            <div class="divider"></div>
+                                            <!--<a href="#" class="btn btn-primary btn-sm">View Profile</a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navbar-footer">
+                                    <div class="navbar-footer-content">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm" data-target="#modal-change-password" data-toggle="modal">Change Password</a></div>
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm pull-right">Sign Out</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                      </ul>
+                  </li>
+                </ul>
+          </div>
+        </nav>
+        <!--Modal Change Avatar start-->
+                            <div id="modal-change-avatar" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                    <h4 id="modal-login-label2" class="modal-title">Change Avatar</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="form">
+                                      <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label">Upload Avatar Image </label>
+                                          <div class="col-md-8">
+                                            <div class="text-15px margin-top-10px"> 
+                                           	  <img src="images/profile/image_hock.jpg" alt="Avatar" class="img-responsive"><br/>
+                                                <input id="exampleInputFile1" type="file"/>
+                                              <br/>
+                                                <span class="help-block">(Image dimension: 100 x 100 pixels, JPEG/GIF/PNG only, Max. 2MB) </span> </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                          <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <!--END MODAL Change Avatar-->
+        <!--Modal Change Password start-->
+                <div id="modal-change-password" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                <h4 id="modal-login-label" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Change Password</h4></div>
+                            <div class="modal-body">
+                                <div class="form">
+                                    <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">Confirm New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="Confirm New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <div class="col-md-offset-4 col-md-8">
+                                               <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp;
+                                              <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a>                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!--END MODAL CHANGE PASSWORD-->
+        <!--END TOPBAR-->
+        
+        <!--BEGIN SIDEBAR MENU-->
+        <nav id="sidebar" role="navigation" class="navbar-default navbar-static-side">
+            <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    <li class="clock"><strong id="get-date"></strong>
+
+                        <div class="digital-clock">
+                            <div id="getHours" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getMinutes" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getSeconds" class="get-time"></div>
+                        </div>
+                    </li>
+                    <li><a href="dashboard.html"><i class="fa fa-laptop fa-fw"></i><span class="menu-title">Dashboard</span></a></li>
+                    <li class="sidebar-heading"><h4>Clients</h4></li>
+                    
+                    <li><a href="client_list.html"><i class="fa fa-user fa-fw"></i><span class="menu-title">Clients Listing</span></a></li>
+                    <li class="sidebar-heading"><h4>Billing</h4></li>
+                    
+                  <li><a href="billing_invoices_list.html"><i class="fa fa-list fa-fw"></i><span class="menu-title">Invoices Listing</span></a></li>
+                  <li><a href="billing_invoice_new.html"><i class="fa fa-plus fa-fw"></i><span class="menu-title">Add New Invoice</span></a></li>
+                  <li><a href="billing_receipts_list.html"><i class="fa fa-file fa-fw"></i><span class="menu-title">Receipts Listing</span></a></li>
+                  <li><a href="billing_quotes_list.html"><i class="fa fa-list-alt fa-fw"></i><span class="menu-title">Quotes Listing</span></a></li>
+                  <li><a href="billing_quote_new.html"><i class="fa fa-plus fa-fw"></i><span class="menu-title">Add New Quote</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Orders</h4></li>
+                    <li><a href="orders_list.html"><i class="fa fa-shopping-cart fa-fw"></i><span class="menu-title">Orders</span><span class="badge badge-blue">3</span></a></li>
+                    
+
+                    <li class="sidebar-heading"><h4>Services</h4></li>
+                    <li><a href="categories_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Categories</span></a> </li>
+					<li><a href="#"><i class="fa fa-globe fa-fw"></i><span class="menu-title">Domains</span><span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li><a href="single_domain_prices_list.html">Single Domain Pricing List</a></li>
+						  <li><a href="bulk_domain_prices_list.html">Bulk Domain Pricing List</a></li>
+                          <li><a href="domain_addons_prices_list.html">Domain Addons Pricing List</a></li>
+                      </ul>
+                  	</li>
+                    <li><a href="client_schedule_notification_list.html"><i class="fa fa-bullhorn fa-fw"></i><span class="menu-title">Client Schedule Notification</span></a></li>  
+
+                    
+                    <li class="sidebar-heading"><h4>Promotions</h4></li>
+                    <!-- InstanceBeginEditable name="EditRegion3" -->
+                    <li><a href="global_discounts_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Global Discounts</span></a> </li>
+					<li class="active"><a href="promo_codes_list.html"><i class="fa fa-qrcode fa-fw"></i><span class="menu-title">Promo Codes</span></a></li>
+                  	<li><a href="newsletter_subscription_list.html"><i class="fa fa-envelope fa-fw"></i><span class="menu-title">Newsletter Subscription</span></a> </li>
+                    <!-- InstanceEndEditable -->
+                    
+                    <li class="sidebar-heading"><h4>Support</h4></li>
+                    <li><a href="support_tickets_list.html"><i class="fa fa-wrench fa-fw"></i><span class="menu-title">Support Tickets/Service Enquiry/Ask For Quote Listing</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Banners</h4></li>
+                    <li><a href="index_banner_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Index Banners</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>CMS Pages</h4></li>
+                    <li><a href="blog_articles_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Blog</span></a></li>
+                    <li><a href="#"><i class="fa fa-globe fa-fw"></i><span class="menu-title">Domains</span><span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li><a href="domains_edit.html">Domains Main Page</a></li>
+						  <li><a href="single_domain_search_edit.html">Single Domain Search</a></li>
+                          <li><a href="bulk_domain_search_edit.html">Bulk Domain Search</a></li>
+                          <li><a href="single_domain_transfer_edit.html">Single Domain Transfer</a></li>
+                          <li><a href="bulk_domain_transfer_edit.html">Bulk Domain Transfer</a></li>
+                      </ul>
+                  	</li>
+                    <li class="sidebar-heading"><h4>Global Setup</h4></li>
+                    <li><a href="gst_rate_list.html"><i class="fa fa-dollar fa-fw"></i><span class="menu-title">GST Rate Setup</span></a></li>
+              </ul>
+          </div>
+    </nav>
+        <!--END SIDEBAR MENU--><!--BEGIN PAGE WRAPPER-->
+      <div id="page-wrapper"><!--BEGIN PAGE HEADER & BREADCRUMB-->
+        
+        <div class="page-header-breadcrumb">
+          <div class="page-heading hidden-xs">
+            <h1 class="page-title">Promotions</h1>
+          </div>
+          
+          <!-- InstanceBeginEditable name="EditRegion1" -->
+          <ol class="breadcrumb page-breadcrumb">
+            <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Dashboard</a>&nbsp; <i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li>Promotions &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li><a href="promo_codes_list.html">Promo Codes Listing</a> &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li class="active">Promo Codes - Edit</li>
+          </ol>
+          <!-- InstanceEndEditable --></div>
+        <!--END PAGE HEADER & BREADCRUMB--><!--BEGIN CONTENT-->
+        <!-- InstanceBeginEditable name="EditRegion2" -->
+        <div class="page-content">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Promo Codes <i class="fa fa-angle-right"></i> Edit</h2>
+              <div class="clearfix"></div>
+              <div class="alert alert-success alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-check-circle"></i> <strong>Success!</strong>
+                <p>The information has been saved/updated successfully.</p>
+              </div>
+              <div class="alert alert-danger alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-times-circle"></i> <strong>Error!</strong>
+                <p>The information has not been saved/updated. Please correct the errors.</p>
+              </div>
+              
+              <div class="pull-left"> Last updated: <span class="text-blue">15 Sept, 2014 @ 12.00PM</span> </div>
+              <div class="clearfix"></div>
+              <p></p>
+
+
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
+                <li><a href="#discounted-items" data-toggle="tab">Discounted Items</a></li>
+              </ul>
+              
+              <div id="myTabContent" class="tab-content">
+              	<div id="details" class="tab-pane fade in active">
+                      <div class="portlet">
+                        
+                        <div class="portlet-body">
+                          <div class="row">
+                          	<div class="col-md-12">
+                            	
+                                <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Status <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                  <div data-on="success" data-off="primary" class="make-switch">
+                                                    <input type="checkbox" checked="checked"/>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Campaign Name <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control" placeholder="Campaign Name" value="Webqom Online Voucher">
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Promo Code <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control" placeholder="Promo Code" value="Test123">
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                             <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Min. Subtotal (RM)</label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control" placeholder="0.00" value="1,500.00">
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Discount</label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control" placeholder="0.00" value="10">
+                                                    <div class="xs-margin"></div>
+                                                    <select class="form-control">
+                                                    	<option value="%" selected="selected">%</option>
+                                                        <option value="RM">RM</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                            	<label class="col-md-3 control-label">Start Date to End Date</label>
+                                                <div class="col-md-6">
+                                                    <div class="input-group input-daterange"><input type="text" name="start" class="form-control" value="2nd Apr 2015"/><span class="input-group-addon">to</span><input type="text" name="end" class="form-control" value="9th Apr 2015"/></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Times to Use</label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control" placeholder="0" value="1">
+                                                    <div class="xs-margin"></div>
+                                                    <div class="text-blue text-12px">(Times to Use defines the maximum number of orders allowed to use this coupon. For example, if this is set to 5, the 6th order using this coupon will not receive the discount.)</div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Global Discounts</label>
+                                                <div class="col-md-6">
+                                                    <select class="form-control">
+                                                    	<option value="">Ignore</option>
+                                                        <option value="" selected="selected">Apply Both</option>
+                                                    </select>
+ 													<div class="xs-margin"></div>
+                                                    <div class="text-blue text-12px">(If set to 'Ignore,' then Global Discounts will not apply to an order that uses this coupon. If set to 'Apply Both,' the coupon discount and Global Discounts will be calculated based on the Cart Subtotal independently of each other and then applied to Order Total.)</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Coupon Application Rule
+                                                <br><div class="text-12px">(If there are products not specified in Discounted Items List)</div>
+                                                </label>
+                                                <div class="col-md-6">
+                                                    <select class="form-control">
+                                                    	<option value="">Do not apply the coupon</option>
+                                                        <option value="">Apply the coupon but only to the products specified in the Discounted Items List</option>
+                                                    </select>
+ 													<div class="xs-margin"></div>
+                                                    <div class="text-blue text-12px">
+                                                    	<b>1. Apply the coupon only to the service plan from Discounted Items List: </b>When the service plan not specified in Discounted Items List are in the cart, the coupon discount applies only to the service plan from Discounted Items List.<br/><br/>
+                                                    	<b>2. Do not apply the coupon if the service plan not specified in Discounted Items List are in the cart: </b>If the service plan not specified in Discounted Items List are in the cart, the coupon will be disabled.
+                                                    </div>
+                                                </div>
+                                            </div>
+											
+                                            <div class="form-actions">
+                                              <div class="col-md-offset-5 col-md-7"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                              note to programmer: only click save button then can proceed to the 2nd tab: Discounted Items
+                                            </div>
+                                          </form>
+                                          
+                            </div>
+                            <!-- end col-md-12 -->
+                            
+   
+                          </div>
+                          <!-- end row -->
+                          <div class="md-margin"></div>    
+                            
+                       </div>
+                       <!-- end porlet-body -->
+                          
+                         
+                          
+                       <div class="clearfix"></div>
+                       
+                                
+                  </div>
+                  <!-- End porlet -->
+                  
+                  
+                </div>
+                <!-- end tab overview -->
+                
+                <div id="discounted-items" class="tab-pane fade">
+                	<div class="portlet">
+                        
+                        <div class="portlet-body">
+  
+                         	<div class="row">
+                            	<div class="col-md-12">
+                                	<div class="alert alert-warning">
+                                        <p><i class="fa fa-gift"></i> Promo Code: <strong>'Test123'</strong></p>
+                                        <i class="fa fa-ticket"></i> Campaign Name: <strong>Webqom Online Voucher</strong>
+                                    </div>
+                                    <form class="form-horizontal">
+                                    	<div class="form-group">
+                                            <label class="col-md-3 control-label">Apply to Service Plan</label>
+                                            <div class="col-md-6"> 
+                                              <select multiple="multiple" class="form-control" style="height: 400px;">
+                                                <option>---- Cloud Hosting ----</option>
+                                                <option selected="selected">S Cloud: SCL-1</option>
+                                                <option>M Cloud: MCL-1</option>
+                                                <option>L Cloud: LCL-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Co-location Hosting ----</option>
+                                                <option selected="selected">2U: CO2U-1</option>
+                                                <option>5U: CO5U-1</option>
+                                                <option>10U: CO10U-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Dedicated Server ----</option>
+                                                <option selected="selected">Enterprise 1: DS1x4-4-2x1TB</option>
+                                                <option>Enterprise 2: DS2x6-8-2x1TB</option>
+                                                <option>Enterprise 3: DS2x6-8-2x1TB</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Domains ----</option>
+                                                <option>Register a New Domain: DN </option>
+                                                <option>Renew a Domain: DN </option>
+                                                <option>Transfer in a Domain: DN </option>
+                                                <option>Bulk Registration: DN </option>
+                                                <option>Bulk Renewal: DN </option>
+                                                <option>Bulk Transfer: DN </option>
+                                                <option>===========================================================</option>
+                                                <option>---- E-commerce ----</option>
+                                                <option>200: EC-200-1</option>
+                                                <option>20,000: EC-20k-1</option>
+                                                <option>Unlimited: EC-U-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Email88 ----</option>
+                                                <option>Booster I: E88B1-10k-1</option>
+                                                <option>Booster II: E88B2-15k-1</option>
+                                                <option>Booster III: E88B3-20k-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Shared Hosting ----</option>
+                                                <option>Small: SHSM-1</option>
+                                                <option>Medium: SHME-1</option>
+                                                <option>Large: SHBI-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- SSL Certificates ----</option>
+                                                <option>Secure a Single Common Name: EV-DC1</option>
+                                                <option>Secure Multiple Domains: UC-DC1</option>
+                                                <option>SP-DC1: UC-DC1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- VPS Hosting ----</option>
+                                                <option>Linux Basic: VPS58-2-1</option>
+                                                <option>Linux Gold: VPS78-3-1</option>
+                                                <option>VPS28-1-1: VPS78-3-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Web88IR ----</option>
+                                                <option>Dynamic I: IRH1-1</option>
+                                                <option>Dynamic I: IRD2-1</option>
+                                                <option>Dynamic II: IRD2-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Responsive Web Design ----</option>
+                                                <option>Responsive Web Design</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Social Media ----</option>
+                                                <option>Social Media</option>
+                                                <option>===========================================================</option>
+                                                <option>List all services here</option>
+                                              </select>
+                                              note to programmer: this is the multiple selection. Admin can select multiple plans in different service categories.	 the list is dynamic and will be fetched from product setup. </div>
+                                          </div>
+                                            
+                                        <div class="form-actions">
+                                           <div class="col-md-offset-5 col-md-7"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                       </div>
+                                            
+                                    </form>
+                                    
+                                    
+                                	
+                                </div>
+                                <!-- end col-md-12 -->
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                            <!-- end row -->
+                          
+                          	<div class="clearfix"></div>
+                        </div>
+                        <!-- end portlet-body -->
+                      
+                      
+                      </div>
+                      <!-- end portlet -->
+                
+                </div>
+                <!-- end tab item details -->
+                
+                
+                
+                
+              </div>
+              <!-- end tab content -->
+                
+              
+            </div>
+            <!-- end col-lg-12 -->
+            
+            
+            
+            
+                    
+                    
+                   
+          </div>
+        </div>
+        <!-- InstanceEndEditable -->
+        <!--END CONTENT-->
+            
+            <!--BEGIN FOOTER-->
+  <div class="page-footer">
+                <div class="copyright"><span class="text-15px">2016 © <a href="http://www.webqom.com" target="_blank">Webqom Technologies Sdn Bhd.</a> Any queries, please contact <a href="mailto:support@webqom.com">Webqom Support</a>.</span>
+                	<div class="pull-right"><img src="images/logo_webqom.png" alt="Webqom Technologies Sdn Bhd"></div>
+                </div>
+        </div>
+    <!--END FOOTER--></div>
+  <!--END PAGE WRAPPER--></div>
+</div>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<!--loading bootstrap js-->
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="vendors/slimScroll/jquery.slimscroll.js"></script>
+<script src="vendors/jquery-cookie/jquery.cookie.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="vendors/jquery-pace/pace.min.js"></script>
+
+<!--LOADING SCRIPTS FOR PAGE-->
+<script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="vendors/moment/moment.js"></script>
+<script src="vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="vendors/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script src="vendors/bootstrap-clockface/js/clockface.js"></script>
+<script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="vendors/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="vendors/jquery-maskedinput/jquery-maskedinput.js"></script>
+<script src="js/form-components.js"></script>
+<!--LOADING SCRIPTS FOR PAGE-->
+
+
+<!-- InstanceBeginEditable name="EditRegion4" -->
+<script src="vendors/tinymce/js/tinymce/tinymce.min.js"></script>
+<script src="vendors/ckeditor/ckeditor.js"></script>
+<script src="js/ui-tabs-accordions-navs.js"></script>
+<!-- InstanceEndEditable -->
+
+
+
+
+<!--CORE JAVASCRIPT-->
+<script src="js/main.js"></script>
+<script src="js/holder.js"></script>
+</body>
+<!-- InstanceEnd --></html>

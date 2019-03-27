@@ -1,0 +1,249 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Models\DomainPricing;
+use App\Models\DomainPricingList;
+use Illuminate\Http\Request;
+use Excel;
+use Validator;
+
+class DomainPricingListController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request, $id)
+    {
+        $item = DomainPricing::findOrFail($id);
+        $recentUpdate = $this->getRecentUpdateTime($id);
+        $perPage = $request->get('per_page') ?: 100;
+        $type = $request->get('type') ?: 'new';
+        return view('admin.domain_pricing_list.show', compact('item', 'recentUpdate', 'perPage', 'type', 'items'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $data = $this->generateData($request);
+        $type = $request->type;
+        $id = $request->domain_pricing_id;
+        DomainPricingList::create($data);
+        return redirect("/admin/domain_pricing_list/$id?type=$type")->with('success', 'Information was saved successfully');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $item = DomainPricingList::find($id);
+        $data = $this->generateData($request);
+        $type = $request->type;
+        $id = $request->domain_pricing_id;
+        $item->update($data);
+        return redirect("/admin/domain_pricing_list/$id?type=$type")->with('success', 'Information was saved successfully');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $item = DomainPricingList::find($id);
+        $parentId = $item->domain_pricing_id;
+        $type = $item->type;
+        $item->delete();
+        return redirect("/admin/domain_pricing_list/$parentId?type=$type")->with('success', 'Item was deleted successfully');
+    }
+
+    public function destroyAll(Request $request)
+    {
+        $type = $request->type;
+        DomainPricingList::where('type', $type)->delete();
+        return redirect()->back()->with('success', 'All items were deleted successfully');
+    }
+
+    public function destroySelected(Request $request)
+    {
+        $ids = explode(',', $request->ids);
+        $item = DomainPricingList::find($ids[0]);
+        $parentId = $item->domain_pricing_id;
+        $type = $item->type;
+        DomainPricingList::destroy($ids);
+        return redirect("/admin/domain_pricing_list/$parentId?type=$type")->with('success', 'Selected items were deleted successfully');
+    }
+
+    private function generateData(Request $request)
+    {
+        $data = $request->all();
+        // Checkboxes fix
+        $data['status'] = isset($data['status']) ? '1' : '0';
+        $data['addons'] = isset($data['addons']) ? implode(';', $data['addons']) : '';
+        // Generate pricing
+        $data['pricing'] = [];
+        for ($i = 1; $i <= 10; $i++) {
+            $data['pricing'][$i]['s'] = (int) $data['sale_price'][$i];
+            $data['pricing'][$i]['l'] = (int) $data['list_price'][$i];
+        }
+        $data['pricing'] = json_encode($data['pricing']);
+        return $data;
+    }
+
+    public function importPricing(Request $request) {
+
+        $type = $request->type;
+        $id = $request->domain_pricing_id;
+        $country = $request->country;
+        $status = $request->status;
+
+        $data = array();
+
+        $sheet = [
+            'new' => 1,
+            'renewal' => 2,
+            'transfer' => 3,
+        ];
+
+        $fromRequest = [
+            'file'      => $request->price_list,
+            'extension' => strtolower($request->price_list->getClientOriginalExtension()),
+        ];
+
+        $rules = [
+            'file'          => 'required',
+            'extension'      => 'required|in:csv,xlsx,xls',
+        ];
+
+        $messages = [
+            'file.required' => 'File is required!',
+            'extension.in' => 'Extention must be in list: csv,xlsx,xls!',
+        ];
+
+        Validator::make($fromRequest, $rules, $messages)->validate();
+
+        if($request->hasFile('price_list')) {
+
+            $path = $request->file('price_list')->getRealPath();
+
+            Excel::selectSheetsByIndex($sheet[$type])->load($path, function($reader) use (&$data) {
+                $results = $reader->get();
+                foreach($results as $row)
+                {
+
+                    for ($i = 1; $i <= 10; $i++) {
+                        $data[$row->ext]['pricing'][$i]['s'] = number_format((float)$row[$i], 2);
+                        $data[$row->ext]['pricing'][$i]['l'] = number_format((float)$row[$i], 2);
+                    }
+                }
+            });
+
+            foreach ($data as $key => $domain) {
+                try {
+                    $domainPrice = DomainPricingList::where([['domain_pricing_id', '=', $id], ['tld', '=', $key], ['type', '=', $type]])->first();
+                    $domainPrice = $domainPrice ? $domainPrice : new DomainPricingList();
+                    $domainPrice->domain_pricing_id = $id;
+                    $domainPrice->type = $type;
+                    $domainPrice->status = $status == "on" ? 1 : 0;
+                    $domainPrice->country = $country;
+                    $domainPrice->tld = $key;
+                    $domainPrice->pricing = json_encode($domain['pricing']);
+                    $domainPrice->addons = 'DNS Managment;Email Forwarding;ID Protection';
+                    $domainPrice->epp_code = 1;
+                    $domainPrice->save();
+                } catch (\Exception $e) {
+                    //return redirect("/admin/domain_pricing_list/$id?type=$type")->with('danger', $e->getMessage());
+                    return $e->getMessage();
+                }
+
+            }
+            //return redirect("/admin/domain_pricing_list/$id?type=$type")->with('success', "Prices for $type was successfully updated!");
+
+            return "Prices for $type was successfully updated!";
+
+        }
+        //return redirect("/admin/domain_pricing_list/$id?type=$type")->with('danger', 'Please choose file!');
+        return 'Please choose file!';
+
+    }
+
+    public function markUp(Request $request) {
+
+        $rules = [
+            'mark_up' => 'required|integer',
+        ];
+
+        $messages = [
+            'mark_up.required' => 'Mark Up is required!',
+            'mark_up.integer' => 'Mark Up integer value is required!',
+        ];
+
+        Validator::make($request->all(), $rules)->validate();
+
+        $type = $request->type;
+        $id = $request->domain_pricing_id;
+        $country = $request->country;
+        $status = $request->status;
+        $markUp = $request->mark_up;
+        $query = array(
+            ['domain_pricing_id', '=', $id],
+            ['type', '=', $type],
+        );
+        $query[] = $status == 'on' ? ['status', '=', 1] : ['status', '=', 0];
+        if ($country) $query[] = ['country', '=', $country];
+
+        $domainsPrices = $domainPrice = DomainPricingList::where($query)->get();
+
+        foreach ($domainsPrices as $domainPrice) {
+            $prices = json_decode($domainPrice->pricing);
+            $newPrices = array();
+            foreach ($prices as $key => $price) {
+                $oldPrice = (array) $price;
+                $newPrices[$key]['s'] = $oldPrice['l'] + $oldPrice['l'] * ($markUp / 100);
+                $newPrices[$key]['l'] = $oldPrice['l'];
+
+            }
+            $domainPrice->pricing = json_encode($newPrices);
+            $domainPrice->save();
+
+        }
+        return redirect("/admin/domain_pricing_list/$id?type=$type")->with('success', "Prices for $type was successfully updated!");
+    }
+
+    private function getRecentUpdateTime($id)
+    {
+        $recent_date_timestamp = DomainPricingList::select('updated_at')
+            ->where('domain_pricing_id', $id)
+            ->orderBy('updated_at', 'desc')
+            ->first();
+        $recent_update = date('d M,Y') . ' @ ' . date('h:i a');
+        if ($recent_date_timestamp) {
+            $recent_update =
+            date('d M,Y', strtotime($recent_date_timestamp->updated_at)) .
+            ' @ ' .
+            date('h:i a', strtotime($recent_date_timestamp->updated_at));
+        }
+        return $recent_update;
+    }
+}

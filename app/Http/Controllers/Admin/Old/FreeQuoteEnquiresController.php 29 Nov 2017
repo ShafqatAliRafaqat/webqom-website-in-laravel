@@ -1,0 +1,101 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Models\FreequoteEnquiry;
+use Illuminate\Http\Request;
+use Response;
+use Session;
+use Maatwebsite\Excel\Facades\Excel;
+
+/**
+ *
+ */
+class FreeQuoteEnquiresController extends Controller
+{
+
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
+    public function index($per_page = 10)
+    {
+        $enquiry = FreequoteEnquiry::orderBy('id', 'desc')->paginate($per_page);
+        return view("admin.enquiry.list", compact('enquiry', 'per_page'));
+    }
+
+    public function deleteEnquires($id)
+    {
+        $enquiry = FreequoteEnquiry::destroy($id);
+        return redirect()->back()->with([
+            'flash_message' => 'Enquiry has been deleted successfully.',
+        ]);
+    }
+
+    public function getEnquiryDetails(Request $request)
+    {
+        $id = $request->id;
+        if ($id != null) {
+            if (is_array($id)) {
+                $enquiry = FreequoteEnquiry::whereIn('id', $id)->get();
+                return response($enquiry);
+            }
+        }
+    }
+
+    public function deleteEnquiryByID(Request $request)
+    {
+        $id = $request->id;
+        if ($id != null) {
+            if (is_array($id)) {
+                $enquiry = FreequoteEnquiry::destroy('id', $id);
+                Session::flash('flash_message', 'Deleted successfully');
+                return response($enquiry);
+            }
+        }
+    }
+
+    public function deleteEnquiryAll(Request $request)
+    {
+
+        $aEnquiry = FreequoteEnquiry::pluck('id')->toArray();
+        FreequoteEnquiry::destroy($aEnquiry);
+        Session::flash('flash_message', 'Deleted successfully');
+        return response();
+    }
+
+    public function exportEnquiry(Request $request ,$type)
+    {
+
+        $reviews = FreequoteEnquiry::get()->toArray();
+        return Excel::create('Enqueries', function($excel) use ($reviews) {
+            $excel->sheet('mySheet', function($sheet) use ($reviews)
+            {
+                $sheet->fromArray($reviews);
+            });
+        })->download($type);
+    }
+
+    public function edit($id)
+    {
+        $enquiry = FreequoteEnquiry::find($id);
+        return view("admin.enquiry.edit", ['enquiry' => $enquiry]);
+    }
+
+    public function update($id, Request $request)
+    {
+        $enquiry = FreequoteEnquiry::find($id);
+        $enquiry->service = $request->input('service');
+        $enquiry->name = $request->input('name');
+        $enquiry->email = $request->input('email');
+        $enquiry->company = $request->input('company');
+        $enquiry->phone = $request->input('phone');
+        $enquiry->website = $request->input('website');
+        $enquiry->message = $request->input('message');
+        $enquiry->save();
+
+        return redirect()->route("enquires-list")->with('status', 'Enquires updated!');
+    }
+}

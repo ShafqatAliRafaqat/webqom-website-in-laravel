@@ -1,0 +1,504 @@
+@php
+    $sub_page = 'single_domain';
+    $countries = App\Models\Country::all();
+    $breadcrumbs = [
+        ['url' => false, 'name' => 'Services'],
+        ['url' => false, 'name' => 'Domains'],
+        ['url' => '/admin/domain_pricing', 'name' => 'Single Domain Pricing Listing'],
+        ['url' => 'javascript:void', 'name' => "$item->title Pricing - Add New"],
+    ];
+    $page = 'domains';
+@endphp
+
+@extends('layouts.admin_layout')
+@section('title','Admin | Single Domain Pricing - Listing')
+@section('content')
+@section('page_header','Services')
+<style>
+    .strike {
+        text-decoration: line-through;
+    }
+</style>
+<!-- InstanceBeginEditable name="EditRegion2" -->
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+<div class="page-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>{{ $item->title }} Pricing <i class="fa fa-angle-right"></i> Add New</h2>
+            <div class="clearfix"></div>
+            @include('admin.partials.messages')
+            <div class="pull-left"> Last updated: <span class="text-blue">{{ $recentUpdate }}</span></div>
+            <div class="clearfix"></div>
+
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="{{ $type === 'new' ? 'active' : '' }}">
+                    <a href="#new" data-toggle="tab">New Registrations</a>
+                </li>
+                <li class="{{ $type === 'renewal' ? 'active' : '' }}">
+                    <a href="#renewal" data-toggle="tab">Renewals</a>
+                </li>
+                <li class="{{ $type === 'transfer' ? 'active' : '' }}">
+                    <a href="#transfer" data-toggle="tab">Transfers</a>
+                </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+                @include('admin.domain_pricing_list.inc.tab', ['type'=>'new'])
+                @include('admin.domain_pricing_list.inc.tab', ['type'=>'renewal'])
+                @include('admin.domain_pricing_list.inc.tab', ['type'=>'transfer'])
+            </div><!-- end all tabs -->
+            <div class="clearfix"></div>
+        </div><!-- end col-lg-12 -->
+    </div><!-- end row -->
+</div>
+<input type="hidden" name="_url" value="{{url('').'/resources/assets/admin/'}}">
+@include('admin.domain_pricing_list.modals.delete', ['type' => $type])
+@include('admin.domain_pricing_list.modals.delete_selected')
+<!-- InstanceEndEditable -->
+<!--END CONTENT-->
+@endsection
+@section('custom_scripts')
+    <link type="text/css" rel="stylesheet"
+          href="{{url('').'/resources/assets/admin/'}}vendors/bootstrap-switch/css/bootstrap-switch.css">
+
+    <script src="{{url('').'/resources/assets/admin/'}}vendors/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <link type="text/css" rel="stylesheet"
+          href="{{url('').'/resources/assets/admin/'}}vendors/bootstrap-datepicker/css/datepicker.css">
+    <script src="{{url('').'/resources/assets/admin/'}}vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <script type="text/javascript">
+        page_url = base_url + '/admin/domain_pricing/';
+
+        $('#add_new_frm').submit(function (event) {
+            $('.red_error').html('');
+            $('#msg_error').hide();
+            event.preventDefault();
+            $.ajax({
+                url: page_url + 'new',
+                type: 'POST',
+                data: $("#add_new_frm").serialize(),
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (response) {
+                    $('#title').html(response.responseJSON.title);
+                }
+            });
+        });
+        $('#delete_client').submit(function (event) {
+            event.preventDefault();
+        });
+
+        $(document).on('click', '#delete_bulk', function (event) {
+            var selected = $('input[name="id[]"]:checked').length;
+
+            event.preventDefault();
+            if (selected < 1) {
+                $('#delete-selected-body').prepend('<p class="alert alert-danger">Please select items</p>');
+            } else {
+
+                $('#delete_bulk').attr("disabled", true);
+                $.ajax({
+                    url: page_url + 'delete',
+                    type: 'POST',
+
+                    data: $("#delete_client").serialize(),
+                })
+                    .done(function () {
+                        location.reload();
+                    })
+                    .fail(function () {
+                        $('#modal-delete-selected').modal('hide');
+                        alert("Error: no client was selected to delete");
+                    })
+                    .always(function () {
+                        $('#delete_bulk').attr("disabled", false);
+                    });
+            }
+
+        });
+
+        function delete_single(id) {
+            $('#delete_single_button').attr("disabled", true);
+            $.ajax({
+                url: page_url + 'delete',
+                type: 'POST',
+
+                data: {'_token': csrf_token, 'id': id}
+            })
+                .done(function () {
+                    location.reload();
+                })
+                .fail(function () {
+                    alert("some error");
+                })
+                .always(function () {
+                    // console.log("complete");
+                });
+        }
+
+        $("#created_date").datepicker();
+
+        function open_modal_delete_selected() {
+            $('#delete-selected-body-information').html("");
+            $("#modal-delete-selected").modal('show');
+            var selected = $('input[name="id[]"]:checked').length;
+            if (selected < 1) {
+                $('#selected_zero').show()
+                $('#delete-selected-buttons').hide()
+            } else {
+                /*get seleccted users details*/
+                $.ajax({
+                    url: page_url + 'get_details',
+                    type: 'POST',
+                    data: $("#delete_client").serialize()
+                })
+                    .done(function (response) {
+                        // console.log(response);
+                        for (var i = 0; i < response.length; i++) {
+                            $('#delete-selected-body-information').prepend('<p>' +
+                                '<strong>#' + response[i].id + '</strong>:<span>' + response[i].title + '</span>' +
+                                '</p>');
+                        }
+                    })
+                    .fail(function () {
+                        // console.log("error");
+                    })
+                    .always(function () {
+                        $('#selected_zero').hide()
+                        $('#delete-selected-buttons').show();
+                        $('#count-seleted').html(selected);
+                    });
+
+                /*End*/
+
+            }
+        }
+
+        function delete_all() {
+            $.ajax({
+                url: base_url + '/clients/delete_all',
+                type: 'POST',
+                data: {'_token': csrf_token},
+            })
+                .done(function () {
+                    location.reload();
+                })
+                .fail(function () {
+                    // console.log("error");
+                })
+                .always(function () {
+                    // console.log("complete");
+                });
+
+        }
+
+        function per_page_change() {
+            per_page = $("#per_page_select").find(":selected").val();
+            window.location.href = page_url + per_page;
+        }
+
+        function add_new_modal() {
+            /*$("#modal-add-client").modal('show');*/
+            $('#modal-add-form').modal({
+                backdrop: 'static',
+                keyboard: false
+            })
+        }
+
+        function edit_plan_feature(id) {
+            $('.red_error').html("");
+            var status = 0;
+            if ($('#edit_pf_status_' + id).is(":checked")) {
+                status = 1;
+            }
+            var title = $('#edit_pf_title_' + id).val();
+            $.ajax({
+                url: page_url + 'update',
+                type: 'POST',
+                data: {'id': id, 'status': status, 'title': title, '_token': csrf_token},
+            })
+                .done(function () {
+                    location.reload();
+                })
+                .fail(function (response) {
+                    $("#pf_error_title" + id).html(response.responseJSON.title);
+                })
+                .always(function () {
+                    // console.log("complete");
+                });
+        }
+    </script>
+    <script>
+        $('#pages').on('change', function () {
+            var perPage = $(this).val();
+            var url = '{{ route('domain_pricing_list.show', $item->id) }}?type={{$type}}&per_page=' + perPage;
+            window.location = url;
+        });
+        $('[data-target="#modal-delete-pricing"]').click(function () {
+            var id = $(this).attr('data-id');
+            var tld = $(this).attr('data-tld');
+            $('#delete-single-id').html(id);
+            $('#delete-single-tld').html(tld);
+            var action = '{{ url('') }}/admin/domain_pricing_list/';
+            $('#delete-single-form').attr('action', action + id);
+        });
+
+        $('[data-target="#modal-delete-selected"]').click(function () {
+            var items = $('.select-items:checked');
+            var ids = '';
+            var content = '';
+            items.each(function () {
+                ids += $(this).attr('data-id') + ',';
+            });
+            items.each(function () {
+                content += '<p><strong>#' + $(this).attr('data-id') + ':</strong> ' + $(this).attr('data-tld') + '</p>';
+            });
+            ids = ids.slice(0, -1);
+            $('#delete-selected-ids').val(ids);
+            $('#delete-selected-content').html(content);
+        });
+        $('[data-target="#modal-edit-price"]').click(function () {
+            var modal = $('#modal-edit-price');
+            var i = $.parseJSON($(this).attr('data'));
+            if (!i.status) {
+                modal.children('[name="status"]').prop('checked', false);
+            }
+            modal.children('[name="tld"]').val(i.tld);
+        });
+        // Checkbox toggler
+        $('[data-toggler]').change(function () {
+            var selector = $(this).attr('data-toggle');
+            $(selector).prop('checked', $(this).prop('checked'));
+        });
+
+        $('[data-toggler]').each(function () {
+            var selector = $(this).attr('data-toggle');
+            var parent = $(this);
+            $(selector).change(function () {
+                var checked = $(selector + ':checked').length;
+                var all = $(selector).length;
+                if (all === checked && !parent.prop('checked')) {
+                    parent.prop('checked', true);
+                }
+                if (!checked && parent.prop('checked')) {
+                    parent.prop('checked', false);
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+        /***********************************************/
+        /************ Jquery Bootstrap Switch *********/
+        .has-switch {
+            border-color: #e5e5e5;
+        }
+
+        .has-switch span.switch-left {
+            text-shadow: none;
+            background-color: #ed5565;
+            background-image: none;
+            border: 1px solid #e5e5e5;
+        }
+
+        .has-switch label {
+            border-left: 1px solid #e5e5e5;
+            border-right: 1px solid #e5e5e5;
+            text-shadow: none;
+            background-image: none;
+            border-color: #e5e5e5;
+        }
+
+        .has-switch span.switch-right {
+            text-shadow: none;
+            background-color: #f0f0f0;
+            background-image: none;
+            border-color: #e5e5e5;
+            color: #999999;
+        }
+
+        .has-switch span.switch-primary:hover,
+        .has-switch span.switch-left:hover,
+        .has-switch span.switch-primary:focus,
+        .has-switch span.switch-left:focus,
+        .has-switch span.switch-primary:active,
+        .has-switch span.switch-left:active,
+        .has-switch span.switch-primary.active,
+        .has-switch span.switch-left.active,
+        .has-switch span.switch-primary.disabled,
+        .has-switch span.switch-left.disabled,
+        .has-switch span.switch-primary[disabled],
+        .has-switch span.switch-left[disabled] {
+            background-color: #ed5565;
+        }
+
+        .has-switch span.switch-info:hover,
+        .has-switch span.switch-info:focus,
+        .has-switch span.switch-info:active,
+        .has-switch span.switch-info.active,
+        .has-switch span.switch-info.disabled,
+        .has-switch span.switch-info[disabled] {
+            background: #5bc0de;
+        }
+
+        /************ Jquery Bootstrap Switch *********/
+        /*********************************************/
+        .datepicker table tr td.active:hover, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active:active, .datepicker table tr td.active:hover:active, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.active, .datepicker table tr td.active:hover.active, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active[disabled], .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active.disabled:hover[disabled] {
+            background-color: #b8312f;
+        }
+    </style>
+    <script src="{{url('').'/resources/assets/admin/'}}js/jquery.blockUI.js"></script>
+    <script>
+        window.app_url = $('input[name="_url"]').val();
+        var __ajax = function (url, data, type, settings) {
+            switch (type) {
+                case 'PUT':
+                    data._method = 'PUT';
+                    break;
+                case 'DELETE':
+                    data._method = 'DELETE';
+                    break;
+            }
+
+            var fd = new FormData($('.ajax-form')[0]);
+            var $dfd = $.ajax({
+                url: url,
+                data: fd,
+                type: 'post',
+                async: true,
+                cache: false,
+                contentType: false,
+                enctype: 'multipart/form-data',
+                processData: false,
+                error: function (response) {
+                    $.unblockUI();
+                    var response = response.responseJSON;
+                    $('.alert.alert-success').hide();
+                    $('.alert.alert-danger').show();
+                    $('.alert.alert-danger').find('.message').text(response['extension']);
+                },
+                beforeSend: function () {
+                    $('.cancel-button').trigger('click');
+                    $.blockUI({
+                        message: '<h2><img style=";width: 65px;height:auto" src="' + app_url + 'images/loaderimage.gif" /></h2>',
+                        baseZ: 2000,
+                        css: {
+                            top: '50%',
+                            background: 'none',
+                            border: 'none',
+                            zIndex: '2000',
+                        }
+                    });
+                },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                    'Content-Type': undefined
+                },
+            });
+
+            $dfd.fail(function (data) {
+
+                if (data.status == 401) {
+                    setTimeout(function () {
+                        window.location.href = "/login";
+                    }, 0);
+                }
+            });
+
+            $dfd.done(function (data) {
+                // $.unblockUI();
+
+            });
+            return $dfd;
+        };
+
+        $.fn.serializeObject = function () {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function () {
+                if (o[this.name] !== undefined) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
+        };
+
+        function __api($form, $ajax_data) {
+            var $api_object = $('input,select,textarea', $form).serializeObject();
+            if ((typeof $ajax_data == "object") && ($ajax_data !== null)) {
+                $api_object = $.extend($ajax_data, $api_object);
+            }
+            return $api_object;
+        }
+
+        $(document).on('submit', 'form.ajax-form', {}, function (e) {
+            e.preventDefault();
+            var $ajax_data = e.data;
+
+            var $form = $(this);
+            var $data = __api($form, $ajax_data);
+            var $_method = $('input[name=_method]', $form).val();
+            var $_token = $('input[name=_token]', $form).val();
+
+            if ($_method) {
+                $data._method = $_method;
+            } else $data._method = 'POST';
+
+            if ($_token) {
+                $data._token = $_token;
+            } else $data._token = '';
+
+            var $BeforeAjaxDone = $form.data('ajax-before');
+            if ($BeforeAjaxDone) {
+                $return_before = window[$BeforeAjaxDone]($form);
+                if ($return_before == false) {
+                    return false;
+                }
+            }
+
+            var $ajax = __ajax($form.attr('action'), $data);
+
+            var $response = {};
+
+            $ajax.done(function (data) {
+
+                $.unblockUI();
+                // notify(data.status, data.msg);
+                $response = data;
+
+                $('.cancel-button').trigger('click');
+
+
+                if ($response.status == 'success') {
+                    $('.alert.alert-success').show();
+                    $('.alert.alert-success').find('.message').text($response.message);
+                }
+
+                if ($response.status == 'error') {
+                    $('.alert.alert-danger').show();
+                    $('.alert.alert-danger').find('.message').text($response.message);
+                }
+                var $whenAjaxDone = $form.data('ajax-done');
+                if ($whenAjaxDone) {
+                    window[$whenAjaxDone]($response, $form);
+                }
+
+                // if ($response.redirect_url) {
+                // setTimeout(function () {
+                //     window.location.reload();
+                // }, 1000);
+                // }
+                return $response;
+            });
+            return $response;
+        });
+
+
+    </script>
+@endsection

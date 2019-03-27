@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/admin_billing.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Quote:: Add New</title>
+<!-- InstanceEndEditable -->
+<!-- OCK front end icons css --> 
+<link type="text/css" rel="stylesheet" href="icons/font-awesome.min.css"> 
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="images/icons/favicon.ico" rel="shortcut icon">
+   
+    <!-- Google fonts - witch you want to use - (rest you can just remove) -->
+   	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+    
+ <!--Loading bootstrap css-->
+<link type="text/css" rel="stylesheet" href="vendors/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+<link type="text/css" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    
+<!--LOADING SCRIPTS FOR PAGE-->
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap-datepicker/css/datepicker.css">
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap-switch/css/bootstrap-switch.css">
+    
+    <!--Loading style vendors-->
+<link type="text/css" rel="stylesheet" href="vendors/animate.css/animate.css">
+<link type="text/css" rel="stylesheet" href="vendors/jquery-pace/pace.css">
+
+<!--Loading style-->
+<link type="text/css" rel="stylesheet" href="css/style.css">  
+<!--<link type="text/css" rel="stylesheet" href="css/style.css">-->
+<link type="text/css" rel="stylesheet" href="css/style-mango.css" id="theme-style">
+<link type="text/css" rel="stylesheet" href="css/vendors.css">
+<link type="text/css" rel="stylesheet" href="css/themes/grey.css" id="color-style">
+<link type="text/css" rel="stylesheet" href="css/style-responsive.css">
+
+<!-- webqom frontend style css -->
+<link type="text/css" rel="stylesheet" href="css/style_webqom_front.css">
+<link type="text/css" rel="stylesheet" href="css/reset.css">
+<link type="text/css" rel="stylesheet" href="css/responsive-leyouts_webqom_front.css">
+
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body>
+<div>
+<!--BEGIN TO TOP--><a id="totop" href="#"><i class="fa fa-angle-up"></i></a><!--END BACK TO TOP-->
+  <div id="wrapper"><!--BEGIN TOPBAR-->
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;" class="navbar navbar-default navbar-static-top">
+          <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a id="logo" href="http://www.webqom.com/web88.html" target="_blank" class="navbar-brand"><img src="images/logo_web88.png"></a>          </div>
+            
+            	<div class="topbar-main">
+                	<a id="logo" href="#" class="navbar-brand"><img src="images/logo.jpg"></a>
+                    <a id="menu-toggle" href="#" class="btn hidden-xs"><i class="fa fa-bars"></i></a>
+                    
+                <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control"/></div>
+                </form>
+                <ul class="nav navbar-top-links navbar-right">
+                	<li><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-fw"></i><span class="badge badge-blue">3</span></a></li>
+                    <li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><img src="images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>&nbsp;
+                        Support Webqom
+                        &nbsp;<span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-user pull-right animated bounceInLeft">
+                            <li>
+                                <div class="navbar-content">
+                                    <div class="row">
+                                        <div class="col-md-5 col-xs-5"><img src="images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>
+
+                                            <p class="text-center mtm">
+                                            	<a href="#" data-target="#modal-change-avatar" data-toggle="modal" class="change-avatar">
+                                                <small>Change Avatar</small>                                                </a></p>
+                                      </div>
+                                        <div class="col-md-7 col-xs-5"><span>Support Webqom</span>
+
+                                            <p class="text-muted small">support@webqom.com</p>
+
+                                            <div class="divider"></div>
+                                            <!--<a href="#" class="btn btn-primary btn-sm">View Profile</a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navbar-footer">
+                                    <div class="navbar-footer-content">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm" data-target="#modal-change-password" data-toggle="modal">Change Password</a></div>
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm pull-right">Sign Out</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                      </ul>
+                  </li>
+                </ul>
+          </div>
+        </nav>
+        <!--Modal Change Avatar start-->
+                            <div id="modal-change-avatar" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                    <h4 id="modal-login-label2" class="modal-title">Change Avatar</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="form">
+                                      <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label">Upload Avatar Image </label>
+                                          <div class="col-md-8">
+                                            <div class="text-15px margin-top-10px"> 
+                                           	  <img src="images/profile/image_hock.jpg" alt="Avatar" class="img-responsive"><br/>
+                                                <input id="exampleInputFile1" type="file"/>
+                                              <br/>
+                                                <span class="help-block">(Image dimension: 100 x 100 pixels, JPEG/GIF/PNG only, Max. 2MB) </span> </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                          <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <!--END MODAL Change Avatar-->
+        <!--Modal Change Password start-->
+                <div id="modal-change-password" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                <h4 id="modal-login-label" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Change Password</h4></div>
+                            <div class="modal-body">
+                                <div class="form">
+                                    <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">Confirm New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="Confirm New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <div class="col-md-offset-4 col-md-8">
+                                               <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp;
+                                              <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a>                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!--END MODAL CHANGE PASSWORD-->
+        <!--END TOPBAR-->
+        
+        <!--BEGIN SIDEBAR MENU-->
+        <nav id="sidebar" role="navigation" class="navbar-default navbar-static-side">
+            <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    <li class="clock"><strong id="get-date"></strong>
+
+                        <div class="digital-clock">
+                            <div id="getHours" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getMinutes" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getSeconds" class="get-time"></div>
+                        </div>
+                    </li>
+                    <li><a href="dashboard.html"><i class="fa fa-laptop fa-fw"></i><span class="menu-title">Dashboard</span></a></li>
+                    <li class="sidebar-heading"><h4>Clients</h4></li>
+                    
+                    <li><a href="client_list.html"><i class="fa fa-user fa-fw"></i><span class="menu-title">Clients Listing</span></a></li>
+                    <li class="sidebar-heading"><h4>Billing</h4></li>
+                    <!-- InstanceBeginEditable name="EditRegion3" -->
+                    <li><a href="billing_invoices_list.html"><i class="fa fa-list fa-fw"></i><span class="menu-title">Invoices Listing</span></a></li>
+                    <li><a href="billing_invoice_new.html"><i class="fa fa-plus fa-fw"></i><span class="menu-title">Add New Invoice</span></a></li>
+                    <li><a href="billing_receipts_list.html"><i class="fa fa-file fa-fw"></i><span class="menu-title">Receipts Listing</span></a></li>
+                    <li><a href="billing_quotes_list.html"><i class="fa fa-list-alt fa-fw"></i><span class="menu-title">Quotes Listing</span></a></li>
+                    <li class="active"><a href="billing_quote_new.html"><i class="fa fa-plus fa-fw"></i><span class="menu-title">Add New Quote</span></a></li>
+                    <!-- InstanceEndEditable -->
+                    
+                    <li class="sidebar-heading"><h4>Orders</h4></li>
+                    <li><a href="orders_list.html"><i class="fa fa-shopping-cart fa-fw"></i><span class="menu-title">Orders</span><span class="badge badge-blue">3</span></a></li>
+                    
+
+                    <li class="sidebar-heading"><h4>Services</h4></li>
+                    <li><a href="categories_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Categories</span></a> </li>
+					<li><a href="#"><i class="fa fa-globe fa-fw"></i><span class="menu-title">Domains</span><span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li><a href="single_domain_prices_list.html">Single Domain Pricing List</a></li>
+						  <li><a href="bulk_domain_prices_list.html">Bulk Domain Pricing List</a></li>
+                          <li><a href="domain_addons_prices_list.html">Domain Addons Pricing List</a></li>
+                      </ul>
+                  	</li> 
+                    <li><a href="client_schedule_notification_list.html"><i class="fa fa-bullhorn fa-fw"></i><span class="menu-title">Client Schedule Notification</span></a></li> 
+                    
+                    <li class="sidebar-heading"><h4>Promotions</h4></li>
+                    <li><a href="global_discounts_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Global Discounts</span></a> </li>
+					<li><a href="promo_codes_list.html"><i class="fa fa-qrcode fa-fw"></i><span class="menu-title">Promo Codes</span></a></li>
+                  	<li><a href="newsletter_subscription_list.html"><i class="fa fa-envelope fa-fw"></i><span class="menu-title">Newsletter Subscription</span></a> </li>
+                    
+                    <li class="sidebar-heading"><h4>Support</h4></li>
+                    <li><a href="support_tickets_list.html"><i class="fa fa-wrench fa-fw"></i><span class="menu-title">Support Tickets/Service Enquiry/Ask For Quote Listing</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Banners</h4></li>
+                    <li><a href="index_banner_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Index Banners</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>CMS Pages</h4></li>
+                    <li><a href="blog_articles_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Blog</span></a></li>
+                    <li><a href="#"><i class="fa fa-globe fa-fw"></i><span class="menu-title">Domains</span><span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li><a href="domains_edit.html">Domains Main Page</a></li>
+						  <li><a href="single_domain_search_edit.html">Single Domain Search</a></li>
+                          <li><a href="bulk_domain_search_edit.html">Bulk Domain Search</a></li>
+                          <li><a href="single_domain_transfer_edit.html">Single Domain Transfer</a></li>
+                          <li><a href="bulk_domain_transfer_edit.html">Bulk Domain Transfer</a></li>
+                      </ul>
+                  	</li>
+                    <li class="sidebar-heading"><h4>Global Setup</h4></li>
+                    <li><a href="gst_rate_list.html"><i class="fa fa-dollar fa-fw"></i><span class="menu-title">GST Rate Setup</span></a></li>
+              </ul>
+          </div>
+    </nav>
+        <!--END SIDEBAR MENU--><!--BEGIN PAGE WRAPPER-->
+      <div id="page-wrapper"><!--BEGIN PAGE HEADER & BREADCRUMB-->
+        
+        <div class="page-header-breadcrumb">
+          <div class="page-heading hidden-xs">
+            <h1 class="page-title">Billing</h1>
+          </div>
+          
+          <!-- InstanceBeginEditable name="EditRegion1" -->
+          <ol class="breadcrumb page-breadcrumb">
+            <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Dashboard</a>&nbsp; <i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li>Billing &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li><a href="billing_quotes_list.html">Quotes Listing</a> &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li class="active">Quote - Add New</li>
+          </ol>
+          <!-- InstanceEndEditable --></div>
+        <!--END PAGE HEADER & BREADCRUMB--><!--BEGIN CONTENT-->
+        <!-- InstanceBeginEditable name="EditRegion2" -->
+        <div class="page-content">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Quote <i class="fa fa-angle-right"></i> Add New</h2>
+              <div class="clearfix"></div>
+              <div class="alert alert-success alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-check-circle"></i> <strong>Success!</strong>
+                <p>The information has been saved/updated successfully.</p>
+              </div>
+              <div class="alert alert-danger alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-times-circle"></i> <strong>Error!</strong>
+                <p>The information has not been saved/updated. Please correct the errors.</p>
+              </div>
+              
+              <div class="pull-left"> Last updated: <span class="text-blue">15 Sept, 2014 @ 12.00PM</span> </div>
+              <div class="pull-right">
+              	<a href="#" class="btn btn-danger">Print &nbsp;<i class="fa fa-print"></i></a>&nbsp;
+                <a href="#" class="btn btn-danger">Download PDF &nbsp;<i class="fa fa-cloud-download"></i></a>&nbsp;
+                <a href="#" data-target="#modal-add-email" data-toggle="modal" class="btn btn-danger">Email as PDF &nbsp;<i class="fa fa-envelope"></i></a>&nbsp;
+                <a href="#" data-target="#modal-convert-invoice" data-toggle="modal" class="btn btn-danger">Convert to Invoice &nbsp;<i class="fa fa-pencil"></i></a>&nbsp;
+              </div>
+              <!--Modal email as pdf start-->
+                  <div id="modal-add-email" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                    <div class="modal-dialog modal-wide-width">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                          <h4 id="modal-login-label2" class="modal-title">Email as PDF</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="form">
+                            <form class="form-horizontal">
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Status</label>
+                                <div class="col-md-6">
+                                  <div data-on="success" data-off="primary" class="make-switch">
+                                    <input type="checkbox" checked="checked"/>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Default Email <span class="text-red">*</span></label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control" value="hock@webqom.com"/>  
+                                  </div>
+                                  note to programmer: default email will be auto displayed here.
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Email 2</label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control"/>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Email 3</label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control"/>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Email 4</label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control"/>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Email 5 </label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control"/>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Email 6</label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control"/>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Email 7</label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control"/>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Email 8</label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control"/>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Email 9</label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control"/>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Email 10</label>
+                                <div class="col-md-6">
+                                  <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                      <input type="text" placeholder="Email Address" class="form-control"/>
+                                  </div>
+                                </div>
+                              </div>
+                              note to programmer: once user clicks "send", there shall be a progress bar to show the emails being sent. Once completed, it shall show "Success" notification otherwise "Error" notification.
+                              <div class="form-actions">
+                                <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Send &nbsp;<i class="fa fa-send-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--END MODAL email as pdf-->
+                   <!--Modal convert to invoice start-->
+                  <div id="modal-convert-invoice" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                          <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to convert to invoice? </h4>
+                        </div>
+                        <div class="modal-body">
+                        note to programmer: if the selection is "yes", it will show a progress bar that it is converting. Once the conversion is success, shows the "Success" notification and link it to that invoice.
+                          <div class="form-actions">
+                            <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- modal convert to invoice end -->
+              
+              
+              <div class="clearfix"></div>
+              <p></p>
+              <div class="clearfix"></div>
+
+
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#client-info" data-toggle="tab">Client Information</a></li>
+                <li><a href="#invoice-items" data-toggle="tab">Quote Items</a></li>
+              </ul>
+              
+              <div id="myTabContent" class="tab-content">
+              	<div id="client-info" class="tab-pane fade in active">
+                	<div class="invoice-title"><h2>Quote</h2>
+						<h3 class="pull-right">Quote #: MY-8014111</h3>
+                    </div>
+                	note to programmer: if new quote is created, pls auto-generate a new quote # according to the last # sequence.	
+                	<div class="portlet">
+                        <div class="portlet-header">
+                          <div class="caption">General</div>
+                          <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+          
+                        </div><!-- end porlet header -->
+                        
+                        <div class="portlet-body">
+                          <div class="row">
+                          
+                          	<form class="form-horizontal">
+                            
+                                <div class="col-md-6">
+                                
+                                      <div class="form-group">
+                                        <label class="col-md-4 control-label">Client ID: </label>
+                                        <div class="col-md-8">
+                                           <p class="form-control-static"><a href="client_edit.html">Auto Fill in based on the client info below</a></p>
+                                        </div>
+                                        client ID and/or client name shall be the mandatory field for the below search/filter.
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="col-md-4 control-label">Client Name: </label>
+                                        <div class="col-md-8">
+                                          <p class="form-control-static"><a href="client_edit.html">Auto fill in based on the client info below</a> (<a href="#">View all invoices of this client</a>)</p>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="form-group">
+                                        <label class="col-md-4 control-label">Date Created: </label>
+                                        <div class="col-md-8">
+                                               <div class="input-group">
+                                                <input type="text" data-date-format="dd/mm/yyyy" placeholder="dd/mm/yyyy" class="datepicker-default form-control" value="16th Apr 2015"/>
+                                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                              </div>
+                                              note to programmer: default date will be the date of new quote created.
+                                            </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="col-md-4 control-label">Valid Until: </label>
+                                        <div class="col-md-8">
+                                               <div class="input-group">
+                                                <input type="text" data-date-format="dd/mm/yyyy" placeholder="dd/mm/yyyy" class="datepicker-default form-control" />
+                                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                              </div>
+                                            </div>
+                                            note to programmer: "valid until" date shall be auto-calculated by itself which by default is "14 days from date created". The user can change the date later if the user wishes to.
+                                      </div>
+                                      <div class="form-group">
+                                        <h5 class="col-md-4 control-label text-red"><b>Total:</b></h5>
+                                        <div class="col-md-8">
+                                            <h5 class="form-control-static text-red"><b>RM 0.00</b></h5>
+                                        </div>
+                                      </div>
+                                    </div><!-- end col-md 6 -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label">Status: </label>
+                                            <div class="col-md-6">
+                                            	<div class="btn-group">
+                                                    <button type="button" class="btn btn-default">Draft</button>
+                                                    <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                                                    <ul role="menu" class="dropdown-menu">
+                                                      <li><a href="#">Accepted</a></li>
+                                                      <li><a href="#">Expired</a></li>
+                                                      <li><a href="#">Delivered</a></li>
+                                                    </ul>  
+                                                  </div>
+                                                
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-success">Accepted</button>
+                                                    <button type="button" data-toggle="dropdown" class="btn btn-success dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                                                    <ul role="menu" class="dropdown-menu">
+                                                      <li><a href="#">Draft</a></li>
+                                                      <li><a href="#">Expired</a></li>
+                                                      <li><a href="#">Delivered</a></li>
+                                                    </ul>  
+                                                  </div>
+                                                  <div class="btn-group">
+                                                    <button type="button" class="btn btn-danger">Expired</button>
+                                                    <button type="button" data-toggle="dropdown" class="btn btn-danger dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                                                    <ul role="menu" class="dropdown-menu">
+                                                      <li><a href="#">Draft</a></li>
+                                                      <li><a href="#">Accepted</a></li>
+                                                      <li><a href="#">Delivered</a></li>
+                                                    </ul>  
+                                                  </div>
+                                                  <div class="btn-group">
+                                                    <button type="button" class="btn btn-info">Delivered</button>
+                                                    <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                                                    <ul role="menu" class="dropdown-menu">
+                                                      <li><a href="#">Draft</a></li>
+                                                      <li><a href="#">Accepted</a></li>
+                                                      <li><a href="#">Expired</a></li>
+                                                    </ul>  
+                                                  </div>
+                                            </div>
+                                            note to programmer: the "status" will auto-change to "Expired" from status "Draft" when the "valid until" date is exceeded. When the status is  "Accepted" or "Delivered" before the "valid until" date, these status shall remain the same and not change to "Expired" when the "valid until" date is exceeded.  
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-4 control-label">Subject: </label>
+                                            <div class="col-md-8">
+                                               <input type="text" class="form-control">
+                                            </div>
+                                          </div>
+                                          
+                                    	</div>
+                                    </form>
+                             
+                          </div><!-- end row -->
+                        </div><!-- end porlet-body -->
+                     </div><!-- end portlet -->
+                    
+                      <div class="portlet">
+                        
+                        <div class="portlet-header">
+                          <div class="caption">Client Information</div>
+                          <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+          
+                        </div><!-- end porlet header -->
+                           
+                        <div class="portlet-body">
+                          <div class="row">
+                          	<div class="col-md-12">
+                            	
+                                <form class="form-horizontal">
+                                 	<div class="form-group">
+                                    	
+                                        <label class="col-md-3 control-label">The Quote is For <span class="text-red">*</span></label>
+										<div class="col-md-6">
+                                            <div class="radio-list">
+                                            	<label><input id="optionsRadios1" type="radio" name="optionsRadios" value="option1" checked="checked"/>&nbsp; Existing Client</label>
+                                                <div class="clearfix"></div>
+                                                <label>Filter Exisiting Client By</label>
+                                                <select class="form-control">
+                                                	<option>- Please select -</option>
+                                                    <option selected="selected">Business Account</option>
+                                                    <option>Individual Account</option>
+                                                    <option>All</option>
+                                                </select>
+                                                <div class="clearfix xs-margin"></div>
+                                                <select class="form-control">
+                                                	<option>B-000001-MY: Hock Lim (Webqom Technologies Sdn Bhd)</option>
+                                                    <option>I-000001-MY: Danny Chan</option>
+                                                </select>
+                                                <div class="clearfix xs-margin"></div>
+                                                <label><input id="optionsRadios2" type="radio" name="optionsRadios" value="option2"/>&nbsp; New Client</label>
+                                               
+                                             </div>
+                                        </div>
+                                   </div>                    
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">First Name <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Last Name <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Company <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Email Address <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Phone <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control" placeholder="eg. (03) 2630-5562">
+                                                </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Mobile Phone <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control" placeholder="eg. 016-123-1234">
+                                                </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Address <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control">
+                                                </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Address 2</label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control">
+                                                </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">City <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control">
+                                                </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">State <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control">
+                                                </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Postal Code <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<input type="text" class="form-control">
+                                                </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <label for="inputFirstName" class="col-md-3 control-label">Country <span class="text-red">*</span></label>
+                                                <div class="col-md-6">
+                                                	<select class="form-control">
+                                                        <option>-- Please select --</option>
+                                                        <option data-calling-code="93" data-eu-tax="unknown" value="AF">Afghanistan</option>
+                                                        <option data-calling-code="358" data-eu-tax="unknown" value="AX">Åland Islands</option>
+                                                        <option data-calling-code="355" data-eu-tax="unknown" value="AL">Albania</option>
+                                                        <option data-calling-code="213" data-eu-tax="unknown" value="DZ">Algeria</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="AS">American Samoa</option>
+                                                        <option data-calling-code="376" data-eu-tax="unknown" value="AD">Andorra</option>
+                                                        <option data-calling-code="244" data-eu-tax="unknown" value="AO">Angola</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="AI">Anguilla</option>
+                                                        <option data-calling-code="672" data-eu-tax="unknown" value="AQ">Antarctica</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="AG">Antigua and Barbuda</option>
+                                                        <option data-calling-code="54" data-eu-tax="unknown" value="AR">Argentina</option>
+                                                        <option data-calling-code="374" data-eu-tax="unknown" value="AM">Armenia</option>
+                                                        <option data-calling-code="297" data-eu-tax="unknown" value="AW">Aruba</option>
+                                                        <option data-calling-code="61" data-eu-tax="unknown" value="AU">Australia</option>
+                                                        <option data-calling-code="43" data-eu-tax="yes" value="AT">Austria</option>
+                                                        <option data-calling-code="994" data-eu-tax="unknown" value="AZ">Azerbaijan</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="BS">Bahamas</option>
+                                                        <option data-calling-code="973" data-eu-tax="unknown" value="BH">Bahrain</option>
+                                                        <option data-calling-code="880" data-eu-tax="unknown" value="BD">Bangladesh</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="BB">Barbados</option>
+                                                        <option data-calling-code="375" data-eu-tax="unknown" value="BY">Belarus</option>
+                                                        <option data-calling-code="32" data-eu-tax="yes" value="BE">Belgium</option>
+                                                        <option data-calling-code="501" data-eu-tax="unknown" value="BZ">Belize</option>
+                                                        <option data-calling-code="229" data-eu-tax="unknown" value="BJ">Benin</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="BM">Bermuda</option>
+                                                        <option data-calling-code="975" data-eu-tax="unknown" value="BT">Bhutan</option>
+                                                        <option data-calling-code="591" data-eu-tax="unknown" value="BO">Bolivia, Plurinational State of</option>
+                                                        <option data-calling-code="387" data-eu-tax="unknown" value="BA">Bosnia and Herzegovina</option>
+                                                        <option data-calling-code="267" data-eu-tax="unknown" value="BW">Botswana</option>
+                                                        <option data-calling-code="55" data-eu-tax="unknown" value="BR">Brazil</option>
+                                                        <option data-calling-code="246" data-eu-tax="unknown" value="IO">British Indian Ocean Territory</option>
+                                                        <option data-calling-code="673" data-eu-tax="unknown" value="BN">Brunei Darussalam</option>
+                                                        <option data-calling-code="359" data-eu-tax="yes" value="BG">Bulgaria</option>
+                                                        <option data-calling-code="226" data-eu-tax="unknown" value="BF">Burkina Faso</option>
+                                                        <option data-calling-code="257" data-eu-tax="unknown" value="BI">Burundi</option>
+                                                        <option data-calling-code="855" data-eu-tax="unknown" value="KH">Cambodia</option>
+                                                        <option data-calling-code="237" data-eu-tax="unknown" value="CM">Cameroon</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="CA">Canada</option>
+                                                        <option data-calling-code="238" data-eu-tax="unknown" value="CV">Cape Verde</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="KY">Cayman Islands</option>
+                                                        <option data-calling-code="236" data-eu-tax="unknown" value="CF">Central African Republic</option>
+                                                        <option data-calling-code="235" data-eu-tax="unknown" value="TD">Chad</option>
+                                                        <option data-calling-code="56" data-eu-tax="unknown" value="CL">Chile</option>
+                                                        <option data-calling-code="86" data-eu-tax="unknown" value="CN">China</option>
+                                                        <option data-calling-code="61" data-eu-tax="unknown" value="CX">Christmas Island</option>
+                                                        <option data-calling-code="61" data-eu-tax="unknown" value="CC">Cocos (Keeling) Islands</option>
+                                                        <option data-calling-code="57" data-eu-tax="unknown" value="CO">Colombia</option>
+                                                        <option data-calling-code="269" data-eu-tax="unknown" value="KM">Comoros</option>
+                                                        <option data-calling-code="242" data-eu-tax="unknown" value="CG">Congo</option>
+                                                        <option data-calling-code="243" data-eu-tax="unknown" value="CD">Congo, the Democratic Republic of the</option>
+                                                        <option data-calling-code="682" data-eu-tax="unknown" value="CK">Cook Islands</option>
+                                                        <option data-calling-code="506" data-eu-tax="unknown" value="CR">Costa Rica</option>
+                                                        <option data-calling-code="225" data-eu-tax="unknown" value="CI">Côte d'Ivoire</option>
+                                                        <option data-calling-code="385" data-eu-tax="yes" value="HR">Croatia</option>
+                                                        <option data-calling-code="53" data-eu-tax="unknown" value="CU">Cuba</option>
+                                                        <option data-calling-code="357" data-eu-tax="yes" value="CY">Cyprus</option>
+                                                        <option data-calling-code="420" data-eu-tax="yes" value="CZ">Czech Republic</option>
+                                                        <option data-calling-code="45" data-eu-tax="yes" value="DK">Denmark</option>
+                                                        <option data-calling-code="253" data-eu-tax="unknown" value="DJ">Djibouti</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="DM">Dominica</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="DO">Dominican Republic</option>
+                                                        <option data-calling-code="593" data-eu-tax="unknown" value="EC">Ecuador</option>
+                                                        <option data-calling-code="20" data-eu-tax="unknown" value="EG">Egypt</option>
+                                                        <option data-calling-code="503" data-eu-tax="unknown" value="SV">El Salvador</option>
+                                                        <option data-calling-code="240" data-eu-tax="unknown" value="GQ">Equatorial Guinea</option>
+                                                        <option data-calling-code="291" data-eu-tax="unknown" value="ER">Eritrea</option>
+                                                        <option data-calling-code="372" data-eu-tax="yes" value="EE">Estonia</option>
+                                                        <option data-calling-code="251" data-eu-tax="unknown" value="ET">Ethiopia</option>
+                                                        <option data-calling-code="500" data-eu-tax="unknown" value="FK">Falkland Islands (Malvinas)</option>
+                                                        <option data-calling-code="298" data-eu-tax="unknown" value="FO">Faroe Islands</option>
+                                                        <option data-calling-code="679" data-eu-tax="unknown" value="FJ">Fiji</option>
+                                                        <option data-calling-code="358" data-eu-tax="yes" value="FI">Finland</option>
+                                                        <option data-calling-code="33" data-eu-tax="yes" value="FR">France</option>
+                                                        <option data-calling-code="594" data-eu-tax="unknown" value="GF">French Guiana</option>
+                                                        <option data-calling-code="689" data-eu-tax="unknown" value="PF">French Polynesia</option>
+                                                        <option data-calling-code="262" data-eu-tax="unknown" value="TF">French Southern Territories</option>
+                                                        <option data-calling-code="241" data-eu-tax="unknown" value="GA">Gabon</option>
+                                                        <option data-calling-code="220" data-eu-tax="unknown" value="GM">Gambia</option>
+                                                        <option data-calling-code="995" data-eu-tax="unknown" value="GE">Georgia</option>
+                                                        <option data-calling-code="49" data-eu-tax="yes" value="DE">Germany</option>
+                                                        <option data-calling-code="233" data-eu-tax="unknown" value="GH">Ghana</option>
+                                                        <option data-calling-code="350" data-eu-tax="unknown" value="GI">Gibraltar</option>
+                                                        <option data-calling-code="30" data-eu-tax="yes" value="GR">Greece</option>
+                                                        <option data-calling-code="299" data-eu-tax="unknown" value="GL">Greenland</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="GD">Grenada</option>
+                                                        <option data-calling-code="590" data-eu-tax="unknown" value="GP">Guadeloupe</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="GU">Guam</option>
+                                                        <option data-calling-code="502" data-eu-tax="unknown" value="GT">Guatemala</option>
+                                                        <option data-calling-code="44" data-eu-tax="unknown" value="GG">Guernsey</option>
+                                                        <option data-calling-code="224" data-eu-tax="unknown" value="GN">Guinea</option>
+                                                        <option data-calling-code="245" data-eu-tax="unknown" value="GW">Guinea-Bissau</option>
+                                                        <option data-calling-code="592" data-eu-tax="unknown" value="GY">Guyana</option>
+                                                        <option data-calling-code="509" data-eu-tax="unknown" value="HT">Haiti</option>
+                                                        <option data-calling-code="3906" data-eu-tax="unknown" value="VA">Holy See (Vatican City State)</option>
+                                                        <option data-calling-code="504" data-eu-tax="unknown" value="HN">Honduras</option>
+                                                        <option data-calling-code="852" data-eu-tax="unknown" value="HK">Hong Kong</option>
+                                                        <option data-calling-code="36" data-eu-tax="yes" value="HU">Hungary</option>
+                                                        <option data-calling-code="354" data-eu-tax="unknown" value="IS">Iceland</option>
+                                                        <option data-calling-code="91" data-eu-tax="unknown" value="IN">India</option>
+                                                        <option data-calling-code="62" data-eu-tax="unknown" value="ID">Indonesia</option>
+                                                        <option data-calling-code="98" data-eu-tax="unknown" value="IR">Iran, Islamic Republic of</option>
+                                                        <option data-calling-code="964" data-eu-tax="unknown" value="IQ">Iraq</option>
+                                                        <option data-calling-code="353" data-eu-tax="yes" value="IE">Ireland</option>
+                                                        <option data-calling-code="44" data-eu-tax="yes" value="IM">Isle of Man</option>
+                                                        <option data-calling-code="972" data-eu-tax="unknown" value="IL">Israel</option>
+                                                        <option data-calling-code="39" data-eu-tax="yes" value="IT">Italy</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="JM">Jamaica</option>
+                                                        <option data-calling-code="81" data-eu-tax="unknown" value="JP">Japan</option>
+                                                        <option data-calling-code="44" data-eu-tax="unknown" value="JE">Jersey</option>
+                                                        <option data-calling-code="962" data-eu-tax="unknown" value="JO">Jordan</option>
+                                                        <option data-calling-code="7" data-eu-tax="unknown" value="KZ">Kazakhstan</option>
+                                                        <option data-calling-code="254" data-eu-tax="unknown" value="KE">Kenya</option>
+                                                        <option data-calling-code="686" data-eu-tax="unknown" value="KI">Kiribati</option>
+                                                        <option data-calling-code="850" data-eu-tax="unknown" value="KP">Korea, Democratic People's Republic of</option>
+                                                        <option data-calling-code="82" data-eu-tax="unknown" value="KR">Korea, Republic of</option>
+                                                        <option data-calling-code="965" data-eu-tax="unknown" value="KW">Kuwait</option>
+                                                        <option data-calling-code="996" data-eu-tax="unknown" value="KG">Kyrgyzstan</option>
+                                                        <option data-calling-code="856" data-eu-tax="unknown" value="LA">Lao People's Democratic Republic</option>
+                                                        <option data-calling-code="371" data-eu-tax="yes" value="LV">Latvia</option>
+                                                        <option data-calling-code="961" data-eu-tax="unknown" value="LB">Lebanon</option>
+                                                        <option data-calling-code="266" data-eu-tax="unknown" value="LS">Lesotho</option>
+                                                        <option data-calling-code="231" data-eu-tax="unknown" value="LR">Liberia</option>
+                                                        <option data-calling-code="218" data-eu-tax="unknown" value="LY">Libyan Arab Jamahiriya</option>
+                                                        <option data-calling-code="423" data-eu-tax="unknown" value="LI">Liechtenstein</option>
+                                                        <option data-calling-code="370" data-eu-tax="yes" value="LT">Lithuania</option>
+                                                        <option data-calling-code="352" data-eu-tax="yes" value="LU">Luxembourg</option>
+                                                        <option data-calling-code="853" data-eu-tax="unknown" value="MO">Macao</option>
+                                                        <option data-calling-code="389" data-eu-tax="unknown" value="MK">Macedonia, the former Yugoslav Republic of</option>
+                                                        <option data-calling-code="261" data-eu-tax="unknown" value="MG">Madagascar</option>
+                                                        <option data-calling-code="265" data-eu-tax="unknown" value="MW">Malawi</option>
+                                                        <option data-calling-code="60" data-eu-tax="unknown" value="MY" selected="selected">Malaysia</option>
+                                                        <option data-calling-code="960" data-eu-tax="unknown" value="MV">Maldives</option>
+                                                        <option data-calling-code="223" data-eu-tax="unknown" value="ML">Mali</option>
+                                                        <option data-calling-code="356" data-eu-tax="yes" value="MT">Malta</option>
+                                                        <option data-calling-code="692" data-eu-tax="unknown" value="MH">Marshall Islands</option>
+                                                        <option data-calling-code="596" data-eu-tax="unknown" value="MQ">Martinique</option>
+                                                        <option data-calling-code="222" data-eu-tax="unknown" value="MR">Mauritania</option>
+                                                        <option data-calling-code="230" data-eu-tax="unknown" value="MU">Mauritius</option>
+                                                        <option data-calling-code="262" data-eu-tax="unknown" value="YT">Mayotte</option>
+                                                        <option data-calling-code="52" data-eu-tax="unknown" value="MX">Mexico</option>
+                                                        <option data-calling-code="691" data-eu-tax="unknown" value="FM">Micronesia, Federated States of</option>
+                                                        <option data-calling-code="373" data-eu-tax="unknown" value="MD">Moldova, Republic of</option>
+                                                        <option data-calling-code="377" data-eu-tax="yes" value="MC">Monaco</option>
+                                                        <option data-calling-code="976" data-eu-tax="unknown" value="MN">Mongolia</option>
+                                                        <option data-calling-code="382" data-eu-tax="unknown" value="ME">Montenegro</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="MS">Montserrat</option>
+                                                        <option data-calling-code="212" data-eu-tax="unknown" value="MA">Morocco</option>
+                                                        <option data-calling-code="258" data-eu-tax="unknown" value="MZ">Mozambique</option>
+                                                        <option data-calling-code="94" data-eu-tax="unknown" value="MM">Myanmar</option>
+                                                        <option data-calling-code="264" data-eu-tax="unknown" value="NA">Namibia</option>
+                                                        <option data-calling-code="674" data-eu-tax="unknown" value="NR">Nauru</option>
+                                                        <option data-calling-code="977" data-eu-tax="unknown" value="NP">Nepal</option>
+                                                        <option data-calling-code="31" data-eu-tax="yes" value="NL">Netherlands</option>
+                                                        <option data-calling-code="599" data-eu-tax="unknown" value="AN">Netherlands Antilles</option>
+                                                        <option data-calling-code="687" data-eu-tax="unknown" value="NC">New Caledonia</option>
+                                                        <option data-calling-code="64" data-eu-tax="unknown" value="NZ">New Zealand</option>
+                                                        <option data-calling-code="505" data-eu-tax="unknown" value="NI">Nicaragua</option>
+                                                        <option data-calling-code="227" data-eu-tax="unknown" value="NE">Niger</option>
+                                                        <option data-calling-code="234" data-eu-tax="unknown" value="NG">Nigeria</option>
+                                                        <option data-calling-code="683" data-eu-tax="unknown" value="NU">Niue</option>
+                                                        <option data-calling-code="672" data-eu-tax="unknown" value="NF">Norfolk Island</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="MP">Northern Mariana Islands</option>
+                                                        <option data-calling-code="47" data-eu-tax="unknown" value="NO">Norway</option>
+                                                        <option data-calling-code="968" data-eu-tax="unknown" value="OM">Oman</option>
+                                                        <option data-calling-code="92" data-eu-tax="unknown" value="PK">Pakistan</option>
+                                                        <option data-calling-code="680" data-eu-tax="unknown" value="PW">Palau</option>
+                                                        <option data-calling-code="970" data-eu-tax="unknown" value="PS">Palestinian Territory, Occupied</option>
+                                                        <option data-calling-code="507" data-eu-tax="unknown" value="PA">Panama</option>
+                                                        <option data-calling-code="675" data-eu-tax="unknown" value="PG">Papua New Guinea</option>
+                                                        <option data-calling-code="595" data-eu-tax="unknown" value="PY">Paraguay</option>
+                                                        <option data-calling-code="51" data-eu-tax="unknown" value="PE">Peru</option>
+                                                        <option data-calling-code="63" data-eu-tax="unknown" value="PH">Philippines</option>
+                                                        <option data-calling-code="649" data-eu-tax="unknown" value="PN">Pitcairn</option>
+                                                        <option data-calling-code="48" data-eu-tax="yes" value="PL">Poland</option>
+                                                        <option data-calling-code="351" data-eu-tax="yes" value="PT">Portugal</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="PR">Puerto Rico</option>
+                                                        <option data-calling-code="974" data-eu-tax="unknown" value="QA">Qatar</option>
+                                                        <option data-calling-code="262" data-eu-tax="unknown" value="RE">Réunion</option>
+                                                        <option data-calling-code="40" data-eu-tax="yes" value="RO">Romania</option>
+                                                        <option data-calling-code="7" data-eu-tax="unknown" value="RU">Russian Federation</option>
+                                                        <option data-calling-code="250" data-eu-tax="unknown" value="RW">Rwanda</option>
+                                                        <option data-calling-code="590" data-eu-tax="unknown" value="BL">Saint Barthélemy</option>
+                                                        <option data-calling-code="290" data-eu-tax="unknown" value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="KN">Saint Kitts and Nevis</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="LC">Saint Lucia</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="MF">Saint Martin (French part)</option>
+                                                        <option data-calling-code="508" data-eu-tax="unknown" value="PM">Saint Pierre and Miquelon</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="VC">Saint Vincent and the Grenadines</option>
+                                                        <option data-calling-code="685" data-eu-tax="unknown" value="WS">Samoa</option>
+                                                        <option data-calling-code="378" data-eu-tax="unknown" value="SM">San Marino</option>
+                                                        <option data-calling-code="239" data-eu-tax="unknown" value="ST">Sao Tome and Principe</option>
+                                                        <option data-calling-code="966" data-eu-tax="unknown" value="SA">Saudi Arabia</option>
+                                                        <option data-calling-code="221" data-eu-tax="unknown" value="SN">Senegal</option>
+                                                        <option data-calling-code="382" data-eu-tax="unknown" value="RS">Serbia</option>
+                                                        <option data-calling-code="248" data-eu-tax="unknown" value="SC">Seychelles</option>
+                                                        <option data-calling-code="232" data-eu-tax="unknown" value="SL">Sierra Leone</option>
+                                                        <option data-calling-code="65" data-eu-tax="unknown" value="SG">Singapore</option>
+                                                        <option data-calling-code="421" data-eu-tax="yes" value="SK">Slovakia</option>
+                                                        <option data-calling-code="386" data-eu-tax="yes" value="SI">Slovenia</option>
+                                                        <option data-calling-code="677" data-eu-tax="unknown" value="SB">Solomon Islands</option>
+                                                        <option data-calling-code="252" data-eu-tax="unknown" value="SO">Somalia</option>
+                                                        <option data-calling-code="27" data-eu-tax="unknown" value="ZA">South Africa</option>
+                                                        <option data-calling-code="34" data-eu-tax="yes" value="ES">Spain</option>
+                                                        <option data-calling-code="94" data-eu-tax="unknown" value="LK">Sri Lanka</option>
+                                                        <option data-calling-code="249" data-eu-tax="unknown" value="SD">Sudan</option>
+                                                        <option data-calling-code="597" data-eu-tax="unknown" value="SR">Suriname</option>
+                                                        <option data-calling-code="" data-eu-tax="unknown" value="SJ">Svalbard and Jan Mayen</option>
+                                                        <option data-calling-code="268" data-eu-tax="unknown" value="SZ">Swaziland</option>
+                                                        <option data-calling-code="46" data-eu-tax="yes" value="SE">Sweden</option>
+                                                        <option data-calling-code="41" data-eu-tax="unknown" value="CH">Switzerland</option>
+                                                        <option data-calling-code="963" data-eu-tax="unknown" value="SY">Syrian Arab Republic</option>
+                                                        <option data-calling-code="886" data-eu-tax="unknown" value="TW">Taiwan</option>
+                                                        <option data-calling-code="992" data-eu-tax="unknown" value="TJ">Tajikistan</option>
+                                                        <option data-calling-code="255" data-eu-tax="unknown" value="TZ">Tanzania, United Republic of</option>
+                                                        <option data-calling-code="66" data-eu-tax="unknown" value="TH">Thailand</option>
+                                                        <option data-calling-code="670" data-eu-tax="unknown" value="TL">Timor-Leste</option>
+                                                        <option data-calling-code="228" data-eu-tax="unknown" value="TG">Togo</option>
+                                                        <option data-calling-code="690" data-eu-tax="unknown" value="TK">Tokelau</option>
+                                                        <option data-calling-code="676" data-eu-tax="unknown" value="TO">Tonga</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="TT">Trinidad and Tobago</option>
+                                                        <option data-calling-code="216" data-eu-tax="unknown" value="TN">Tunisia</option>
+                                                        <option data-calling-code="90" data-eu-tax="unknown" value="TR">Turkey</option>
+                                                        <option data-calling-code="993" data-eu-tax="unknown" value="TM">Turkmenistan</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="TC">Turks and Caicos Islands</option>
+                                                        <option data-calling-code="688" data-eu-tax="unknown" value="TV">Tuvalu</option>
+                                                        <option data-calling-code="256" data-eu-tax="unknown" value="UG">Uganda</option>
+                                                        <option data-calling-code="380" data-eu-tax="unknown" value="UA">Ukraine</option>
+                                                        <option data-calling-code="971" data-eu-tax="unknown" value="AE">United Arab Emirates</option>
+                                                        <option data-calling-code="44" data-eu-tax="yes" value="GB">United Kingdom</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="US">United States</option>
+                                                        <option data-calling-code="598" data-eu-tax="unknown" value="UY">Uruguay</option>
+                                                        <option data-calling-code="998" data-eu-tax="unknown" value="UZ">Uzbekistan</option>
+                                                        <option data-calling-code="678" data-eu-tax="unknown" value="VU">Vanuatu</option>
+                                                        <option data-calling-code="58" data-eu-tax="unknown" value="VE">Venezuela, Bolivarian Republic of</option>
+                                                        <option data-calling-code="84" data-eu-tax="unknown" value="VN">Viet Nam</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="VG">Virgin Islands, British</option>
+                                                        <option data-calling-code="1" data-eu-tax="unknown" value="VI">Virgin Islands, U.S.</option>
+                                                        <option data-calling-code="681" data-eu-tax="unknown" value="WF">Wallis and Futuna</option>
+                                                        <option data-calling-code="" data-eu-tax="unknown" value="EH">Western Sahara</option>
+                                                        <option data-calling-code="967" data-eu-tax="unknown" value="YE">Yemen</option>
+                                                        <option data-calling-code="260" data-eu-tax="unknown" value="ZM">Zambia</option>
+                                                        <option data-calling-code="263" data-eu-tax="unknown" value="ZW">Zimbabwe</option>
+                                                 </select>
+                                                </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+  
+                                            
+                                          </form>
+
+                                  
+                            </div>
+                            <!-- end col-md-12 -->
+                            
+                          </div>
+                          <!-- end row -->
+                          <div class="md-margin"></div>    
+                            
+                       </div><!-- end porlet-body -->   
+                       <div class="clearfix"></div>
+                       
+                       
+                       <div class="form-actions">
+                       		<div class="col-md-offset-5 col-md-7"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                       </div>
+                                
+                  </div><!-- End porlet -->
+                  
+                  
+                </div><!-- end tab client info -->
+                
+                <div id="invoice-items" class="tab-pane fade">
+                	<div class="portlet">
+                        
+                        <div class="portlet-header">
+                          <div class="caption">Quote Items</div>
+                  		  <p class="margin-top-10px"></p>
+                          <a href="#" data-target="#modal-add-item" data-toggle="modal" class="btn btn-success">Add New Item &nbsp;<i class="fa fa-plus"></i></a>&nbsp;
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-primary">Delete</button>
+                                    <button type="button" data-toggle="dropdown" class="btn btn-red dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                                    <ul role="menu" class="dropdown-menu">
+                                      <li><a href="#" data-target="#modal-delete-selected" data-toggle="modal">Delete selected item(s)</a></li>
+                                      <li class="divider"></li>
+                                      <li><a href="#" data-target="#modal-delete-all" data-toggle="modal">Delete all</a></li>
+                                    </ul>
+                                  </div> 
+                                  <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                                  <div class="clearfix"></div>
+                                  
+                                <!--Modal add new item start-->
+                              <div id="modal-add-item" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                <div class="modal-dialog modal-wide-width">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                      <h4 id="modal-login-label3" class="modal-title">Add New Item</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5 class="block-heading">Services</h5>
+                                        
+                                        <form class="form-horizontal">
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Service Plan / Service Code <span class="text-red">*</span></label>
+                                            <div class="col-md-6">
+                                              <select class="form-control">
+                                              	<option>- Please select -</option>
+                                                <option>Custom Plan/Package</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Cloud Hosting ----</option>
+                                                <option>S Cloud: SCL-1</option>
+                                                <option>M Cloud: MCL-1</option>
+                                                <option>L Cloud: LCL-1</option>
+                                                <option>===========================================================</option>
+                                              	<option>---- Co-location Hosting ----</option>
+                                                <option>2U: CO2U-1</option>
+                                                <option>5U: CO5U-1</option>
+                                                <option>10U: CO10U-1</option>
+                                                <option>===========================================================</option>
+												<option>---- Dedicated Server ----</option>
+                                                <option>Enterprise 1: DS1x4-4-2x1TB</option>
+                                                <option>Enterprise 2: DS2x6-8-2x1TB</option>
+                                                <option>Enterprise 3: DS2x6-8-2x1TB</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Domains ----</option>
+                                                <option>Register a New Domain: DN </option>
+                                                <option>Renew a Domain: DN </option>
+                                                <option>Transfer in a Domain: DN </option>
+                                                <option>Bulk Registration: DN </option>
+                                                <option>Bulk Renewal: DN </option>
+                                                <option>Bulk Transfer: DN </option>
+                                                <option>===========================================================</option>
+                                                <option>---- E-commerce ----</option>
+                                                <option>200: EC-200-1</option>
+                                                <option>20,000: EC-20k-1</option>
+                                                <option>Unlimited: EC-U-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Email88 ----</option>
+                                                <option>Booster I: E88B1-10k-1</option>
+                                                <option>Booster II: E88B2-15k-1</option>
+                                                <option>Booster III: E88B3-20k-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Shared Hosting ----</option>
+                                                <option>Small: SHSM-1</option>
+                                                <option>Medium: SHME-1</option>
+                                                <option>Large: SHBI-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- SSL Certificates ----</option>
+                                                <option>Secure a Single Common Name: EV-DC1</option>
+                                                <option>Secure Multiple Domains: UC-DC1</option>
+                                                <option>SP-DC1: UC-DC1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- VPS Hosting ----</option>
+                                                <option>Linux Basic: VPS58-2-1</option>
+                                                <option>Linux Gold: VPS78-3-1</option>
+                                                <option>VPS28-1-1: VPS78-3-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Web88IR ----</option>
+                                                <option>Dynamic I: IRH1-1</option>
+                                                <option>Dynamic I: IRD2-1</option>
+                                                <option>Dynamic II: IRD2-1</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Responsive Web Design ----</option>
+                                                <option>Responsive Web Design</option>
+                                                <option>===========================================================</option>
+                                                <option>---- Social Media ----</option>
+                                                <option>Social Media</option>
+                                                <option>===========================================================</option>
+                                                <option>List all services here</option> 
+                                              </select>
+                                              <div class="xs-margin"></div>
+                                              <div class="text-blue text-12px">Please select a <b>"Service Plan"</b> &amp; <b>"Service Code"</b> to continue,  eg. for VPS Hosting, <b>Service Plan = "Linux Basic"</b>, <b>Service Code = "VPS58-2-1"</b>.</div>
+                                              note to programmer: some of the services does not have a service code, if service plan doesn't have a service code, please leave it blank after the plan name in the above dropdown list.
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan/Package Name</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control">
+                                            </div>
+                                            
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Unit Price (RM)</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" placeholder="0.00">
+                                              <div class="text-blue text-12px">The unit price is for all other packages execpt domain. For single/bulk domain prices, please specify the prices in below <b>"Domain Configuration"</b> section.</div>
+                                              note to programmer: auto-fill in the price above after selected a plan. the price will be varied from the selection of the plan above.
+                                            </div>
+                                            
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Global Discount Name </label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" placeholder="eg. Sample 2">
+                                              note to programmer: "discount name" and "discount rate" are auto-filled in this section if the selected services in above service dropdown list has applied to the global discount.
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Global Discount Rate </label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" placeholder="Amount">
+                                              <div class="xs-margin"></div>
+                                              <select name="select" class="form-control">
+                                                <option value="%">%</option>
+                                                <option value="RM">RM</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Promo Code </label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" placeholder="eg. Test123">
+                                              note to programmer: "promo code" and "discount rate" are auto-filled in this section if the selected services in above service dropdown list has applied to the global discount.
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Discount Rate (Promo Code) </label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" placeholder="Amount">
+                                              <div class="xs-margin"></div>
+                                              <select name="select" class="form-control">
+                                                <option value="%">%</option>
+                                                <option value="RM">RM</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">SSL Price (RM) </label>
+                                            <div class="col-md-6">
+                                               <div class="margin-top-10px"></div>
+                                               <select class="form-control">
+                                               		<option>- Please select -</option>
+                                               	    <option value="1 year">1 year(s) @ RM239.99/yr</option>
+                                                    <option value="2 years">2 year(s) @ RM 219.99/yr</option>
+                                                    <option value="3 years">3 year(s) @ RM 199.99/yr</option>
+                                               </select>	
+                                              <div class="xs-margin"></div>
+                                               note to programmer: the ssl price dropdown list is dynamic and fectched from the ssl services setup depending on the ssl plan selected above.
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Quantity <span class="text-red">*</span></label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" placeholder="1">
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Cycle <span class="text-red">*</span></label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" placeholder="eg. 1 year(s)">
+                                            </div>
+                                          </div>
+
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Setup Fee (RM) </label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" placeholder="0.00">
+                                              <div class="xs-margin"></div>
+                                              <div class="text-blue text-12px">If "Setup Fee" is set to <b>RM 0.00</b>, it is <b>"FREE Setup"</b>.</div>
+                                            </div>
+                                          </div>
+                                          
+                                          <!-- domain configuration start -->
+                                          <h5 class="block-heading">Domain Configuration</h5>
+                                          <div class="form-group">
+                                            <label for="inputFirstName" class="col-md-3 control-label">Domain Name <span class="text-red">*</span></label>
+                                            <div class="col-md-6">
+                                              <div class="radio-list">
+                                                  <label><input type="radio" checked="checked"> Use existing domain, please enter your domain below:
+                                                  		<div class="xs-margin"></div>
+                                              			<input type="text" class="form-control" placeholder="eg. webqom.net">
+                                                  </label>
+                                                  <label><input type="radio"> Register a new domain, please enter your domain below:
+                                                  		<div class="xs-margin"></div>
+                                              			<input type="text" class="form-control" placeholder="eg. webqom.net">
+                                                  </label>
+                                                  <label><input type="radio"> Please specify your domain below (for single domain): 
+                                                  		<div class="xs-margin"></div>
+                                              			<input type="text" class="form-control" placeholder="eg. webqom.net">
+                                                  </label>
+                                                  <label><input type="radio"> Please specify your domains below (for bulk domains): 
+                                                  		<div class="xs-margin"></div>
+                                              			<textarea class="form-control" rows="10">Each name must be on a separate line.
+
+Examples: 
+yourdomain.com
+yourdomain.net                                                  
+                                                        </textarea>
+                                                  </label>
+                                              </div>
+                                              
+                                            </div>										  
+                                          </div>
+                                          note to programmer: the domain price from 1 year to 10 years is dynamic and fectched from the domain pricing and maybe varied from different TLDs. Same as bulk domain pricing.
+                                          
+                                          <h6 class="block-heading">Single Domain Pricing (RM)</h6>
+                                          <div class="text-blue text-12px">You can specify single domain price in below table for <b>"New Domain Registration"</b>, <b>"Domain Renewal"</b> or <b>"Transfer in a Domain"</b>. If "Domain Price" is set to <b>RM 0.00</b>, it is <b>"FREE Domain"</b>. </div>
+                                          <div class="xs-margin"></div>
+                                          <div class="table-responsive">
+                                          	  <table class="table table-striped table-hover">
+                                              	  <thead>
+                                                 	<th>1 Year(s)</th>
+                                                    <th>2 Year(s)</th>
+                                                    <th>3 Year(s)</th>
+                                                    <th>5 Year(s)</th>
+                                                    <th>10 Year(s)</th>
+                                                  </thead>
+                                                  <tbody>
+                                                  	<tr>
+                                                    	<td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                    </tr>
+                                                  </tbody>
+                                                  <tfoot>
+                                                  	<tr>
+                                                    	<td colspan="5"></td>
+                                                    </tr>
+                                                  </tfoot>
+                                              </table>
+                                          	
+                                          </div><!-- end table responsive -->
+                                          
+                                          <h6 class="block-heading">Bulk Domain Pricing (RM)</h6>
+                                          <div class="text-blue text-12px">You can specify bulk domain price in below table for <b>"Bulk Registration"</b>, <b>"Bulk Renewal"</b> or <b>"Bulk Transfer"</b>.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="table-responsive">
+                                          	  <table class="table table-striped table-hover">
+                                              	  <thead>
+                                                 	<th>Domains</th>
+                                                    <th>1 Year(s)</th>
+                                                    <th>2 Year(s)</th>
+                                                    <th>3 Year(s)</th>
+                                                    <th>5 Year(s)</th>
+                                                    <th>10 Year(s)</th>
+                                                  </thead>
+                                                  <tbody>
+                                                  	<tr>
+                                                    	<td>1-5</td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td>6-20</td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td>21-49</td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td>50-100</td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td>101-200</td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td>201-500</td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                        <td><input type="text" class="form-control" placeholder="0.00"></td>
+                                                    </tr>
+                                                  </tbody>
+                                                  <tfoot>
+                                                  	<tr>
+                                                    	<td colspan="6"></td>
+                                                    </tr>
+                                                  </tfoot>
+                                              </table>
+                                          	
+                                          </div><!-- end table responsive -->
+                                          
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Discount </label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" placeholder="Amount">
+                                              <div class="xs-margin"></div>
+                                              <select name="select" class="form-control">
+                                                <option value="%">%</option>
+                                                <option value="RM">RM</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Domain Addons </label>
+                                            <div class="col-md-6">
+                                              <div class="checkbox-list margin-top-10px">
+                                              	<label><input type="checkbox"/>&nbsp; DNS Management (@ RM 102.50/yr)</label>
+                                                <label><input type="checkbox"/>&nbsp; Email Forwarding (@ RM 102.50/yr)</label>
+                                                <label><input type="checkbox"/>&nbsp; ID Protection (@ RM 102.50/yr)</label>
+                                                note to programmer: domain addons list and price is fetched from the domain setup.
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+										  <!-- end domain configuration -->
+                                          
+                                          <!-- co-locationi hosting configuration start -->
+                                          <h5 class="block-heading">Co-location Hosting Configuration</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>						
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Rack Space  </label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; Quarter Rack </label>
+                                                    <label><input type="radio">&nbsp; Half Rack </label>
+                                                    <label><input type="radio">&nbsp; Full Rack </label>
+                                                    <label><input type="radio">&nbsp; Cabinet </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Bandwidth </label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 10Mbps </label>
+                                                    <label><input type="radio">&nbsp; 20Mbps </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Power Port</label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 1 Port </label>
+                                                    <label><input type="radio">&nbsp; 5 Ports </label>
+                                                    <label><input type="radio">&nbsp; 10 Ports </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Wan Port </label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 1 Port</label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">No. of IP Addresses</label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 1</label>
+                                                    <label><input type="radio">&nbsp; 4 </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end co-location hosting configuration -->
+                                          
+                                          <!-- dedicated server configuration start -->
+                                          <h5 class="block-heading">Dedicated Server Configuration</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>						
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">CPU </label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 1 x 4-cores Intel Xeon </label>
+                                                    <label><input type="radio">&nbsp; 1 x 6-cores Intel Xeon </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">No. of Processors</label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 1 processor </label>
+                                                    <label><input type="radio">&nbsp; 2 processors  </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">RAM</label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 4GB </label>
+                                                    <label><input type="radio">&nbsp; 8GB </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Hard Disk </label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 2 x 1TB SATA </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">No. of IP Addresses (IPv4) </label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 1 x IPv4 Address</label>
+                                                    <label><input type="radio">&nbsp; 2 x IPv4 Address </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Bandwidth </label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; 10Mbps </label>
+                                                    <label><input type="radio">&nbsp; 20Mbps </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Control Panel </label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; No management software </label>
+                                                    <label><input type="radio">&nbsp; Webmin / cPanel WHM / zPanel </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Fully Managed Server </label>
+                                            <div class="col-md-6">
+                                               <div class="radio-list">
+                                               		<div class="margin-top-5px"></div>
+                                               		<label><input type="radio" checked="checked">&nbsp; Optional </label>
+                                                    <label><input type="radio">&nbsp; Others, please sepcify: 
+                                                    	<div class="xs-margin"></div>
+                                                    <input type="text" class="form-control"></label>
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end dedicated server configuration -->
+                                          
+                                          <!-- custom cloud hosting plan specs start -->
+                                          <h5 class="block-heading">Cloud Hosting Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom cloud hosting plan specs -->
+                                          
+                                          <!-- custom shared hosting plan specs start -->
+                                          <h5 class="block-heading">Shared Hosting Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom shared hosting plan specs -->
+                                          
+                                          <!-- custom vps hosting plan specs start -->
+                                          <h5 class="block-heading">VPS Hosting Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom vps hosting plan specs -->
+                                          
+                                          <!-- custom ecommerce plan specs start -->
+                                          <h5 class="block-heading">E-commerce Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom ecommerce plan specs -->
+                                          
+                                          <!-- custom email88 plan specs start -->
+                                          <h5 class="block-heading">Email88 Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom email88 plan specs -->
+                                          
+                                          <!-- custom package p plan specs start -->
+                                          <h5 class="block-heading">Package P Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom package p plan specs -->
+                                          
+                                          <!-- custom rwd plan specs start -->
+                                          <h5 class="block-heading">Responsive Web Design Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom rwd plan specs -->
+                                          
+                                          <!-- custom seo specs start -->
+                                          <h5 class="block-heading">SEO Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom seo specs -->
+                                          
+                                          <!-- custom social media plan specs start -->
+                                          <h5 class="block-heading">Social Media Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom social media plan specs -->
+                                          
+                                          <!-- custom ssl plan specs start -->
+                                          <h5 class="block-heading">SSL Certificates Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom ssl plan specs -->
+                                          
+                                          <!-- custom web88 cms plan specs start -->
+                                          <h5 class="block-heading">Web88 CMS Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom web88 cms plan specs -->
+                                          
+                                          <!-- custom web88ir plan specs start -->
+                                          <h5 class="block-heading">Web88IR Plan Specifications</h5>
+                                          <div class="text-blue text-12px">By default, the plan specification will be filled-in automatically after selecting a plan/service code in the above "Service Plan/Service Code" dropdown list. If it is a request for customization, please fill in the custom plan specification below.</div>
+                                          <div class="xs-margin"></div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Custom Plan Specification</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control"> 
+                                                <div class="xss-margin"></div>
+                                                <a href="#" class="btn btn-sm btn-success">Add Another <i class="fa fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-3 control-label">Notes </label>
+                                            <div class="col-md-6">
+                                            	<textarea rows="3" class="form-control"></textarea>
+                                            </div>
+                                          </div>
+                                          <!-- end custom web88ir plan specs -->
+                                          
+                                          <div class="form-actions">
+                                            <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                          </div>
+                                        </form>
+                                    </div><!-- end modal body -->
+                                  </div>
+                                </div>
+                              </div>
+                              <!--END MODAL add new item -->
+                                
+                                <!--Modal delete selected items start-->
+                              	<div id="modal-delete-selected" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                      <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete the selected item(s)? </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p><strong>Service Code:</strong> DN<br/>
+                                          <strong>Domain Registration:</strong> webqom.net </p>
+                                      <div class="form-actions">
+                                        <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- modal delete selected items end -->
+                              <!--Modal delete all items start-->
+                              <div id="modal-delete-all" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                      <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete all items? </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="form-actions">
+                                        <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- modal delete all items end -->
+
+                        </div><!-- end porlet header -->
+                        
+                        <div class="portlet-body">
+  
+                         	<div class="row">
+                            	<div class="col-md-12">
+                                	<div class="table-responsive">	
+                                    	<table class="table table-checkout table-striped">
+                                            <thead>
+                                            <tr>
+                                              <th width="1%"><input type="checkbox"/></th>
+                                              <th>#</th>
+                                              <th>Services</th>
+                                              <th class="text-center">Cycle</th>
+                                              <th class="text-center">Qty</th>
+                                              <th class="text-center">Global Discount Name <br/> / Global Discount Rate</th>
+                                              <th class="text-center">Promo Code <br/> / Discount Rate</th>
+                                              <th class="text-right">Price</th>
+                                              <th class="text-center">Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td class="text-center"></td>
+                                                  <td class="text-center"></td>
+                                                  <td class="text-center"></td>
+                                                  <td class="text-center"></td>
+                                                  <td class="text-right"></td>
+                                                  <td class="text-center"></td>
+                                                  
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="thick-line" colspan="5"></td>
+                                                <td class="thick-line text-right"><h6><b>Subtotal:</b></h6></td>
+                                                <td class="thick-line text-right" colspan="2"><h6><b>RM 0.00</b></h6></td>
+                                                <td class="thick-line text-right"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="no-line" colspan="5"></td>
+                                                <td class="no-line text-right"><h6 class="text-red"><b>Discount:</b></h6></td>
+                                                <td class="no-line text-right" colspan="2"><h6 class="text-red"><b>- RM 0.00</b></h6></td>
+                                                <td class="no-line text-right"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="no-line" colspan="5"></td>
+                                                <td class="no-line text-right"><h6><b>6% GST:</b></h6></td>
+                                                <td class="no-line text-right" colspan="2"><h6><b>RM 0.00</b></h6></td>
+                                                <td class="no-line text-right"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="no-line" colspan="5"></td>
+                                                <td class="thick-line text-right"><h5 class="text-red"><b>Total:</b></h5></td>
+                                                <td class="thick-line text-right" colspan="2"><h5 class="text-red"><b>RM 0.00</b></h5></td>
+                                                <td class="thick-line text-right"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><!-- end table responsive -->
+                                    
+                                     <div class="clearfix"></div>
+                                     
+                                     <form class="form-horizontal">
+                                         <div class="form-group">
+                                            <label class="col-md-2 control-label">Proposal Texts </label>
+                                            <div class="col-md-9">
+                                              <textarea class="form-control" rows="5"></textarea>
+                                              <div class="xs-margin"></div>
+                                              <div class="text-blue text-12px">(Displayed at the <b>Top</b> of the Quote)</div>
+                                            </div>
+                                          </div>
+                                         
+                                         <div class="form-group">
+                                            <label class="col-md-2 control-label">Customer Notes </label>
+                                            <div class="col-md-9">
+                                              <textarea class="form-control" rows="5"></textarea>
+                                              <div class="xs-margin"></div>
+                                              <div class="text-blue text-12px">(Displayed as a <b>Footer</b> to the Quote)</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-md-2 control-label">Admin Notes </label>
+                                            <div class="col-md-9">
+                                              <textarea class="form-control" rows="5"></textarea>
+                                            </div>
+                                          </div>
+                                      </form>
+                                     
+                                    
+                                            
+                                      
+                                	
+                                </div><!-- end col-md-12 -->
+                                
+                                  
+                            </div><!-- end row -->
+                          
+                          	<div class="clearfix"></div>
+                        </div>
+                        <!-- end portlet-body -->
+                        
+                         <div class="form-actions">
+                         	<div class="col-md-offset-5 col-md-7"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                         </div>
+                      
+                      
+                      </div>
+                      <!-- end portlet -->
+                
+                </div>
+                <!-- end tab item details -->
+                
+                
+                
+                
+              </div>
+              <!-- end tab content -->
+                              
+              
+            </div><!-- end col-lg-12 -->
+
+				
+          </div><!-- end row -->
+        </div>
+        <!-- InstanceEndEditable -->
+        <!--END CONTENT-->
+            
+            <!--BEGIN FOOTER-->
+<div class="page-footer">
+                <div class="copyright"><span class="text-15px">2016 © <a href="http://www.webqom.com" target="_blank">Webqom Technologies Sdn Bhd.</a> Any queries, please contact <a href="mailto:support@webqom.com">Webqom Support</a>.</span>
+                	<div class="pull-right"><img src="images/logo_webqom.png" alt="Webqom Technologies Sdn Bhd"></div>
+                </div>
+        </div>
+    <!--END FOOTER--></div>
+  <!--END PAGE WRAPPER--></div>
+</div>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<!--loading bootstrap js-->
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="vendors/slimScroll/jquery.slimscroll.js"></script>
+<script src="vendors/jquery-cookie/jquery.cookie.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="vendors/jquery-pace/pace.min.js"></script>
+
+<!--LOADING SCRIPTS FOR PAGE-->
+<script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="vendors/moment/moment.js"></script>
+<script src="vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="vendors/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script src="vendors/bootstrap-clockface/js/clockface.js"></script>
+<script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="vendors/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="vendors/jquery-maskedinput/jquery-maskedinput.js"></script>
+<script src="js/form-components.js"></script>
+<!--LOADING SCRIPTS FOR PAGE-->
+
+
+<!-- InstanceBeginEditable name="EditRegion4" -->
+<script src="vendors/tinymce/js/tinymce/tinymce.min.js"></script>
+<script src="vendors/ckeditor/ckeditor.js"></script>
+<script src="js/ui-tabs-accordions-navs.js"></script>
+<!-- InstanceEndEditable -->
+
+
+<!--CORE JAVASCRIPT-->
+<script src="js/main.js"></script>
+<script src="js/holder.js"></script>
+</body>
+<!-- InstanceEnd --></html>

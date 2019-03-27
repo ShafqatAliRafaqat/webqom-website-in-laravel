@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Dashboard</title>
+
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="images/icons/favicon.ico" rel="shortcut icon">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPT+Gudea:400,700,400italic%7CPT+Oswald:400,700,300" rel="stylesheet" id="googlefont">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+ <!--Loading bootstrap css-->
+<link type="text/css" rel="stylesheet" href="vendors/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+<link type="text/css" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    
+<!--LOADING SCRIPTS FOR PAGE-->
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap-datepicker/css/datepicker.css">
+<link type="text/css" rel="stylesheet" href="vendors/bootstrap-switch/css/bootstrap-switch.css">
+    
+    <!--Loading style vendors-->
+<link type="text/css" rel="stylesheet" href="vendors/animate.css/animate.css">
+<link type="text/css" rel="stylesheet" href="vendors/jquery-pace/pace.css">
+
+<!--Loading style-->
+<link type="text/css" rel="stylesheet" href="css/style.css">  
+<!--<link type="text/css" rel="stylesheet" href="css/style.css">-->
+<link type="text/css" rel="stylesheet" href="css/style-mango.css" id="theme-style">
+<link type="text/css" rel="stylesheet" href="css/vendors.css">
+<link type="text/css" rel="stylesheet" href="css/themes/grey.css" id="color-style">
+<link type="text/css" rel="stylesheet" href="css/style-responsive.css">
+
+    
+</head>
+<body>
+<div>
+<!--BEGIN TO TOP--><a id="totop" href="#"><i class="fa fa-angle-up"></i></a><!--END BACK TO TOP-->
+  <div id="wrapper"><!--BEGIN TOPBAR-->
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;" class="navbar navbar-default navbar-static-top">
+          <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a id="logo" href="http://www.webqom.com/web88.html" target="_blank" class="navbar-brand"><img src="images/logo_web88.png"></a>          </div>
+            
+            	<div class="topbar-main">
+                	<a id="logo" href="#" class="navbar-brand"><img src="images/logo.jpg"></a>
+                    <a id="menu-toggle" href="#" class="btn hidden-xs"><i class="fa fa-bars"></i></a>
+                    
+                <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control"/></div>
+                </form>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-fw"></i><span class="badge badge-blue">3</span></a></li> 
+                    <li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><img src="images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>&nbsp;
+                        Support Webqom
+                        &nbsp;<span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-user pull-right animated bounceInLeft">
+                            <li>
+                                <div class="navbar-content">
+                                    <div class="row">
+                                        <div class="col-md-5 col-xs-5"><img src="images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>
+
+                                            <p class="text-center mtm">
+                                            	<a href="#" data-target="#modal-change-avatar" data-toggle="modal" class="change-avatar">
+                                                <small>Change Avatar</small>                                                </a></p>
+                                      </div>
+                                        <div class="col-md-7 col-xs-5"><span>Support Webqom</span>
+
+                                            <p class="text-muted small">support@webqom.com</p>
+
+                                            <div class="divider"></div>
+                                            <!--<a href="#" class="btn btn-primary btn-sm">View Profile</a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navbar-footer">
+                                    <div class="navbar-footer-content">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm" data-target="#modal-change-password" data-toggle="modal">Change Password</a></div>
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm pull-right">Sign Out</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                      </ul>
+                  </li>
+                </ul>
+          </div>
+        </nav>
+        <!--Modal Change Avatar start-->
+                            <div id="modal-change-avatar" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                    <h4 id="modal-login-label2" class="modal-title">Change Avatar</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="form">
+                                      <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label">Upload Avatar Image </label>
+                                          <div class="col-md-8">
+                                            <div class="text-15px margin-top-10px"> 
+                                            	<img src="images/profile/image_hock.jpg" alt="Avatar" class="img-responsive"><br/>
+                                                <input id="exampleInputFile1" type="file"/>
+                                              <br/>
+                                                <span class="help-block">(Image dimension: 100 x 100 pixels, JPEG/GIF/PNG only, Max. 2MB) </span> </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                          <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <!--END MODAL Change Avatar-->
+        
+        <!--Modal Change Password start-->
+                <div id="modal-change-password" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                <h4 id="modal-login-label" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Change Password</h4></div>
+                            <div class="modal-body">
+                                <div class="form">
+                                    <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">Confirm New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="Confirm New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <div class="col-md-offset-4 col-md-8">
+                                               <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp;
+                                              <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a>                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!--END MODAL CHANGE PASSWORD-->
+        <!--END TOPBAR-->
+        
+        <!--BEGIN SIDEBAR MENU-->
+        <nav id="sidebar" role="navigation" class="navbar-default navbar-static-side">
+            <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    <li class="clock"><strong id="get-date"></strong>
+
+                        <div class="digital-clock">
+                            <div id="getHours" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getMinutes" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getSeconds" class="get-time"></div>
+                        </div>
+                    </li>
+                    <li class="active"><a href="dashboard.html"><i class="fa fa-laptop fa-fw"></i><span class="menu-title">Dashboard</span></a></li>
+                    <li class="sidebar-heading"><h4>Clients</h4></li>
+                    
+                    <li><a href="client_list.html"><i class="fa fa-user fa-fw"></i><span class="menu-title">Clients Listing</span></a></li>
+                    <li class="sidebar-heading"><h4>Billing</h4></li>
+                    
+                  <li><a href="billing_invoices_list.html"><i class="fa fa-list fa-fw"></i><span class="menu-title">Invoices Listing</span></a></li>
+                  <li><a href="billing_invoice_new.html"><i class="fa fa-plus fa-fw"></i><span class="menu-title">Add New Invoice</span></a></li>
+                  <li><a href="billing_receipts_list.html"><i class="fa fa-file fa-fw"></i><span class="menu-title">Receipts Listing</span></a></li>
+                  <li><a href="billing_quotes_list.html"><i class="fa fa-list-alt fa-fw"></i><span class="menu-title">Quotes Listing</span></a></li>
+                  <li><a href="billing_quote_new.html"><i class="fa fa-plus fa-fw"></i><span class="menu-title">Add New Quote</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Orders</h4></li>
+                    <li><a href="orders_list.html"><i class="fa fa-shopping-cart fa-fw"></i><span class="menu-title">Orders</span><span class="badge badge-blue">3</span></a></li>
+                    
+
+                    <li class="sidebar-heading"><h4>Services</h4></li>
+                    <li><a href="categories_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Categories</span></a> </li>
+                    <li><a href="#"><i class="fa fa-globe fa-fw"></i><span class="menu-title">Domains</span><span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li><a href="single_domain_prices_list.html">Single Domain Pricing List</a></li>
+						  <li><a href="bulk_domain_prices_list.html">Bulk Domain Pricing List</a></li>
+                          <li><a href="domain_addons_prices_list.html">Domain Addons Pricing List</a></li>
+                      </ul>
+                  	</li> 
+                    <li><a href="client_schedule_notification_list.html"><i class="fa fa-bullhorn fa-fw"></i><span class="menu-title">Client Schedule Notification</span></a></li> 
+					<li><a href="services_enquiry_list.html"><i class="fa fa-info-circle fa-fw"></i><span class="menu-title">Services Enquiry Listing</span></a></li>
+                    
+                    
+                    <li class="sidebar-heading"><h4>Promotions</h4></li>
+                    <li><a href="global_discounts_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Global Discounts</span></a> </li>
+					<li><a href="promo_codes_list.html"><i class="fa fa-qrcode fa-fw"></i><span class="menu-title">Promo Codes</span></a></li>
+                  	<li><a href="newsletter_subscription_list.html"><i class="fa fa-envelope fa-fw"></i><span class="menu-title">Newsletter Subscription</span></a> </li>
+                    
+                    <li class="sidebar-heading"><h4>Support</h4></li>
+                    <li><a href="support_tickets_list.html"><i class="fa fa-wrench fa-fw"></i><span class="menu-title">Support Tickets/Service Enquiy/Ask For Quote Listing</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Banners</h4></li>
+                    <li><a href="index_banner_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Index Banners</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>CMS Pages</h4></li>
+                    <li><a href="blog_articles_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Blog</span></a></li>
+                    <li><a href="#"><i class="fa fa-globe fa-fw"></i><span class="menu-title">Domains</span><span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li><a href="domains_edit.html">Domains Main Page</a></li>
+						  <li><a href="single_domain_search_edit.html">Single Domain Search</a></li>
+                          <li><a href="bulk_domain_search_edit.html">Bulk Domain Search</a></li>
+                          <li><a href="single_domain_transfer_edit.html">Single Domain Transfer</a></li>
+                          <li><a href="bulk_domain_transfer_edit.html">Bulk Domain Transfer</a></li>
+                      </ul>
+                  	</li>
+                    
+                    <li class="sidebar-heading"><h4>Global Setup</h4></li>
+                    <li><a href="gst_rate_list.html"><i class="fa fa-dollar fa-fw"></i><span class="menu-title">GST Rate Setup</span></a></li>
+              </ul>
+          </div>
+    </nav>
+        <!--END SIDEBAR MENU--><!--BEGIN PAGE WRAPPER-->
+      <div id="page-wrapper"><!--BEGIN PAGE HEADER & BREADCRUMB-->
+        
+        <div class="page-header-breadcrumb">
+          <div class="page-heading hidden-xs">
+            <h1 class="page-title">Dashboard</h1>
+          </div>
+          <ol class="breadcrumb page-breadcrumb">
+            <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Dashboard</a>&nbsp;</li>
+
+          </ol>
+        </div>
+        <!--END PAGE HEADER & BREADCRUMB--><!--BEGIN CONTENT-->
+        
+        <div class="page-content">
+                <div id="tab-general">
+                    <div class="row">
+                    	<div class="col-lg-12">
+                        	<h5 class="block-heading">Showing data from 02nd January - 08th January 2016 <a href="#" data-hover="tooltip" data-placement="top" data-target="#modal-edit-data-range" data-toggle="modal" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a></h5>
+                            note to programmer: by default, showing the latest 1 week data. 
+                            
+                            <!--Modal Edit data range start-->
+                                  <div id="modal-edit-data-range" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                    <div class="modal-dialog modal-wide-width">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                          <h4 id="modal-login-label3" class="modal-title">Edit Data Range</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="form">
+                                            <form class="form-horizontal">
+                                            	<h5 class="block-heading">Total Sales</h5>
+                                                <div class="form-group">
+                                                    <label class="col-md-3 control-label">Showing Data</label>
+                                                    <div class="col-md-6">
+                                                      <div class="input-group input-daterange">
+                                                        <input type="text" name="start" class="form-control" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy" value="02nd Jan 2016"/>
+                                                        <span class="input-group-addon">to</span>
+                                                        <input type="text" name="end" class="form-control" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy" value="08th Jan 2016"/>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  
+                                                <h5 class="block-heading">Total Lifetime Sales</h5>
+                                                <div class="form-group">
+                                                    <label class="col-md-3 control-label">Showing Data</label>
+                                                    <div class="col-md-6">
+                                                      <div class="input-group input-daterange">
+                                                        <input type="text" name="start" class="form-control" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy" value="02nd Jan 2016"/>
+                                                        <span class="input-group-addon">to</span>
+                                                        <input type="text" name="end" class="form-control" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy" value="02nd Feb 2016"/>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  note to programmer: pls follow the date format ie. 02nd Jan 2016. the data should be latest 1 week or 1 month data by default.
+                                              <div class="form-actions">
+                                                <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <!--END MODAL Edit data range -->
+                        </div><!-- end col-lg-12 -->
+                    	    
+                    	<div class="col-lg-6">
+                        	
+                        
+                        	<div class="panel panel-primary">
+                            	<div class="panel-heading">Total Sales</div>
+                                <div class="panel-body">
+                                
+                                    <div id="counter-chart" style="width: 100%; height:300px"></div>
+                                    
+                                    <div class="order-detail">
+                                    	<div class="col-md-6">
+                                            <div class="revenue-total">RM<span id='revenue-number'>0</span></div>
+                                            <div class="revenue-title">Current Week</div>
+                                            <div class="xss-margin"></div>
+                                            <div class="text-12px">[02nd Jan - 08th Jan]</div>
+                                            <div class="xss-margin"></div>
+                                            <i class="fa fa-arrow-up text-green"></i>&nbsp; <span class="text-green"><b>55.2%</b></span> from last week
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="revenue-total">RM<span id='new-sales-number'>0</span></div>
+                                            <div class="revenue-title">New Sales for Today</div>
+                                            <div class="xss-margin"></div>
+                                            <div class="text-12px">[08th Jan]</div>
+                                            <div class="xss-margin"></div>
+                                            <i class="fa fa-arrow-down text-red"></i>&nbsp; <span class="text-red"><b>20.8%</b></span>
+                                        </div>
+                                        
+                                                
+                                    </div><!-- end order detail -->
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-lg-6">
+                        
+                        	<div class="panel panel-primary">
+                            	<div class="panel-heading">Total Lifetime Sales</div>
+                                <div class="panel-body">
+                                    <div id="area-chart" style="width: 100%; height:300px"></div>
+                                    
+                                    <div class="order-detail">
+                                    	<div class="col-md-6">
+                                            <div class="revenue-total">RM<span id='earning-number'>0</span></div>
+                                            <div class="revenue-title">Current Month</div>
+                                            <div class="xss-margin"></div>
+                                            <div class="text-12px">January</div>
+                                            <div class="xss-margin"></div>
+                                            <i class="fa fa-arrow-up text-green"></i>&nbsp; <span class="text-green"><b>65%</b></span> from last month
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="revenue-total">RM<span id='visits-number'>0</span></div>
+                                            <div class="revenue-title">Total 2016 Sales</div>
+                                            <div class="xss-margin"></div>
+                                            <i class="fa fa-arrow-down text-red"></i>&nbsp; <span class="text-red"><b>12.6%</b></span>
+                                        </div>
+                                        
+                                                
+                                    </div><!-- end order detail -->
+                                    
+                                </div>
+                            </div>
+                            
+                        </div> 
+                        <div class="clearfix"></div>
+                        
+                        <div class="col-lg-12">
+                        
+                        	<div class="panel panel-primary">
+                            	<div class="panel-heading">Top Product Sales</div>
+                                <div class="panel-body">
+                                	
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="panel">
+                                            <div class="panel-body"><h6 class="block-heading">VPS Server<span class="pull-right">RM <span id='earning-number-vps'></span></span></h6>
+    
+                                                <div id="earning-chart" style="width: 100%; height:100px"></div>
+                                            </div>
+                                        </div>
+                                        <div class="panel">
+                                        <div class="panel-body"><h6 class="block-heading">Dedicated Server<span class="pull-right">RM <span id='earning-number-dedicated'></span></span></h6>
+
+                                            <div id="earning-chart-dedicated" style="width: 100%; height:100px"></div>
+                                        </div>
+                                    </div>
+                                    </div> <!-- end col-md-4 -->
+                                    
+                                    
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="panel">
+                                            <div class="panel-body"><h6 class="block-heading">Web Design<span class="pull-right">RM <span id='earning-number-web-design'></span></span></h6>
+    
+                                                <div id="earning-chart-web-design" style="width: 100%; height:100px"></div>
+                                            </div>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panel-body"><h6 class="block-heading">Email88<span class="pull-right">RM <span id='earning-number-email88'></span></span></h6>
+    
+                                                <div id="earning-chart-email88" style="width: 100%; height:100px"></div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end col-md-4 -->
+                                    
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="panel">
+                                            <div class="panel-body"><h6 class="block-heading">Shared Hosting<span class="pull-right">RM <span id='earning-number-shared'></span></span></h6>
+    
+                                                <div id="earning-chart-shared" style="width: 100%; height:100px"></div>
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- end col-md-4 -->
+                                    
+                                </div><!-- end panel body -->
+                            </div><!-- end panel primary -->
+                            
+                        
+                        </div><!-- end col-lg-12 -->
+                        
+                        
+                        
+                        <div class="col-lg-12">
+                        
+                        	<div class="panel panel-primary tabbable">
+                            	<div class="panel-heading">Top Clients Sales</div>
+                                <div class="panel-body">
+                                	<div class="tabbable portlet-tabs">
+                                
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#by-sales" data-toggle="tab">By Sales</a></li>
+                                        </ul>
+                                        
+                                        <div class="tab-content">
+                                        
+                                        	 <div id="by-sales" class="tab-pane fade in active">
+                                             	
+                                                <div class="col-md-6 col-xs-12">
+                                                    <div class="panel">
+                                                        <div class="panel-body"><h6 class="block-heading">OCK Group Bhd<span class="pull-right">RM <span id='ock-group-number'></span></span></h6>
+                
+                                                            <div id="ock-group-chart" style="width: 100%; height:100px"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="panel">
+                                                        <div class="panel-body"><h6 class="block-heading">Tan Boon Ming Sdn Bhd<span class="pull-right">RM <span id='tbm-number'></span></span></h6>
+                
+                                                            <div id="tbm-chart" style="width: 100%; height:100px"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="panel">
+                                                        <div class="panel-body"><h6 class="block-heading">Yee Lee Corporation Bhd<span class="pull-right">RM <span id='yee-lee-number'></span></span></h6>
+                
+                                                            <div id="yee-lee-chart" style="width: 100%; height:100px"></div>
+                                                        </div>
+                                                    </div>
+
+                                    			</div> <!-- end col-md-6 -->
+                                                
+                                                
+                                                <div class="col-md-6 col-xs-12">
+                                                    <div class="panel">
+                                                        <div class="panel-body"><h6 class="block-heading">Restoran Foh San Sdn Bhd<span class="pull-right">RM <span id='foh-san-number'></span></span></h6>
+                
+                                                            <div id="foh-san-chart" style="width: 100%; height:100px"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="panel">
+                                                        <div class="panel-body"><h6 class="block-heading">Grand Teak Sdn Bhd<span class="pull-right">RM <span id='grand-teak-number'></span></span></h6>
+                
+                                                            <div id="grand-teak-chart" style="width: 100%; height:100px"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+
+                                    			</div> <!-- end col-md-6 -->
+                                             
+                                             </div><!-- end tab by sales -->
+                                        
+                                        </div><!-- end tab content -->
+                                    </div><!-- end portlet tabs -->
+                                
+                                </div><!-- end panel body -->
+                            
+                            </div><!-- end panel primary -->
+                            
+                            
+                            
+                        </div><!-- end col-lg-12 -->
+                        
+                        
+                        
+                        <div class="col-lg-12">
+                            
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab-bestsellers" data-toggle="tab">Bestsellers</a></li>
+                                        <li><a href="#tab-most-viewed-products" data-toggle="tab">Most Viewed Products</a></li>
+                                        <li><a href="#tab-new-customers" data-toggle="tab">New Customers</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="tab-bestsellers" class="tab-pane fade in active">
+                                            <table class="table table-hover table-striped mbn">
+                                                <thead>
+                                                <tr>
+                                                    <th>Products/Services</th>
+                                                    <th class="text-right">Price</th>
+                                                    <th class="text-right">Quantity Ordered</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Web88IR: Dynamic I</td>
+                                                        <td class="text-right">RM 750.00</td>
+                                                        <td class="text-right">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Responsive Web Design: Premium</td>
+                                                        <td class="text-right">RM 600.50</td>
+                                                        <td class="text-right">2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>VPS Hosting: Linux Gold</td>
+                                                        <td class="text-right">RM 390.49</td>
+                                                        <td class="text-right">26</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Dedicated Servers: Enterprise I</td>
+                                                        <td class="text-right">RM 240.74</td>
+                                                        <td class="text-right">12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Email88: Booster II</td>
+                                                        <td class="text-right">RM 350.50</td>
+                                                        <td class="text-right">1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Shared Hosting: Large</td>
+                                                        <td class="text-right">RM 590.29</td>
+                                                        <td class="text-right">45</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="tab-most-viewed-products" class="tab-pane fade">
+                                        	<table class="table table-hover table-striped mbn">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Products/Services</th>
+                                                        <th class="text-right">Price</th>
+                                                        <th class="text-right">Quantity Ordered</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                	<tr>
+                                                    <td>Web88IR: Dynamic I</td>
+                                                    <td class="text-right">RM 750.00</td>
+                                                    <td class="text-right">3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Responsive Web Design: Premium</td>
+                                                    <td class="text-right">RM 600.50</td>
+                                                    <td class="text-right">2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>VPS Hosting: Linux Gold</td>
+                                                    <td class="text-right">RM 390.49</td>
+                                                    <td class="text-right">26</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dedicated Servers: Enterprise I</td>
+                                                    <td class="text-right">RM 240.74</td>
+                                                    <td class="text-right">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email88: Booster II</td>
+                                                    <td class="text-right">RM 350.50</td>
+                                                    <td class="text-right">1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shared Hosting: Large</td>
+                                                    <td class="text-right">RM 590.29</td>
+                                                    <td class="text-right">45</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        
+                                        </div>
+                                        <!-- end tab most viewed products -->
+                                        
+                                        <div id="tab-new-customers" class="tab-pane fade">
+                                        	<table id="example1" class="table table-hover table-striped">
+                                                <thead>
+                                                  <tr>
+                                                  	<th><a href="#sort by client id">Client ID</a></th>
+                                                    <th><a href="#sort by customer name">Client Name</a></th>
+                                                    <th><a href="#sort by email">Email</a></th>
+                                                    <th><a href="#sort by comapny">Company</a></th>
+                                                    <th><a href="#sort by registered date">Registered Date</a></th>
+                                                    <th><a href="#sort by type">Type</a></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>B-000001-MY</td>
+                                                    <td>Hock Lim</td>
+                                                    <td><a href="mailto:hock@webqom.com">hock@webqom.com</a></td>
+                                                    <td>Webqom Technologies Sdn Bhd</td>
+                                                    <td>20th Nov 2015<br/>
+                                                        14:25</td>
+                                                    <td>Business</td>									
+                                                  </tr>
+                                                  <tr>
+                                                    <td>I-000001-MY</td>
+                                                    <td>Danny Chan</td>
+                          							<td><a href="mailto:danny@webqom.com">danny@webqom.com</a></td>
+                        							<td>-</td>
+                          							<td>20th Nov 2015<br/>
+                            							14:25</td>
+                                                    <td>Individual</td>							
+                                                  </tr>
+                                                  <tr>
+                                                    <td>B-000001-MY</td>
+                                                    <td>Hock Lim</td>
+                                                    <td><a href="mailto:hock@webqom.com">hock@webqom.com</a></td>
+                                                    <td>Webqom Technologies Sdn Bhd</td>
+                                                    <td>20th Nov 2015<br/>
+                                                        14:25</td>
+                                                    <td>Business</td>									
+                                                  </tr>
+                                                  <tr>
+                                                    <td>I-000001-MY</td>
+                                                    <td>Danny Chan</td>
+                          							<td><a href="mailto:danny@webqom.com">danny@webqom.com</a></td>
+                        							<td>-</td>
+                          							<td>20th Nov 2015<br/>
+                            							14:25</td>
+                                                    <td>Individual</td>							
+                                                  </tr> 
+                                                  <tr>
+                                                    <td>I-000001-MY</td>
+                                                    <td>Danny Chan</td>
+                          							<td><a href="mailto:danny@webqom.com">danny@webqom.com</a></td>
+                        							<td>-</td>
+                          							<td>20th Nov 2015<br/>
+                            							14:25</td>
+                                                    <td>Individual</td>							
+                                                  </tr>                                                 
+                                                 
+                                                </tbody>
+                                                <tfoot>
+                                                  <tr>
+                                                    <td colspan="6"></td>
+                                                  </tr>
+                                                </tfoot>
+                                              </table>
+                                        
+                                        </div>
+                                        <!-- end tab new customers -->
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end col-lg-12 -->
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        <!--END CONTENT-->
+            
+            <!--BEGIN FOOTER-->
+            <div class="page-footer">
+                <div class="copyright"><span class="text-15px">2016 © <a href="http://www.webqom.com" target="_blank">Webqom Technologies Sdn Bhd.</a> Any queries, please contact <a href="mailto:support@webqom.com">Webqom Support</a>.</span>
+                	<div class="pull-right"><img src="images/logo_webqom.png" alt="Webqom Technologies"></div>
+                </div>
+            </div>
+    <!--END FOOTER--></div>
+  <!--END PAGE WRAPPER--></div>
+</div>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<!--loading bootstrap js-->
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="vendors/slimScroll/jquery.slimscroll.js"></script>
+<script src="vendors/jquery-cookie/jquery.cookie.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="vendors/jquery-pace/pace.min.js"></script>
+
+<!--LOADING SCRIPTS FOR PAGE-->
+<script src="vendors/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="vendors/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="vendors/jquery-jvectormap/gdp-data.js"></script>
+<script src="vendors/jquery-knob/jquery.knob.js"></script>
+<script src="vendors/jquery-animateNumber/jquery.animateNumber.min.js"></script>
+<script src="vendors/flot-chart/jquery.flot.js"></script>
+<script src="vendors/flot-chart/jquery.flot.categories.js"></script>
+<script src="vendors/flot-chart/jquery.flot.pie.js"></script>
+<script src="vendors/flot-chart/jquery.flot.tooltip.js"></script>
+<script src="vendors/flot-chart/jquery.flot.resize.js"></script>
+<script src="vendors/flot-chart/jquery.flot.fillbetween.js"></script>
+<script src="vendors/flot-chart/jquery.flot.stack.js"></script>
+<script src="vendors/flot-chart/jquery.flot.spline.js"></script>
+<script src="vendors/skycons/skycons.js"></script>
+<script src="vendors/jquery-news-ticker/jquery.news-ticker.js"></script>
+<script src="js/index.js"></script>
+
+<script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="vendors/moment/moment.js"></script>
+<script src="vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="vendors/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script src="vendors/bootstrap-clockface/js/clockface.js"></script>
+<script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="vendors/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="vendors/jquery-maskedinput/jquery-maskedinput.js"></script>
+<script src="js/form-components.js"></script>
+
+<!--CORE JAVASCRIPT-->
+<script src="js/main.js"></script>
+<script src="js/holder.js"></script>
+</body>
+</html>

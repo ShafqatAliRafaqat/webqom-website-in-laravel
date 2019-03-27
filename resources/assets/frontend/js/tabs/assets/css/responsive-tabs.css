@@ -1,0 +1,183 @@
+/*	Responsive Tabs v1.0, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	======================================================================================= */
+
+/*	Table of Contents
+//	==================================================
+//		#Reset
+//		#Themes
+
+
+/*	#Reset
+//	================================================== */
+
+.tabs {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+/*ul.tabs {
+	float: right;
+	width: 13%;
+	margin-left: 0;
+}*/
+.tabs li {
+	/*margin: 0px 0px 25px 0px;*/
+	text-align: center;
+	margin: 5px 0px 5px 0px;
+}
+.tabs li i {
+	font-size: 25px;
+	margin-bottom: 8px;
+	text-align: center;
+	display: block;
+	
+}
+.tabs li a {
+	float: left;
+	color: #454545;
+	/*display: block;
+	height: 98px;*/
+	padding: 15px 10px 15px 10px;
+	text-decoration: none;
+	font-size: 14px;
+	background-color: #f5f5f5;
+	position: relative;
+	margin: 0px 5px 0px 0px;
+}
+
+
+.tabs li a:after {
+	/*right: 100%;
+	top: 50%;*/
+	left: 40%;
+	top: 100%;
+	border: solid transparent; content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(238, 238, 238, 0);
+	border-top-color: #f5f5f5;
+	border-width: 10px;
+	/*margin-top: -10px;*/
+
+}
+.tabs li.active a {
+	color: #fff;
+	background-color: #006699;
+}
+.tabs li.active a:after {
+	border-color: rgba(19, 175, 235, 0);
+	border-top-color: #006699;
+}
+
+
+.tabs-content {
+	float: left;
+	width: 100%;
+	padding: 0;
+	text-align: left;
+	margin-top: 25px;
+}
+.tabs-content img {
+	width: 100%;
+}
+.tabs-content img.img_left2 {
+	width: auto;
+}
+.tabs-content .tabs-panel {
+	padding: 20px 0px;
+}
+.tabs-content .tabs-panel .tab-title {
+	display: none;
+}
+
+.tabs-content .tabs-panel.bgimg1 {
+	background: url(../../../../images/site-img172.jpg) no-repeat right 10px;
+	height: 340px;
+}
+.tabs-content .tabs-panel.bgimg2 {
+	background: url(../../../../images/site-img173.jpg) no-repeat right 10px;
+	height: 340px;
+}
+.tabs-content .tabs-panel.bgimg3 {
+	background: url(../../../../images/site-img174.jpg) no-repeat right 10px;
+	height: 340px;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 999px){
+
+.tabs li i {
+	font-size: 20px;
+}
+
+.tabs li a {
+	padding: 15px 5px 15px 5px;
+	font-size: 14px;
+	margin: 0px 3px 0px 3px;
+}
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+/*ul.tabs {
+	width: 25%;
+	margin-right: 3%;
+}
+.tabs-content {
+	width: 72%;
+	width: 100%
+}*/
+
+.tabs li i {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.tabs li a {
+	font-size: 12px;
+	margin: 0px 2px 0px 2px;
+	padding: 10px 5px 10px 5px;
+}
+
+.tabs-content .tabs-panel.bgimg1,
+.tabs-content .tabs-panel.bgimg2,
+.tabs-content .tabs-panel.bgimg3 {
+	background: none;
+}
+
+
+}
+
+
+@media only screen and (max-width: 479px){
+/*ul.tabs {
+	width: 30%;
+	margin-right: 1%;
+}
+.tabs-content {
+	width: 69%;
+}*/
+
+.tabs li i {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.tabs li a {
+	font-size: 12px;
+	margin: 0px 2px 0px 2px;
+	padding: 10px 5px 10px 5px;
+	margin-bottom: 10px;
+}
+.tabs-content .tabs-panel.bgimg1,
+.tabs-content .tabs-panel.bgimg2,
+.tabs-content .tabs-panel.bgimg3 {
+	background: none;
+}
+
+	
+}
